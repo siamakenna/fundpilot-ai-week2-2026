@@ -1,5 +1,7 @@
 # FundPilot AI
 
+[Public repository](https://github.com/siamakenna/fundpilot-ai-week2-2026) · [Submission draft](docs/DEV_SUBMISSION_DRAFT.md)
+
 **A local Gemma prototype for checking fictional funding requirements against supplied facts.**
 Before spending hours on a travel-award application, see which conditions match,
 which do not, and which still need verification. The result includes exact source

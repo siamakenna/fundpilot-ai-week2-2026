@@ -16,13 +16,13 @@ My intended customer is an independent researcher or a small mentoring program w
 
 ## Demo
 
-The application runs locally in Gradio. The repository contains authentic browser screenshots and actual model request/response records. A public video has not yet been recorded or uploaded; the exact recording steps are in `docs/LOCAL_CAPTURE_STEPS.md`. This draft remains unpublished until a real demo URL is added and reviewed.
+The application runs locally in Gradio. The repository contains an [authentic live Gemma UI screenshot](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/live-ui-graduate.png), a [downloaded live report](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/live-ui-downloaded-report.md), and actual model request/response records. A public video has not yet been recorded or uploaded; the exact recording steps are in `docs/LOCAL_CAPTURE_STEPS.md`. This draft remains unpublished until a real demo URL is added and reviewed.
 
 The walkthrough uses three fictional scenarios: Alex appears to meet an early-career travel call, Alex is not eligible for a graduate-only call, and Casey lacks confirmed presentation acceptance. The UI labels reference fixtures as **NO AI**. Select **Live local Gemma** for actual inference; a fixture demonstration is never substituted for a model run.
 
 ## Code
 
-The independently authored application is MIT licensed. The new public repository link will be inserted after repository creation succeeds. All fixture JSON is unchanged from the supplied Week 2 starter. The source and evidence review is documented in `docs/PROVENANCE_AND_LICENSES.md`.
+The independently authored application is MIT licensed. [View the public GitHub repository](https://github.com/siamakenna/fundpilot-ai-week2-2026). All fixture JSON is unchanged from the supplied Week 2 starter. The source and evidence review is documented in `docs/PROVENANCE_AND_LICENSES.md`.
 
 ## How I Built It
 

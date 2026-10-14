@@ -80,3 +80,19 @@ release result. Use `docs/EVALUATION.md` and `evidence/evaluation-release` for t
 release benchmark. Evaluation refuses to overwrite an existing output directory.
 The full passing test log is `evidence/final-tests.txt`; all adapter mocks are
 explicitly named as mocks. No mock result enters live evaluation metrics.
+
+## Public repository
+
+After ownership attestation, MIT licensing, scoped source review and checks:
+
+```bash
+git init -b main
+git commit -m 'Import independent Week 2 starter as supplied'
+git commit -m 'Verify live Gemma classification and harden evidence and uncertainty handling'
+git commit -m 'Document measured model results, failures, demo evidence and submission draft'
+gh repo create fundpilot-ai-week2-2026 --public --source . --remote origin --push
+```
+
+Created and pushed: https://github.com/siamakenna/fundpilot-ai-week2-2026 .
+The DEV draft was then updated with this genuinely created URL. No DEV publication,
+customer outreach, payment or paid hosting was performed.
