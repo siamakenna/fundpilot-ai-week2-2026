@@ -1,0 +1,10 @@
+[
+  {"profile_id":"alex_postgrad","opportunity_id":"early_career_travel","expected":"ELIGIBLE_BASED_ON_SUPPLIED_EVIDENCE","reason":"All mandatory conditions explicitly match."},
+  {"profile_id":"alex_postgrad","opportunity_id":"graduate_student_only","expected":"NOT_ELIGIBLE","reason":"Not enrolled in graduate program; also requested amount exceeds $600."},
+  {"profile_id":"alex_postgrad","opportunity_id":"midatlantic_workshop","expected":"NOT_ELIGIBLE","reason":"Scientific conference is not a training workshop."},
+  {"profile_id":"alex_postgrad","opportunity_id":"open_methods","expected":"NEEDS_VERIFICATION","reason":"Accepted talk and amount match, but MIT/Apache-2.0 software license is unknown."},
+  {"profile_id":"alex_postgrad","opportunity_id":"postdoc_exchange","expected":"NOT_ELIGIBLE","reason":"Not a current postdoctoral appointee, and invitation is absent."},
+  {"profile_id":"jordan_grad","opportunity_id":"graduate_student_only","expected":"ELIGIBLE_BASED_ON_SUPPLIED_EVIDENCE","reason":"Currently enrolled, US-based, award request within ceiling."},
+  {"profile_id":"casey_uncertain","opportunity_id":"early_career_travel","expected":"NEEDS_VERIFICATION","reason":"Presentation acceptance is unknown."},
+  {"profile_id":"jordan_grad","opportunity_id":"open_methods","expected":"ELIGIBLE_BASED_ON_SUPPLIED_EVIDENCE","reason":"Accepted presentation, MIT license declared, request within limit."}
+]

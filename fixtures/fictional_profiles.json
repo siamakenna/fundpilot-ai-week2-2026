@@ -1,0 +1,53 @@
+[
+  {
+    "id": "alex_postgrad",
+    "display_name": "Alex Morgan (fictional)",
+    "us_based": true,
+    "region": "Maryland",
+    "career_stage": "research_professional",
+    "currently_enrolled_graduate": false,
+    "current_postdoc": false,
+    "latest_degree_year": 2025,
+    "application_year": 2026,
+    "event_type": "scientific_conference",
+    "accepted_presentation": true,
+    "award_request_usd": 700,
+    "software_license": null,
+    "international_host_invitation": false,
+    "project_type": "conference_travel"
+  },
+  {
+    "id": "jordan_grad",
+    "display_name": "Jordan Lee (fictional)",
+    "us_based": true,
+    "region": "Massachusetts",
+    "career_stage": "graduate_student",
+    "currently_enrolled_graduate": true,
+    "current_postdoc": false,
+    "latest_degree_year": 2024,
+    "application_year": 2026,
+    "event_type": "scientific_conference",
+    "accepted_presentation": true,
+    "award_request_usd": 450,
+    "software_license": "MIT",
+    "international_host_invitation": false,
+    "project_type": "conference_travel"
+  },
+  {
+    "id": "casey_uncertain",
+    "display_name": "Casey Rivera (fictional)",
+    "us_based": true,
+    "region": "Maryland",
+    "career_stage": "research_professional",
+    "currently_enrolled_graduate": false,
+    "current_postdoc": false,
+    "latest_degree_year": 2025,
+    "application_year": 2026,
+    "event_type": "scientific_conference",
+    "accepted_presentation": null,
+    "award_request_usd": 650,
+    "software_license": null,
+    "international_host_invitation": null,
+    "project_type": "conference_travel"
+  }
+]

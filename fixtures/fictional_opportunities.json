@@ -1,0 +1,50 @@
+[
+  {
+    "id": "early_career_travel",
+    "title": "FICTIONAL — Early Career Science Conference Travel Award",
+    "source_type": "synthetic_demo_only",
+    "max_award_usd": 1000,
+    "eligibility_text": "Applicants must be based in the United States. Applicants must be employed as a research professional or enrolled as a graduate student. Applicants must have earned their most recent degree no more than five years before the application date. Applicants must have an accepted oral presentation or poster for a scientific conference. The requested travel award must not exceed $1,000.",
+    "mandatory": ["us_based", "research_professional_or_grad_student", "degree_within_five_years", "accepted_presentation", "request_le_1000"]
+  },
+  {
+    "id": "graduate_student_only",
+    "title": "FICTIONAL — Enrolled Graduate Student Mobility Grant",
+    "source_type": "synthetic_demo_only",
+    "max_award_usd": 600,
+    "eligibility_text": "Applicants must currently be enrolled in a graduate degree program. Applicants must be based in the United States. The requested award must not exceed $600.",
+    "mandatory": ["currently_enrolled_graduate", "us_based", "request_le_600"]
+  },
+  {
+    "id": "midatlantic_workshop",
+    "title": "FICTIONAL — Mid-Atlantic Research Training Award",
+    "source_type": "synthetic_demo_only",
+    "max_award_usd": 800,
+    "eligibility_text": "Applicants must reside or work in Washington, DC, Maryland, or Virginia. Applicants must be either current research professionals or enrolled graduate students. The trip must be to a training workshop rather than to a research conference. The requested amount must not exceed $800.",
+    "mandatory": ["dc_md_va", "research_professional_or_grad_student", "training_workshop", "request_le_800"]
+  },
+  {
+    "id": "open_methods",
+    "title": "FICTIONAL — Open Methods Dissemination Award",
+    "source_type": "synthetic_demo_only",
+    "max_award_usd": 1200,
+    "eligibility_text": "Applicants must have an accepted presentation at a scientific meeting. Applicants must make the software described in their presentation publicly available under an MIT or Apache-2.0 software license. The amount requested must not exceed $1,200.",
+    "mandatory": ["accepted_presentation", "repo_mit_or_apache", "request_le_1200"]
+  },
+  {
+    "id": "postdoc_exchange",
+    "title": "FICTIONAL — Postdoctoral International Exchange Fund",
+    "source_type": "synthetic_demo_only",
+    "max_award_usd": 2000,
+    "eligibility_text": "Applicants must currently hold a postdoctoral research appointment. Applicants must provide an invitation letter from an international host laboratory. The requested amount must not exceed $2,000.",
+    "mandatory": ["current_postdoc", "international_host_invitation", "request_le_2000"]
+  },
+  {
+    "id": "community_science",
+    "title": "FICTIONAL — Community Science Outreach Microgrant",
+    "source_type": "synthetic_demo_only",
+    "max_award_usd": 1000,
+    "eligibility_text": "Applicants must be based in the United States. The project must be a public-facing community science outreach or science education initiative. The funding request must not exceed $1,000.",
+    "mandatory": ["us_based", "outreach_project", "request_le_1000"]
+  }
+]
