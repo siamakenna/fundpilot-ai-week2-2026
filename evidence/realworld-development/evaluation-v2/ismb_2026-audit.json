@@ -1,0 +1,48 @@
+{
+  "model": "gemma3:1b",
+  "source_sha256": "c9b882c1dd0f1585d0640709edff872905c9bb0d0d6a11868597fe004f18f320",
+  "calls": [
+    {
+      "ids": [
+        0
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-14T22:03:50.940554Z",
+        "response": "{\"passage_0\": {\"kind\": \"requirement\", \"keys\": [\"abstract_submitted\", \"abstract_accepted\", \"unknown\"]}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 5917165077,
+        "load_duration": 1111624,
+        "prompt_eval_count": 523,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 4151537999,
+        "eval_count": 31,
+        "eval_duration": 1745012000
+      },
+      "seconds": 5.925
+    },
+    {
+      "ids": [
+        1
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-14T22:03:55.883023Z",
+        "response": "{\"passage_1\": {\"kind\": \"requirement\", \"keys\": [\"membership\", \"membership\"]}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 4933833869,
+        "load_duration": 1314247,
+        "prompt_eval_count": 466,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 3640609000,
+        "eval_count": 23,
+        "eval_duration": 1275137000
+      },
+      "error": "ValueError: Model duplicated a criterion. Review the source and try again.",
+      "seconds": 4.94
+    }
+  ],
+  "seconds": 10.866
+}

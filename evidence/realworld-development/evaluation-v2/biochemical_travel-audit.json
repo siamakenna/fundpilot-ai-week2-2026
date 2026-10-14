@@ -1,0 +1,68 @@
+{
+  "model": "gemma3:1b",
+  "source_sha256": "80dd56e7109217e03d56ecd3dcfa64ab8e051248b5b91f8f241949e08c42d380",
+  "calls": [
+    {
+      "ids": [
+        0
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-14T22:05:11.93457Z",
+        "response": "{\"passage_0\": {\"kind\": \"award\", \"keys\": [\"unknown\"]}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 11219201174,
+        "load_duration": 1928651,
+        "prompt_eval_count": 430,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 3606050000,
+        "eval_count": 20,
+        "eval_duration": 1032502999
+      },
+      "seconds": 11.225
+    },
+    {
+      "ids": [
+        1
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-14T22:05:17.536275Z",
+        "response": "{\"passage_1\": {\"kind\": \"award\", \"keys\": [\"unknown\"]}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 5594633098,
+        "load_duration": 1508967,
+        "prompt_eval_count": 432,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 4126524999,
+        "eval_count": 20,
+        "eval_duration": 1454182000
+      },
+      "seconds": 5.6
+    },
+    {
+      "ids": [
+        2
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-14T22:05:23.636511Z",
+        "response": "{\"passage_2\": {\"kind\": \"deadline\", \"keys\": [\"unknown\", \"unknown\"]}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 6094501584,
+        "load_duration": 1025684,
+        "prompt_eval_count": 433,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 4286868999,
+        "eval_count": 22,
+        "eval_duration": 1793660000
+      },
+      "error": "ValueError: Model duplicated a criterion. Review the source and try again.",
+      "seconds": 6.103
+    }
+  ],
+  "seconds": 22.932
+}

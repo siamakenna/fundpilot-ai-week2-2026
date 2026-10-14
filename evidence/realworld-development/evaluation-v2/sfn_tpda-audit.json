@@ -1,0 +1,48 @@
+{
+  "model": "gemma3:1b",
+  "source_sha256": "7299d9299e8935de49de534af9acfdfcd7fab4a8c59d2f06d290dceb06c6827a",
+  "calls": [
+    {
+      "ids": [
+        0
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-14T22:04:03.545545Z",
+        "response": "{\"passage_0\": {\"kind\": \"award\", \"keys\": [\"unknown\"]}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 7652142233,
+        "load_duration": 1298088,
+        "prompt_eval_count": 504,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 6117234000,
+        "eval_count": 20,
+        "eval_duration": 1517027000
+      },
+      "seconds": 7.66
+    },
+    {
+      "ids": [
+        1
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-14T22:04:11.265507Z",
+        "response": "{\"passage_1\": {\"kind\": \"requirement\", \"keys\": [\"in_person\", \"in_person\", \"in_person\", \"in_person\", \"in_person\"]}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 7711712779,
+        "load_duration": 2405604,
+        "prompt_eval_count": 487,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 5065132000,
+        "eval_count": 41,
+        "eval_duration": 2630431000
+      },
+      "error": "ValueError: Model duplicated a criterion. Review the source and try again.",
+      "seconds": 7.744
+    }
+  ],
+  "seconds": 15.406
+}

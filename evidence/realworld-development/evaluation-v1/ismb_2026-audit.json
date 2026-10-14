@@ -1,0 +1,33 @@
+{
+  "model": "gemma3:1b",
+  "source_sha256": "c9b882c1dd0f1585d0640709edff872905c9bb0d0d6a11868597fe004f18f320",
+  "calls": [
+    {
+      "ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-14T22:02:00.354449Z",
+        "response": "{\"passage_0\": {\"kind\": \"requirement\", \"keys\": [\"membership\", \"membership\", \"membership\", \"membership\"]}, \"passage_1\": {\"kind\": \"exclusion\", \"keys\": [\"membership\"]}, \"passage_2\": {\"kind\": \"requirement\", \"keys\": [\"membership\", \"membership\"]}, \"passage_3\": {\"kind\": \"exclusion\", \"keys\": [\"membership\"]}, \"passage_4\": {\"kind\": \"requirement\", \"keys\": [\"membership\", \"membership\"]}, \"passage_5\": {\"kind\": \"requirement\", \"keys\": [\"membership\", \"membership\"]}\n}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 15090890987,
+        "load_duration": 3237679,
+        "prompt_eval_count": 942,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 6713316000,
+        "eval_count": 134,
+        "eval_duration": 8352804000
+      },
+      "error": "ValueError: Model duplicated a criterion. Review the source and try again.",
+      "seconds": 15.101
+    }
+  ],
+  "seconds": 15.102
+}

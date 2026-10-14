@@ -1,0 +1,46 @@
+{
+  "split": "development",
+  "reviewer": "Codex assistant, source-reviewed separately from evaluated Gemma; NOT independently human-verified",
+  "live_model": {
+    "true_positive": 20,
+    "predicted": 47,
+    "reference": 48,
+    "precision": 0.425531914893617,
+    "recall": 0.4166666666666667,
+    "f1": 0.42105263157894735,
+    "mandatory_matched": 15,
+    "mandatory_reference": 34,
+    "mandatory_recall": 0.4411764705882353,
+    "category_correct": 20,
+    "paragraphs": 40,
+    "exclusion_category_correct": 6,
+    "exclusion_paragraphs": 12,
+    "unsupported_predictions": 13
+  },
+  "rules_baseline": {
+    "true_positive": 30,
+    "predicted": 48,
+    "reference": 48,
+    "precision": 0.625,
+    "recall": 0.625,
+    "f1": 0.625,
+    "mandatory_matched": 23,
+    "mandatory_reference": 34,
+    "mandatory_recall": 0.6764705882352942,
+    "category_correct": 27,
+    "paragraphs": 40,
+    "exclusion_category_correct": 9,
+    "exclusion_paragraphs": 12,
+    "unsupported_predictions": 13
+  },
+  "cases": 5,
+  "completed": 5,
+  "failed": 0,
+  "latency_seconds": {
+    "mean": 50.211999999999996,
+    "min": 45.292,
+    "max": 55.199
+  },
+  "inference": "actual local Gemma; no retries or fixture substitutions",
+  "scope": "Selected original paragraphs, not whole-document completeness or independently human-adjudicated eligibility accuracy"
+}

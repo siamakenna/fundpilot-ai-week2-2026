@@ -1,0 +1,410 @@
+[
+  {
+    "id": "cns_2027",
+    "reference": [
+      {
+        "source_line": 82,
+        "kind": "requirement",
+        "keys": [
+          "membership",
+          "career_stage"
+        ],
+        "mandatory": true,
+        "passage_sha256": "8422461dba282c84e6e8d2d61efe50afd72be352a34b9e941663da162081a871"
+      },
+      {
+        "source_line": 83,
+        "kind": "requirement",
+        "keys": [
+          "first_author",
+          "presenting_author"
+        ],
+        "mandatory": true,
+        "passage_sha256": "e27d9633aefe0d4538b36c6aab602f9e7a0d13ddbb53ddbfc782b3ddc951ad74"
+      },
+      {
+        "source_line": 85,
+        "kind": "requirement",
+        "keys": [
+          "abstract_submitted"
+        ],
+        "mandatory": true,
+        "passage_sha256": "02837e7f0545f57f6a4acbfc5ae8e08e6b14adf6335347ecaebdedf096532fd8"
+      },
+      {
+        "source_line": 86,
+        "kind": "deadline",
+        "keys": [
+          "unknown"
+        ],
+        "mandatory": false,
+        "passage_sha256": "84df26d7584d2ee08d71de1354503df31363bf39d7a4a1d4a13ce2770680fe94"
+      },
+      {
+        "source_line": 89,
+        "kind": "document",
+        "keys": [
+          "documents"
+        ],
+        "mandatory": true,
+        "passage_sha256": "6bc48ea4360f0da382ca41c5e30473a43daef3985ffae3fe45060dd27aad3236"
+      },
+      {
+        "source_line": 93,
+        "kind": "requirement",
+        "keys": [
+          "presenting_author",
+          "in_person"
+        ],
+        "mandatory": true,
+        "passage_sha256": "45ea5f436700b42bb2013ac9a384cfb386779ea4d22b2c4d0d2feade681b8c90"
+      },
+      {
+        "source_line": 94,
+        "kind": "exclusion",
+        "keys": [
+          "unknown"
+        ],
+        "mandatory": true,
+        "passage_sha256": "4ecc1a7936e0b57a2b64bbb8afc28cde097b7fce5c738767c1b987351144d6ac"
+      },
+      {
+        "source_line": 96,
+        "kind": "award",
+        "keys": [
+          "unknown"
+        ],
+        "mandatory": false,
+        "passage_sha256": "a5f2eee6b3eb805543833800af25ece8a46846fdadf8a7b19466d2b943ca5a31"
+      }
+    ],
+    "predicted": [],
+    "error": "Local Gemma could not return a complete, valid analysis. Check Ollama and the downloaded model, then retry; no reference response was substituted. Model duplicated a criterion. Review the source and try again.",
+    "seconds": 9.573
+  },
+  {
+    "id": "ismb_2026",
+    "reference": [
+      {
+        "source_line": 145,
+        "kind": "exclusion",
+        "keys": [
+          "abstract_accepted",
+          "unknown"
+        ],
+        "mandatory": true,
+        "passage_sha256": "bd6f50ee6e6fc818f9ce0a70d6dace8cb65b7ab5778adb2f103d10e005bc3c3a"
+      },
+      {
+        "source_line": 149,
+        "kind": "exclusion",
+        "keys": [
+          "membership"
+        ],
+        "mandatory": true,
+        "passage_sha256": "20de5c61f127e558368db955c96888e4b501cfa1b5a8227cb855b707a459ed42"
+      },
+      {
+        "source_line": 150,
+        "kind": "exclusion",
+        "keys": [
+          "abstract_accepted",
+          "presenting_author"
+        ],
+        "mandatory": true,
+        "passage_sha256": "53f3b29cfe494c93d68b5971b045fbca7d0c816aa92691b5f5fb3a8fb3c05fc3"
+      },
+      {
+        "source_line": 151,
+        "kind": "exclusion",
+        "keys": [
+          "career_stage",
+          "us_federal_employee"
+        ],
+        "mandatory": true,
+        "passage_sha256": "a1b4bc63adb024a2fb9fd9d0ee37ecc4dd29e2ba3941f0b589367622c3f115b3"
+      },
+      {
+        "source_line": 152,
+        "kind": "deadline",
+        "keys": [
+          "registration"
+        ],
+        "mandatory": false,
+        "passage_sha256": "03fef333464009804a2f1b837a9e171c416ce9e9114c720f02f2efd9890433ad"
+      },
+      {
+        "source_line": 153,
+        "kind": "requirement",
+        "keys": [
+          "upfront_costs"
+        ],
+        "mandatory": true,
+        "passage_sha256": "04d6c13f8ac386b1424d8ba7f2a636f11c17f1ba2b30f96f24bcb61bf0ab6bf1"
+      },
+      {
+        "source_line": 156,
+        "kind": "funding_limit",
+        "keys": [
+          "unknown"
+        ],
+        "mandatory": true,
+        "passage_sha256": "0bc7746104e6a0ad4fb7d2a5fa1e0394045ba0cbb828558f766673518e0687ef"
+      },
+      {
+        "source_line": 159,
+        "kind": "deadline",
+        "keys": [
+          "unknown"
+        ],
+        "mandatory": false,
+        "passage_sha256": "7cd474d733b1bb454e4688b9c1375d648b90483896ec6ef0fb3971bc8e64eefb"
+      }
+    ],
+    "predicted": [],
+    "error": "Local Gemma could not return a complete, valid analysis. Check Ollama and the downloaded model, then retry; no reference response was substituted. Model duplicated a criterion. Review the source and try again.",
+    "seconds": 10.867
+  },
+  {
+    "id": "sfn_tpda",
+    "reference": [
+      {
+        "source_line": 201,
+        "kind": "unclear",
+        "keys": [
+          "in_person",
+          "presenting_author",
+          "unknown"
+        ],
+        "mandatory": false,
+        "passage_sha256": "c4090be64d074227bfe33e2bfc22c5bdadc5173a7be511287581c16bfe2e5e85"
+      },
+      {
+        "source_line": 202,
+        "kind": "unclear",
+        "keys": [
+          "in_person"
+        ],
+        "mandatory": false,
+        "passage_sha256": "cd8bfbf083a97cdfba7b344a98a0edec20abedb140fc6b4ccfb9b59f3070c51f"
+      },
+      {
+        "source_line": 215,
+        "kind": "document",
+        "keys": [
+          "documents"
+        ],
+        "mandatory": true,
+        "passage_sha256": "b60fe0e2a72de1e91ee80d2e764a2b63cb9d15a2758a72e9e3b1adf0002ef5dc"
+      },
+      {
+        "source_line": 221,
+        "kind": "requirement",
+        "keys": [
+          "presenting_author"
+        ],
+        "mandatory": true,
+        "passage_sha256": "c8a1de2247e08a93bd2f332dad85917f23787d720b4ddf0e55c221e014279134"
+      },
+      {
+        "source_line": 222,
+        "kind": "exclusion",
+        "keys": [
+          "unknown"
+        ],
+        "mandatory": true,
+        "passage_sha256": "5a26b2248d20e50cc6c6a1d81b38846a924fc6965847f5512b23677161026e25"
+      },
+      {
+        "source_line": 223,
+        "kind": "requirement",
+        "keys": [
+          "membership"
+        ],
+        "mandatory": true,
+        "passage_sha256": "eed694d563a0b27524af8dc671acf3c19fe7ad9d48966e5a99215cc22f68922f"
+      },
+      {
+        "source_line": 224,
+        "kind": "unclear",
+        "keys": [
+          "career_stage"
+        ],
+        "mandatory": false,
+        "passage_sha256": "1295d9b56b3522e16df933eccb952810a36da253505872d197fbabbfe61cd168"
+      },
+      {
+        "source_line": 225,
+        "kind": "exclusion",
+        "keys": [
+          "prior_award"
+        ],
+        "mandatory": true,
+        "passage_sha256": "5ab8e4f81a5b4125f64ca83f1cb4f24e29325bcca73ce07c7db3c307b534728b"
+      }
+    ],
+    "predicted": [],
+    "error": "Local Gemma could not return a complete, valid analysis. Check Ollama and the downloaded model, then retry; no reference response was substituted. Model duplicated a criterion. Review the source and try again.",
+    "seconds": 15.439
+  },
+  {
+    "id": "biologists_travel",
+    "reference": [
+      {
+        "source_line": 74,
+        "kind": "award",
+        "keys": [
+          "career_stage"
+        ],
+        "mandatory": false,
+        "passage_sha256": "44a19c9b34c6e90ed96aff08d112e2ab8b412eebf911ea7c21a183bb68b3a724"
+      },
+      {
+        "source_line": 81,
+        "kind": "requirement",
+        "keys": [
+          "unknown"
+        ],
+        "mandatory": true,
+        "passage_sha256": "cd7955db9cf6c227040c7bf223fb28e5e69f2aaa9ba59f5eb8befcaed6c1b638"
+      },
+      {
+        "source_line": 82,
+        "kind": "requirement",
+        "keys": [
+          "unknown"
+        ],
+        "mandatory": true,
+        "passage_sha256": "ebd9c154cdc22822830ace63c1c68b939dca2508a8247eba7523cb6cdfc137b5"
+      },
+      {
+        "source_line": 83,
+        "kind": "requirement",
+        "keys": [
+          "unknown"
+        ],
+        "mandatory": true,
+        "passage_sha256": "a488210702306f22ba59d99f040972129ba10b4bc8eb6a1c2959457dbca6388c"
+      },
+      {
+        "source_line": 84,
+        "kind": "exclusion",
+        "keys": [
+          "unknown"
+        ],
+        "mandatory": true,
+        "passage_sha256": "96251fb9d833fee9217d7bcc8441c509d8d09911d0e48810d3ba1a4e43c5ca74"
+      },
+      {
+        "source_line": 85,
+        "kind": "exclusion",
+        "keys": [
+          "unknown"
+        ],
+        "mandatory": true,
+        "passage_sha256": "bb869705add226bb23cdf98b3ee89055f65b627f2f5d531a5f88939adcde19d8"
+      },
+      {
+        "source_line": 86,
+        "kind": "requirement",
+        "keys": [
+          "career_stage"
+        ],
+        "mandatory": true,
+        "passage_sha256": "be35a99b9337599c21ce9ad950c41dc7a10ea74ce944caa611fd1dad738cfdbd"
+      },
+      {
+        "source_line": 88,
+        "kind": "exclusion",
+        "keys": [
+          "prior_award"
+        ],
+        "mandatory": true,
+        "passage_sha256": "9a08527bc0c5df010de5aeb734e0b4a4bba14e56d783b721990c0955a92f6023"
+      }
+    ],
+    "predicted": [],
+    "error": "Local Gemma could not return a complete, valid analysis. Check Ollama and the downloaded model, then retry; no reference response was substituted. Model duplicated a criterion. Review the source and try again.",
+    "seconds": 49.338
+  },
+  {
+    "id": "biochemical_travel",
+    "reference": [
+      {
+        "source_line": 101,
+        "kind": "award",
+        "keys": [
+          "unknown"
+        ],
+        "mandatory": false,
+        "passage_sha256": "1e10efc7363941c9295ef911e245a5f55669769cc9ab8301ca5b5f8152eb9211"
+      },
+      {
+        "source_line": 102,
+        "kind": "award",
+        "keys": [
+          "unknown"
+        ],
+        "mandatory": false,
+        "passage_sha256": "c462f06123e3ca8f976558068362f23984824818c5ccb5ac486c43ee515901e0"
+      },
+      {
+        "source_line": 108,
+        "kind": "deadline",
+        "keys": [
+          "unknown"
+        ],
+        "mandatory": false,
+        "passage_sha256": "0b31fd9e1adefdd1e9e7aa20c1d50122defbb694518bbbfb23995c2a9da09afa"
+      },
+      {
+        "source_line": 112,
+        "kind": "unclear",
+        "keys": [
+          "membership"
+        ],
+        "mandatory": false,
+        "passage_sha256": "fc7fc9d9f827e9e92b252800b79c472fefa4460ccd38eb0bb95739a2e8539141"
+      },
+      {
+        "source_line": 113,
+        "kind": "exclusion",
+        "keys": [
+          "prior_award"
+        ],
+        "mandatory": true,
+        "passage_sha256": "a923a3e8eccc75a5df74dfa0176ee63b6681bfea337e940cb53466d7cb914018"
+      },
+      {
+        "source_line": 114,
+        "kind": "funding_limit",
+        "keys": [
+          "unknown"
+        ],
+        "mandatory": true,
+        "passage_sha256": "76fd75836fa4e120e5c2c7ed9763d902308a075b3c07429d25b7ab51881bd139"
+      },
+      {
+        "source_line": 115,
+        "kind": "requirement",
+        "keys": [
+          "abstract_submitted"
+        ],
+        "mandatory": true,
+        "passage_sha256": "ce54be541a68a33471ca7ecc11fbe441948dd45af0e12a247246098750d25fb5"
+      },
+      {
+        "source_line": 117,
+        "kind": "exclusion",
+        "keys": [
+          "unknown"
+        ],
+        "mandatory": true,
+        "passage_sha256": "1d996ed02e793378f7dfb02cf688146a99a16f8d666eb23361cb1a0757ddcd13"
+      }
+    ],
+    "predicted": [],
+    "error": "Local Gemma could not return a complete, valid analysis. Check Ollama and the downloaded model, then retry; no reference response was substituted. Model duplicated a criterion. Review the source and try again.",
+    "seconds": 22.934
+  }
+]

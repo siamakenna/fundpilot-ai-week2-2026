@@ -1,29 +1,38 @@
 # FundPilot AI
 
-[Public repository](https://github.com/siamakenna/fundpilot-ai-week2-2026) · [Submission draft](docs/DEV_SUBMISSION_DRAFT.md)
+**Check public funding requirements before spending hours on an application.**
+Paste an organizer's announcement, answer ordinary applicant questions, and use
+local Gemma to help interpret the text. Python attaches exact source passages and
+compares supported conditions with your declared facts. Download the evidence and
+questions that still need the sponsor's answer.
 
-**A local Gemma prototype for checking fictional funding requirements against supplied facts.**
-Before spending hours on a travel-award application, see which conditions match,
-which do not, and which still need verification. The result includes exact source
-sentences and a downloadable Markdown report.
+[Code](https://github.com/siamakenna/fundpilot-ai-week2-2026) ·
+[Official sources](docs/OFFICIAL_SOURCES.md) · [Evaluation rubric](evaluation/RUBRIC.md) ·
+[Submission draft](docs/DEV_SUBMISSION_DRAFT.md)
 
-This independent Week 2 project continues the supplied starter. It is a tested
-prototype, not a funder's decision service. **All built-in calls and profiles are
-fictional.** No NIH, institutional or private grant material is included.
+## Three-step workflow
 
-## Demo and submission status
+1. Paste public eligibility text, including exclusions, amounts, dates and application
+   instructions. Add the official URL for attribution; FundPilot does not fetch it.
+2. Enter your career stage and Yes/No/Unknown facts. Leave unknown amounts blank.
+   The form defaults to **Live local Gemma**; no JSON knowledge is needed.
+3. Review MATCH, NOT MATCH, UNKNOWN and informational rows, precise source evidence,
+   dates and next steps. Download the Markdown report. Changing inputs clears the
+   previous result; inputs are locked during an in-flight analysis.
 
-**Video URL: [INSERT VERIFIED PUBLIC VIDEO URL WHEN AVAILABLE]**
+MATCH means a supported textual comparison with a declared fact—not an independently
+verified credential. Contradictions can be useful without claiming official
+ineligibility. Every pasted passage requires scope review for additional conditions
+and linked policies. No real-call report certifies eligibility or guarantees funding.
 
-No public video or deployed app exists yet. View the [authentic live screenshot](evidence/live-ui-graduate.png)
-and [downloaded live report](evidence/live-ui-downloaded-report.md). Follow the
-[short capture procedure](docs/LOCAL_CAPTURE_STEPS.md) to complete the demo.
-The [release-readiness checklist](docs/RELEASE_READINESS.md) records verified checks
-and the remaining publication blockers. The DEV article remains unpublished.
+Fictional reference examples remain in a secondary tab labeled **legacy**. The
+explicit **Rule baseline (NO AI)** option runs the same public text without a model;
+it is never substituted automatically for a failed live request.
 
 ## Run locally
 
-Requires Python 3.11+ and [Ollama](https://ollama.com/).
+Requires Python 3.11+ and [Ollama](https://ollama.com/). Initial installation and model
+download require internet. Inference uses the local runtime afterward.
 
 ```bash
 python3 -m venv .venv
@@ -31,90 +40,90 @@ source .venv/bin/activate
 pip install -e '.[dev]'
 python -m pytest -q
 ollama pull gemma3:1b
-OLLAMA_NO_CLOUD=1 ollama serve  # separate terminal; skip if already running
+```
+
+Start Ollama in one terminal (skip if already running), then the application in another:
+
+```bash
+OLLAMA_NO_CLOUD=1 ollama serve
+```
+
+```bash
 GRADIO_ANALYTICS_ENABLED=False python app.py
 ```
 
-Open the localhost URL printed by Gradio. The three steps are: choose a fictional
-researcher, read the fictional call, review evidence and download. Select **Live
-local Gemma** to actually run the model. **Curated reference demo (NO AI)** uses
-hand-authored fixture clauses and is never presented as model output.
+Open the localhost URL printed by Gradio. On the development Mac, the official
+Ollama 0.40.4 binary is installed in `.tools/ollama/ollama` (ignored by Git).
+The verified model is `gemma3:1b`, Q4_K_M. `requirements-tested.txt` records tested
+Python packages. No hosted API key, subscription, authentication or payment service
+is required. Installation still requires technical setup; a turnkey installer is
+not claimed.
 
-On the development Mac, Ollama 0.40.4 is installed locally in `.tools/ollama`; use
-`export PATH="$PWD/.tools/ollama:$PATH"`. That directory is excluded from Git.
-`requirements-tested.txt` records the tested Python dependency versions.
-
-## Real model, explicit boundaries
-
-1. Python splits the call into sentences. Every sentence is sent to Gemma.
-2. Gemma chooses the supported criterion, mandatory flag and dollar ceiling.
-   Sentences with a literal `$` or `USD` marker are restricted to a money-cap or
-   unsupported key; other sentences cannot emit a dollar amount. This is a
-   documented schema constraint, not a model-generated finding.
-3. Python copies the exact input sentence as the quote. **Gemma does not generate
-   the quote in the release adapter.** No quote is invented or repaired.
-4. Validation checks schema, amount evidence and source identity. Built-in calls
-   also compare every classified clause against the authored reference, including
-   key, full sentence, amount and mandatory flag. Missing or mismatched clauses
-   produce UNKNOWN findings; the reference never replaces model output.
-5. Deterministic Python checks the supplied profile. A verified mandatory mismatch
-   can yield NOT ELIGIBLE. Unknowns block approval. Edited/custom calls always
-   remain NEEDS VERIFICATION, including when the model produces confident labels.
-
-Only funding-call text goes to local Ollama. The profile is evaluated in Python.
-Ollama endpoints are limited to loopback; redirects and environment proxies are
-blocked. Gradio binds to 127.0.0.1 with sharing and analytics disabled. Setup and
-model download require internet. No hosted model API, account or payment flow is
-integrated. Reports and browser history are local files; local is not encrypted.
-
-## Reproduce the evidence
+Developer reproduction of the real-call path:
 
 ```bash
-python -m fundpilot.cli --mode gemma --profile alex_postgrad --opportunity early_career_travel --output alex.md --audit alex-live.json
-python -m fundpilot.cli --mode gemma --profile alex_postgrad --opportunity graduate_student_only --output graduate.md
-python -m fundpilot.cli --mode gemma --profile casey_uncertain --opportunity early_career_travel --output casey.md
-python scripts/evaluate.py --output evidence/my-new-run
+python -m fundpilot.public_cli --source-file public-call.txt --mode gemma --output report.md --audit model-labels.json
 ```
 
-The benchmark refuses to overwrite existing results. Audit files contain the
-actual prompts and responses: use only fictional data when sharing them.
+The CLI defaults to unknown applicant facts. Its optional `--profile-json` is for
+developer reproduction; ordinary users use the form. Legacy `fundpilot.cli` retains
+the original synthetic benchmark for reproducibility.
 
-- [Measured evaluation and limitations](docs/EVALUATION.md)
-- [Command history](docs/COMMANDS_RUN.md)
-- [Authentic UI evidence](evidence/UI_CHECKS.md)
-- [Exact local video-capture instructions](docs/LOCAL_CAPTURE_STEPS.md)
-- [Unpublished DEV submission draft](docs/DEV_SUBMISSION_DRAFT.md)
-- [Provenance and dependency licenses](docs/PROVENANCE_AND_LICENSES.md)
+## Interpretation and safety boundaries
 
-## What this prototype cannot establish
+- Every nonblank paragraph/list item receives an ID and exact character offsets.
+  Gemma classifies one passage at a time under a strict schema. Fixed Boolean
+  criterion fields avoid duplicated list entries observed in development.
+- Lexical candidates constrain available predicates; Gemma selects applicability
+  and category. This is a measured hybrid, not unrestricted semantic extraction.
+- Python attaches the original source. Source quotes are not generated by Gemma.
+- A comparison is permitted only where the model and explicit rules agree.
+  Unsupported criteria, exceptions, durations, exclusions beyond supported cases,
+  and mixed meanings remain UNKNOWN. Missing/malformed model output fails visibly.
+- Sponsor stipends differ from applicant request ceilings. USD, GBP and EUR request
+  comparisons require the same currency; no exchange rates are invented.
+- Explicit dated milestones are shown with their apparent purpose. Missing years,
+  timezone boundaries and ambiguous cutoffs require review. A future conference
+  does not imply open applications.
+- Paragraph coverage does not establish semantic completeness. Linked policies,
+  complicated dependencies and real-world eligibility need sponsor confirmation.
 
-The measured release run matched 20/21 clauses (95.24% precision/recall), accepted
-5/6 reports and rejected 1/6. All 50 tests pass. A separate CLI run had an
-unexplained wall-time outlier; reliable responsiveness is not established.
+Only pasted public source text goes to local Ollama. Profile facts remain in Python.
+Endpoints are loopback-only, redirects/proxies are blocked, Gradio sharing and
+analytics are disabled. Local reports are not encrypted. Do not paste private grant
+or institutional documents.
 
-Six synthetic calls are a development set, not a general accuracy estimate. The
-prompt was tuned against these calls. No held-out evaluation, real grants,
-customer validation, willingness-to-pay evidence or paid users are claimed.
-Earlier failed prompts and their raw responses are retained in `evidence/`.
+## Evidence and limitations
 
-Sentence splitting loses cross-sentence conditions and context. Currency-marker
-routing does not cover all written-out amounts, currencies or mixed conditions.
-Dates use supplied years rather than exact anniversaries; self-reported licenses
-and presentation acceptances are not independently verified. Confirm full calls,
-deadlines, sponsor interpretations and all UNKNOWN findings before acting.
+The [product audit](docs/PRODUCT_AUDIT.md) records the baseline gaps.
+Five official development sources and three held-out sources were assigned before
+tuning in [the committed split](evaluation/source_split.json). Annotations are
+assistant-reviewed against the sources, **not independently human-verified**.
+Full source copies stay in ignored local storage; public annotations contain hashes,
+line references and labels. Tests distinguish mocks from actual local inference.
 
-This project does not claim to beat a keyword baseline or a closed model; those
-comparisons were not measured. The $9 report / $39 monthly workspace ideas are
-unvalidated pricing hypotheses. The current scope has no new hosting integrations.
+The original **20/21 synthetic clause matches** are historical results only;
+[the baseline evaluation](docs/EVALUATION.md) cannot establish real-world accuracy.
+Failed real-source strategies remain in `evidence/realworld-development/`.
+No model victory over the rule baseline, real customer, revenue or validated price
+is assumed. A $9 report or $39/month workspace remains a business hypothesis.
 
-## License and challenge
+## Demo and submission
 
-Application code and synthetic fixtures: [MIT](LICENSE). Dependencies keep their
-own licenses. Gemma 3 weights are downloaded separately under [Google's Gemma
-terms](https://ai.google.dev/gemma/terms); they are not included or relicensed.
+Video URL: **[INSERT VERIFIED PUBLIC VIDEO URL WHEN AVAILABLE]**
 
-Created during the October 12–18, 2026 challenge window according to the owner's
-attestation; Git records the supplied starter and subsequent real changes. Original
-fixture JSON files are unchanged. See the [official Week 2 challenge](https://dev.to/challenges/hacktoberfest-week2-2026-10-12)
-for the template, categories and deadline. No DEV post has been published by this
-continuation. Any changes made after the deadline must be noted here.
+The DEV article remains unpublished. Demo evidence and links will identify actual
+model runs; curated fixtures are never passed off as live inference.
+
+## License and provenance
+
+Application code and original synthetic fixtures: [MIT](LICENSE), copyright 2026
+Makenna Rodriguez. Dependencies retain their own licenses. Gemma weights are
+separately downloaded under [Google's Gemma terms](https://ai.google.dev/gemma/terms),
+not included or relicensed. Public source passages remain their owners' content;
+only short attributed excerpts are redistributed.
+
+The owner attests independent work during the Week 2 contest window. Original
+fixtures and baseline failure evidence remain unchanged. See
+[provenance](docs/PROVENANCE_AND_LICENSES.md) and the
+[official challenge](https://dev.to/challenges/hacktoberfest-week2-2026-10-12).

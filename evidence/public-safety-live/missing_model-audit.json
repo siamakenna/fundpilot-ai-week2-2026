@@ -1,0 +1,14 @@
+{
+  "model": "fundpilot-intentionally-missing-model:latest",
+  "source_sha256": "70ff432f1dcf645d3f44e2a00a20b34caab6c173262a740e7379b0aa29f7a84c",
+  "calls": [
+    {
+      "ids": [
+        0
+      ],
+      "error": "HTTPError: HTTP Error 404: Not Found",
+      "seconds": 0.013
+    }
+  ],
+  "seconds": 0.013
+}
