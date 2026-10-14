@@ -110,61 +110,67 @@ def clear_result(*_):
     return "**Inputs changed.** Analyze again to create a report for these inputs.", None
 
 
-with gr.Blocks(title="FundPilot AI — Evidence-First Funding Readiness", analytics_enabled=False) as demo:
-    gr.Markdown(
-        "# FundPilot AI\n### Before you spend hours applying, check the fine print.\n"
-        "Compare your supplied facts with the funding call, see the exact evidence, and take away questions to verify. "
-        "**Every built-in profile and opportunity is fictional.**"
-    )
-    with gr.Row():
-        with gr.Column(scale=1):
-            gr.Markdown("## 1. Choose a researcher")
-            profile_id = gr.Dropdown(
-                choices=[(p["display_name"], k) for k, p in PROFILES.items()],
-                value="alex_postgrad",
-                label="Fictional researcher",
-            )
-            overview = gr.Markdown(profile_overview("alex_postgrad"))
-            with gr.Accordion("Edit supplied facts (JSON)", open=False):
+with gr.Blocks(title="FundPilot AI — Public Funding Readiness", analytics_enabled=False) as demo:
+    gr.Markdown("# FundPilot AI")
+    with gr.Tab("Analyze a public announcement"):
+        from fundpilot.real_ui import build_public_ui
+        build_public_ui()
+    with gr.Tab("Fictional reference examples (legacy)"):
+        gr.Markdown(
+            "# FundPilot AI\n### Before you spend hours applying, check the fine print.\n"
+            "Compare your supplied facts with the funding call, see the exact evidence, and take away questions to verify. "
+            "**Every built-in profile and opportunity is fictional.**"
+        )
+        with gr.Row():
+            with gr.Column(scale=1):
+                gr.Markdown("## 1. Choose a researcher")
+                profile_id = gr.Dropdown(
+                    choices=[(p["display_name"], k) for k, p in PROFILES.items()],
+                    value="alex_postgrad",
+                    label="Fictional researcher",
+                )
+                overview = gr.Markdown(profile_overview("alex_postgrad"))
+                with gr.Accordion("Edit supplied facts (JSON)", open=False):
+                    gr.Markdown(
+                        "Use true, false, or null for unknown facts. Only the funding text is sent to local Gemma."
+                    )
+                    profile_json = gr.Code(
+                        value=initial_profile("alex_postgrad"), language="json", label="Profile JSON (editable)"
+                    )
+                gr.Markdown("## 2. Read the funding call")
+                opportunity = gr.Dropdown(
+                    choices=[(v["title"].replace("FICTIONAL — ", ""), k) for k, v in OPS.items()],
+                    value="early_career_travel",
+                    label="Fictional funding call",
+                )
+                call_text = gr.Textbox(
+                    value=initial_opportunity("early_career_travel"),
+                    lines=8,
+                    label="Funding requirements (editable)",
+                )
+                mode = gr.Radio(
+                    ["Curated reference demo (NO AI)", "Live local Gemma"],
+                    value="Curated reference demo (NO AI)",
+                    label="Analysis method",
+                )
                 gr.Markdown(
-                    "Use true, false, or null for unknown facts. Only the funding text is sent to local Gemma."
+                    "Custom or edited calls always need human verification. Local Gemma must be running for live analysis."
                 )
-                profile_json = gr.Code(
-                    value=initial_profile("alex_postgrad"), language="json", label="Profile JSON (editable)"
-                )
-            gr.Markdown("## 2. Read the funding call")
-            opportunity = gr.Dropdown(
-                choices=[(v["title"].replace("FICTIONAL — ", ""), k) for k, v in OPS.items()],
-                value="early_career_travel",
-                label="Fictional funding call",
-            )
-            call_text = gr.Textbox(
-                value=initial_opportunity("early_career_travel"),
-                lines=8,
-                label="Funding requirements (editable)",
-            )
-            mode = gr.Radio(
-                ["Curated reference demo (NO AI)", "Live local Gemma"],
-                value="Curated reference demo (NO AI)",
-                label="Analysis method",
-            )
-            gr.Markdown(
-                "Custom or edited calls always need human verification. Local Gemma must be running for live analysis."
-            )
-            go = gr.Button("Analyze requirements", variant="primary")
-        with gr.Column(scale=1):
-            gr.Markdown("## 3. Review evidence & download")
-            output = gr.Markdown("**No analysis has run.** Select a scenario and click Analyze requirements.")
-            downloadable = gr.File(label="Download Markdown report", interactive=False)
-    profile_id.change(initial_profile, inputs=profile_id, outputs=profile_json)
-    profile_id.change(profile_overview, inputs=profile_id, outputs=overview)
-    opportunity.change(initial_opportunity, inputs=opportunity, outputs=call_text)
-    for component in (profile_id, profile_json, opportunity, call_text, mode):
-        component.change(clear_result, inputs=None, outputs=[output, downloadable])
-    go.click(run, inputs=[profile_json, call_text, opportunity, mode], outputs=[output, downloadable])
-    gr.Markdown(
-        "Informational only. Supplied facts are self-reported. Confirm official eligibility, deadlines and all UNKNOWN findings with the sponsor. "
-        "Local inference, no hosted model API, no accounts or payments."
-    )
+                go = gr.Button("Analyze requirements", variant="primary")
+            with gr.Column(scale=1):
+                gr.Markdown("## 3. Review evidence & download")
+                output = gr.Markdown("**No analysis has run.** Select a scenario and click Analyze requirements.")
+                downloadable = gr.File(label="Download Markdown report", interactive=False)
+        profile_id.change(initial_profile, inputs=profile_id, outputs=profile_json)
+        profile_id.change(profile_overview, inputs=profile_id, outputs=overview)
+        opportunity.change(initial_opportunity, inputs=opportunity, outputs=call_text)
+        for component in (profile_id, profile_json, opportunity, call_text, mode):
+            component.change(clear_result, inputs=None, outputs=[output, downloadable])
+        go.click(run, inputs=[profile_json, call_text, opportunity, mode], outputs=[output, downloadable])
+        gr.Markdown(
+            "Informational only. Supplied facts are self-reported. Confirm official eligibility, deadlines and all UNKNOWN findings with the sponsor. "
+            "Local inference, no hosted model API, no accounts or payments."
+        )
+
 if __name__ == "__main__":
     demo.launch(server_name="127.0.0.1", share=False)
