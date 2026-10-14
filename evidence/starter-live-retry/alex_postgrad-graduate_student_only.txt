@@ -1,0 +1,4 @@
+NEEDS VERIFICATION — 6 criteria — wrote evidence/starter-live-retry/alex_postgrad-graduate_student_only.md
+real 10.50
+user 0.30
+sys 0.09

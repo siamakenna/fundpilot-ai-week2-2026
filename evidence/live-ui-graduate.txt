@@ -1,0 +1,118 @@
+- main:
+  - heading "FundPilot AI" [level=1]
+  - heading "Before you spend hours applying, check the fine print." [level=3]
+  - paragraph:
+    - text: Compare your supplied facts with the funding call, see the exact evidence, and take away questions to verify.
+    - strong: Every built-in profile and opportunity is fictional.
+  - heading "1. Choose a researcher" [level=2]
+  - generic: Fictional researcher
+  - combobox "Fictional researcher": Alex Morgan (fictional)
+  - paragraph:
+    - strong: Alex Morgan (fictional)
+    - text: · research professional
+  - paragraph:
+    - text: Maryland · Request
+    - strong: $700
+    - text: "· Presentation:"
+    - strong: Accepted
+  - button "Edit supplied facts (JSON) ▼":
+    - generic: Edit supplied facts (JSON)
+    - generic: ▼
+  - heading "2. Read the funding call" [level=2]
+  - generic: Fictional funding call
+  - combobox "Fictional funding call": Enrolled Graduate Student Mobility Grant
+  - generic: Funding requirements (editable)
+  - textbox "Funding requirements (editable)":
+    - /placeholder: ""
+    - text: Applicants must currently be enrolled in a graduate degree program. Applicants must be based in the United States. The requested award must not exceed $600.
+  - generic: Analysis method
+  - radio "Curated reference demo (NO AI)"
+  - generic: Curated reference demo (NO AI)
+  - radio "Live local Gemma" [checked]
+  - generic: Live local Gemma
+  - paragraph: Custom or edited calls always need human verification. Local Gemma must be running for live analysis.
+  - button "Analyze requirements" [active]
+  - heading "3. Review evidence & download" [level=2]
+  - heading "NOT ELIGIBLE" [level=2]
+  - paragraph:
+    - strong: 1 MATCH
+    - text: ·
+    - strong: 2 NOT MATCH
+    - text: ·
+    - strong: 0 UNKNOWN
+  - paragraph:
+    - text: Completed in
+    - strong: 31.7s
+    - text: .
+    - strong: This result used live Gemma inference.
+  - heading "Before you apply" [level=3]
+  - list:
+    - listitem: Applicants must currently be enrolled in a graduate degree program. — Not currently enrolled in graduate program.
+    - listitem: The requested award must not exceed $600. — Requested $700 exceeds $600 cap.
+  - separator
+  - heading "FundPilot AI — Funding Readiness Report" [level=1]
+  - paragraph:
+    - strong: "Opportunity:"
+    - text: FICTIONAL — Enrolled Graduate Student Mobility Grant
+    - strong: "Assessment:"
+    - text: NOT ELIGIBLE
+    - strong: "Extraction mode:"
+    - text: Real local Gemma
+    - strong: "Model:"
+    - text: gemma3:1b
+  - blockquote:
+    - paragraph: Informational assessment, not an eligibility determination from a funder. Source text can be incomplete; confirm the official call and deadlines.
+  - heading "Requirement evidence" [level=2]
+  - heading "1. Applicants must currently be enrolled in a graduate degree program." [level=3]
+  - list:
+    - text: "Status:"
+    - strong: NOT MATCH
+    - listitem: "Mandatory: True"
+    - listitem: "Source: Applicants must currently be enrolled in a graduate degree program."
+    - listitem: "Reason: Not currently enrolled in graduate program."
+  - heading "2. Applicants must be based in the United States." [level=3]
+  - list:
+    - text: "Status:"
+    - strong: MATCH
+    - listitem: "Mandatory: True"
+    - listitem: "Source: Applicants must be based in the United States."
+    - listitem: "Reason: Profile confirms US base."
+  - heading "3. The requested award must not exceed $600." [level=3]
+  - list:
+    - text: "Status:"
+    - strong: NOT MATCH
+    - listitem: "Mandatory: True"
+    - listitem: "Source: The requested award must not exceed $600."
+    - listitem: "Reason: Requested $700 exceeds $600 cap."
+  - heading "Next steps" [level=2]
+  - paragraph: Verify all UNKNOWN findings with the official sponsor; confirm that the pasted call is complete and current. Never treat this report as official approval.
+  - text: Download Markdown report
+  - table:
+    - rowgroup:
+      - row "fundpilot_98x21lff.md 1.2 KB ⇣":
+        - cell "fundpilot_98x21lff.md":
+          - generic: fundpilot_98x21lff
+          - generic: .md
+        - cell "1.2 KB ⇣":
+          - link "1.2 KB ⇣":
+            - /url: http://127.0.0.1:7860/gradio_api/file=/private/var/folders/st/959yg_fj6c5fvrnc6yxp3t880000gn/T/gradio/7878e49387668fdb012744ad93064ef6c9eced27b99f4f6b26fdca12b1cfa651/fundpilot_98x21lff.md
+  - paragraph: Informational only. Supplied facts are self-reported. Confirm official eligibility, deadlines and all UNKNOWN findings with the sponsor. Local inference, no hosted model API, no accounts or payments.
+- status
+- contentinfo "Gradio footer navigation":
+  - link "Runs Runs":
+    - /url: http://127.0.0.1:7860/gradio_api/runs
+    - text: Runs
+    - img "Runs"
+  - generic: ·
+  - button "Use via API logo":
+    - text: Use via API
+    - img "logo"
+  - generic: ·
+  - link "Built with Gradio logo":
+    - /url: https://gradio.app
+    - text: Built with Gradio
+    - img "logo"
+  - generic: ·
+  - button "Settings Settings":
+    - text: Settings
+    - img "Settings"

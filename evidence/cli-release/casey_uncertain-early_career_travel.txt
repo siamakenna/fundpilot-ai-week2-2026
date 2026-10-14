@@ -1,0 +1,4 @@
+NEEDS VERIFICATION — 5 criteria — wrote evidence/cli-release/casey_uncertain-early_career_travel.md
+real 1878.90
+user 0.34
+sys 0.08

@@ -1,0 +1,4 @@
+ELIGIBLE BASED ON SUPPLIED EVIDENCE — 5 criteria — wrote evidence/cli-release/alex_postgrad-early_career_travel.md
+real 57.10
+user 0.31
+sys 0.08

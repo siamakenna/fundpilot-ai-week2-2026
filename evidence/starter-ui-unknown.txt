@@ -1,0 +1,150 @@
+- main:
+  - heading "FundPilot AI" [level=1]
+  - paragraph:
+    - text: Research funding eligibility, explained with evidence.
+    - strong: All built-in opportunities and profiles are fictional.
+  - generic: 1. Fictional researcher
+  - combobox "1. Fictional researcher": casey_uncertain
+  - text: Profile JSON (editable)
+  - link "Download":
+    - /url: blob:http://127.0.0.1:7860/350a94f7-4e15-404d-82ef-59bba122ea96
+    - button "Download":
+  - button "Copy":
+  - generic: ⌄
+  - generic: "1"
+  - generic: "2"
+  - generic: "3"
+  - generic: "4"
+  - generic: "5"
+  - generic: "6"
+  - generic: "7"
+  - generic: "8"
+  - generic: "9"
+  - generic: "10"
+  - generic: "11"
+  - generic: "12"
+  - generic: "13"
+  - generic: "14"
+  - generic: "15"
+  - generic: "16"
+  - generic: "17"
+  - textbox "Code input container":
+    - generic: "{"
+    - generic: "\"id\": \"casey_uncertain\","
+    - generic: "\"display_name\": \"Casey Rivera (fictional)\","
+    - generic: "\"us_based\": true,"
+    - generic: "\"region\": \"Maryland\","
+    - generic: "\"career_stage\": \"research_professional\","
+    - generic: "\"currently_enrolled_graduate\": false,"
+    - generic: "\"current_postdoc\": false,"
+    - generic: "\"latest_degree_year\": 2025,"
+    - generic: "\"application_year\": 2026,"
+    - generic: "\"event_type\": \"scientific_conference\","
+    - generic: "\"accepted_presentation\": null,"
+    - generic: "\"award_request_usd\": 650,"
+    - generic: "\"software_license\": null,"
+    - generic: "\"international_host_invitation\": null,"
+    - generic: "\"project_type\": \"conference_travel\""
+    - generic: "}"
+  - generic: 2. Fictional funding call
+  - combobox "2. Fictional funding call": early_career_travel
+  - generic: Funding requirements (editable)
+  - textbox "Funding requirements (editable)":
+    - /placeholder: ""
+    - text: Applicants must be based in the United States. Applicants must be employed as a research professional or enrolled as a graduate student. Applicants must have earned their most recent degree no more than five years before the application date. Applicants must have an accepted oral presentation or poster for a scientific conference. The requested travel award must not exceed $1,000.
+  - generic: Analysis method
+  - radio "Curated reference demo (NO AI)" [checked]
+  - generic: Curated reference demo (NO AI)
+  - radio "Live local Gemma"
+  - generic: Live local Gemma
+  - checkbox "I personally reviewed extracted clauses for completeness (custom calls only)"
+  - generic: I personally reviewed extracted clauses for completeness (custom calls only)
+  - button "Analyze requirements" [active]
+  - paragraph:
+    - strong: "Reference demo only: no generative model was used."
+    - text: Switch to Live local Gemma to validate the real model path.
+  - heading "FundPilot AI — Funding Readiness Report" [level=1]
+  - paragraph:
+    - strong: "Opportunity:"
+    - text: FICTIONAL — Early Career Science Conference Travel Award
+    - strong: "Assessment:"
+    - text: NEEDS VERIFICATION
+    - strong: "Extraction mode:"
+    - text: Curated reference (not AI)
+    - strong: "Model:"
+    - text: Not used
+  - blockquote:
+    - paragraph: Informational assessment, not an eligibility determination from a funder. Source text can be incomplete; confirm the official call and deadlines.
+  - heading "Requirement evidence" [level=2]
+  - heading "1. Applicants must be based in the United States." [level=3]
+  - list:
+    - text: "Status:"
+    - strong: MATCH
+    - listitem: "Mandatory: True"
+    - text: "Source:"
+    - code: Applicants must be based in the United States.
+    - listitem: "Reason: Profile confirms US base."
+  - heading "2. Applicants must be employed as a research professional or enrolled as a graduate student." [level=3]
+  - list:
+    - text: "Status:"
+    - strong: MATCH
+    - listitem: "Mandatory: True"
+    - text: "Source:"
+    - code: Applicants must be employed as a research professional or enrolled as a graduate student.
+    - listitem: "Reason: Research professional or enrolled graduate student."
+  - heading "3. Applicants must have earned their most recent degree no more than five years before the application date." [level=3]
+  - list:
+    - text: "Status:"
+    - strong: MATCH
+    - listitem: "Mandatory: True"
+    - text: "Source:"
+    - code: Applicants must have earned their most recent degree no more than five years before the application date.
+    - listitem: "Reason: Degree age 1 years."
+  - heading "4. Applicants must have an accepted oral presentation or poster for a scientific conference." [level=3]
+  - list:
+    - text: "Status:"
+    - strong: UNKNOWN
+    - listitem: "Mandatory: True"
+    - text: "Source:"
+    - code: Applicants must have an accepted oral presentation or poster for a scientific conference.
+    - listitem: "Reason: Profile does not contain enough information."
+  - heading "5. The requested travel award must not exceed $1,000." [level=3]
+  - list:
+    - text: "Status:"
+    - strong: MATCH
+    - listitem: "Mandatory: True"
+    - text: "Source:"
+    - code: The requested travel award must not exceed $1,000.
+    - listitem: "Reason: Requested $650 <= $1,000 cap."
+  - heading "Next steps" [level=2]
+  - paragraph: Verify all UNKNOWN findings with the official sponsor; confirm that the pasted call is complete and current. Never treat this report as official approval.
+  - text: Download source-grounded Markdown report
+  - table:
+    - rowgroup:
+      - row "fundpilot_f1ff32ke.md 1.8 KB ⇣":
+        - cell "fundpilot_f1ff32ke.md":
+          - generic: fundpilot_f1ff32ke
+          - generic: .md
+        - cell "1.8 KB ⇣":
+          - link "1.8 KB ⇣":
+            - /url: http://127.0.0.1:7860/gradio_api/file=/private/var/folders/st/959yg_fj6c5fvrnc6yxp3t880000gn/T/gradio/9198f4382d48c33783329d7b88be37a0c06f003d223d5347f3fd1f1b87ccda8f/fundpilot_f1ff32ke.md
+  - paragraph: Informational tool only. Real grant deadlines, eligibility, and award amounts always need verification against the official sponsor. No data is transmitted to a hosted model API in local mode.
+- status
+- contentinfo "Gradio footer navigation":
+  - link "Runs Runs":
+    - /url: http://127.0.0.1:7860/gradio_api/runs
+    - text: Runs
+    - img "Runs"
+  - generic: ·
+  - button "Use via API logo":
+    - text: Use via API
+    - img "logo"
+  - generic: ·
+  - link "Built with Gradio logo":
+    - /url: https://gradio.app
+    - text: Built with Gradio
+    - img "logo"
+  - generic: ·
+  - button "Settings Settings":
+    - text: Settings
+    - img "Settings"

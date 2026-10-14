@@ -1,0 +1,150 @@
+{
+  "kind": "live local inference, development fixtures, no mocks, no retries",
+  "measured_at_utc": "2026-10-14T12:08:16.880028+00:00",
+  "platform": "macOS-26.7.1-x86_64-i386-64bit",
+  "model": "gemma3:1b",
+  "model_inventory": {
+    "models": [
+      {
+        "name": "gemma3:1b",
+        "model": "gemma3:1b",
+        "modified_at": "2026-10-13T23:08:13.141774277-04:00",
+        "size": 806067407,
+        "digest": "97558784bdc9175075a72655bf360b15da17df6b3b9e5182af9f8c0c8e58ba7c",
+        "details": {
+          "parent_model": "dhiltgen/gemma3:1b-it-q4_K_M-llamacpp",
+          "format": "gguf",
+          "family": "gemma3",
+          "families": [
+            "gemma3"
+          ],
+          "parameter_size": "999.89M",
+          "quantization_level": "Q4_K_M",
+          "context_length": 32768,
+          "embedding_length": 1152,
+          "runner": "llamacpp"
+        },
+        "capabilities": [
+          "completion"
+        ]
+      }
+    ]
+  },
+  "ollama": {
+    "version": "0.40.4"
+  },
+  "attempts": 6,
+  "validated": 5,
+  "failed": 1,
+  "unknown_verdicts": 1,
+  "verdict_agreement": 5,
+  "true_positive": 20,
+  "returned": 21,
+  "reference": 21,
+  "precision": 0.9523809523809523,
+  "recall": 0.9523809523809523,
+  "exact_quotes": 21,
+  "latency_mean_seconds": 24.878,
+  "latency_median_seconds": 19.58,
+  "latency_min_seconds": 13.715,
+  "latency_max_seconds": 48.203,
+  "cases": [
+    {
+      "opportunity": "early_career_travel",
+      "profile": "alex_postgrad",
+      "expected_verdict": "ELIGIBLE BASED ON SUPPLIED EVIDENCE",
+      "expected_clauses": 5,
+      "source_sha256": "d5153f70297d3bbcd5aeecd5a6b2405957ea02f050219a6c25173029c97132e3",
+      "outcome": "validated",
+      "verdict": "ELIGIBLE BASED ON SUPPLIED EVIDENCE",
+      "unknown_findings": 0,
+      "seconds": 48.203,
+      "returned_clauses": 5,
+      "true_positive": 5,
+      "exact_quotes": 5,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    {
+      "opportunity": "graduate_student_only",
+      "profile": "alex_postgrad",
+      "expected_verdict": "NOT ELIGIBLE",
+      "expected_clauses": 3,
+      "source_sha256": "f0bad2ae7849de4538d644b76c6d006161f7c7fe7b1c2dcb0c84cc99bf2eae0e",
+      "outcome": "validated",
+      "verdict": "NOT ELIGIBLE",
+      "unknown_findings": 0,
+      "seconds": 24.212,
+      "returned_clauses": 3,
+      "true_positive": 3,
+      "exact_quotes": 3,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    {
+      "opportunity": "midatlantic_workshop",
+      "profile": "alex_postgrad",
+      "expected_verdict": "NOT ELIGIBLE",
+      "expected_clauses": 4,
+      "source_sha256": "ffdd8d9e7a5f4f4adef7ce745ac9a03291b1c52bf4eeb79ccd593e5e84174250",
+      "outcome": "validated",
+      "verdict": "NOT ELIGIBLE",
+      "unknown_findings": 0,
+      "seconds": 34.221,
+      "returned_clauses": 4,
+      "true_positive": 4,
+      "exact_quotes": 4,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    {
+      "opportunity": "open_methods",
+      "profile": "alex_postgrad",
+      "expected_verdict": "NEEDS VERIFICATION",
+      "expected_clauses": 3,
+      "source_sha256": "f89b2fa8b52f5a8f3a57f3f7f9079221902f6ffb5dc791ee573e1123376bb24a",
+      "outcome": "validated",
+      "verdict": "NEEDS VERIFICATION",
+      "unknown_findings": 1,
+      "seconds": 13.715,
+      "returned_clauses": 3,
+      "true_positive": 3,
+      "exact_quotes": 3,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    {
+      "opportunity": "postdoc_exchange",
+      "profile": "alex_postgrad",
+      "expected_verdict": "NOT ELIGIBLE",
+      "expected_clauses": 3,
+      "source_sha256": "8dbd77d16d7a3f92114f9449bb7892c30bd9dd6a543d81d3d6bb418c47becad5",
+      "outcome": "validated",
+      "verdict": "NOT ELIGIBLE",
+      "unknown_findings": 0,
+      "seconds": 14.948,
+      "returned_clauses": 3,
+      "true_positive": 3,
+      "exact_quotes": 3,
+      "false_positive": 0,
+      "false_negative": 0
+    },
+    {
+      "opportunity": "community_science",
+      "profile": "alex_postgrad",
+      "expected_verdict": "NOT ELIGIBLE",
+      "expected_clauses": 3,
+      "source_sha256": "4e4fa4c2dab23c5b6435f735c6f5f8d24aac6e29990b09db485f1253b8ce7414",
+      "outcome": "failed",
+      "verdict": null,
+      "error": "ValueError: Amount cap supplied for a non-money requirement",
+      "unknown_findings": null,
+      "seconds": 13.969,
+      "returned_clauses": 3,
+      "true_positive": 2,
+      "exact_quotes": 3,
+      "false_positive": 1,
+      "false_negative": 1
+    }
+  ]
+}

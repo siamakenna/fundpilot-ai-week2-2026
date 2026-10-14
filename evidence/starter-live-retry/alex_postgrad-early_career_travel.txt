@@ -1,0 +1,4 @@
+NEEDS VERIFICATION — 10 criteria — wrote evidence/starter-live-retry/alex_postgrad-early_career_travel.md
+real 27.98
+user 0.27
+sys 0.10

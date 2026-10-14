@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/makennarodriguez/Downloads/fundpilot_side_hustle_starter/app.py", line 6, in <module>
+    import gradio as gr
+ModuleNotFoundError: No module named 'gradio'

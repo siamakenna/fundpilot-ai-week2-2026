@@ -1,0 +1,26 @@
+[
+  {
+    "name": "gradio",
+    "version": "6.30.0",
+    "license": "Apache-2.0",
+    "classifiers": []
+  },
+  {
+    "name": "pydantic",
+    "version": "2.14.1",
+    "license": "MIT",
+    "classifiers": []
+  },
+  {
+    "name": "pytest",
+    "version": "9.1.1",
+    "license": "MIT",
+    "classifiers": []
+  },
+  {
+    "name": "ruff",
+    "version": "0.17.0",
+    "license": "MIT",
+    "classifiers": []
+  }
+]

@@ -1,0 +1,4 @@
+NOT ELIGIBLE — 3 criteria — wrote evidence/cli-release/alex_postgrad-graduate_student_only.md
+real 11.06
+user 0.29
+sys 0.08

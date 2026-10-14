@@ -73,3 +73,21 @@ Log real feedback, interview date and consent. Don't fabricate a customer or enc
 ## Save Work credits
 
 Use ChatGPT for drafting, demo copy, and fixture authoring; Codex for local Ollama installation, model benchmarks, issues and committing; Work only when real browser interaction or automated hosted deployment is actually needed.
+
+## Verified continuation status — October 14, 2026
+
+The owner attests this is independent Week 2 work. Original fixture JSON is
+unchanged. The release adapter uses actual Gemma sentence classification and
+Python's exact-source attachment; it does not generate evidence quotes. See
+`EVALUATION.md` for the measured 20/21 clause matches, 5/6 valid reports, one rejected
+case, live adversarial mistakes, and the separate wall-time outlier. The initial
+19 tests and final 50 tests are distinct from live inference measurements.
+
+The three-step local UI and Markdown reports were exercised. MIT licensing and
+scoped source review are documented in `PROVENANCE_AND_LICENSES.md`. The DEV draft
+preserves the official headings and tags and claims only Gemma. No baseline
+superiority, customer, revenue, hosting integration or testimonial is claimed.
+
+Still manual: record and review the authentic walkthrough using
+`LOCAL_CAPTURE_STEPS.md`, upload it to obtain a real demo URL, and review/publish
+one DEV entry. Publication is deliberately not performed by this continuation.

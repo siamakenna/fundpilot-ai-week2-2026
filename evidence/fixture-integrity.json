@@ -1,0 +1,17 @@
+[
+  {
+    "path": "fixtures/expected_scenarios.json",
+    "sha256": "a029c4b2807936538d7940ad1ab452d1e76eb21a084be087cfa2f395e2481386",
+    "unchanged_from": "381205d"
+  },
+  {
+    "path": "fixtures/fictional_opportunities.json",
+    "sha256": "973ac404e7349f90a8cce54d6ea4343844bb8c3fc128a20fc7024ef72ddec3b6",
+    "unchanged_from": "381205d"
+  },
+  {
+    "path": "fixtures/fictional_profiles.json",
+    "sha256": "8f3fb032392a2db9f363e36df25057e019c7dcc67fe1ce3ca87a8600a3e33d8f",
+    "unchanged_from": "381205d"
+  }
+]
