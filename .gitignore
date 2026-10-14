@@ -6,3 +6,7 @@ __pycache__/
 fundpilot_report.md
 *.log
 .DS_Store
+
+.tools/
+*.egg-info/
+.ruff_cache/
