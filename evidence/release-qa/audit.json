@@ -1,0 +1,26 @@
+{
+  "checked_at_utc": "2026-10-14T17:11:39.734870+00:00",
+  "base_commit": "a4343355703e90b7cd0973922158634952ac2ab9",
+  "tracked_files": 137,
+  "historical_blobs_scanned": 144,
+  "secret_pattern_findings": [],
+  "restricted_extension_or_weight_paths": [],
+  "fixtures": [
+    {
+      "path": "fixtures/expected_scenarios.json",
+      "matches_saved_hash": true,
+      "matches_import": true
+    },
+    {
+      "path": "fixtures/fictional_opportunities.json",
+      "matches_saved_hash": true,
+      "matches_import": true
+    },
+    {
+      "path": "fixtures/fictional_profiles.json",
+      "matches_saved_hash": true,
+      "matches_import": true
+    }
+  ],
+  "scope": "Heuristic credential scan of all reachable Git blobs; tracked path inventory and existing provenance review. Not independent proof of ownership or a guarantee of no secrets."
+}

@@ -11,6 +11,16 @@ This independent Week 2 project continues the supplied starter. It is a tested
 prototype, not a funder's decision service. **All built-in calls and profiles are
 fictional.** No NIH, institutional or private grant material is included.
 
+## Demo and submission status
+
+**Video URL: [INSERT VERIFIED PUBLIC VIDEO URL WHEN AVAILABLE]**
+
+No public video or deployed app exists yet. View the [authentic live screenshot](evidence/live-ui-graduate.png)
+and [downloaded live report](evidence/live-ui-downloaded-report.md). Follow the
+[short capture procedure](docs/LOCAL_CAPTURE_STEPS.md) to complete the demo.
+The [release-readiness checklist](docs/RELEASE_READINESS.md) records verified checks
+and the remaining publication blockers. The DEV article remains unpublished.
+
 ## Run locally
 
 Requires Python 3.11+ and [Ollama](https://ollama.com/).

@@ -1,0 +1,21 @@
+{
+  "official_headings": [
+    "What I Built",
+    "Demo",
+    "Code",
+    "How I Built It",
+    "Why Does Open Innovation Matter?",
+    "Prize Categories"
+  ],
+  "tags": [
+    "devchallenge",
+    "hf26challenge"
+  ],
+  "published": false,
+  "only_partner_category": "Best Use of Gemma",
+  "video_placeholder_retained": true,
+  "application_and_fixtures_unchanged": true,
+  "original_evidence_files_unchanged_except_index": 104,
+  "pytest": "50 passed in 6.85s; no code changes since run",
+  "new_live_inference_requests": 0
+}

@@ -31,3 +31,6 @@ included. The source fixture JSON is unchanged; see `fixture-integrity.json`.
 Refer to `../docs/EVALUATION.md` for definitions, denominators, limitations and
 latency caveats. These fixtures informed prompt development and are not a held-out
 accuracy study. Exact quote attachment is deterministic code, not a model score.
+
+- `release-qa/`: October 14 submission-readiness audit, lightweight smoke checks
+  and link verification. No new model benchmark; original evidence is unchanged.

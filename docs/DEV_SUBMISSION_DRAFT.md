@@ -1,5 +1,5 @@
 ---
-title: "FundPilot AI: A Local Gemma Funding Check That Can Say ‘I Can’t Verify This’"
+title: "FundPilot AI: Check the Fine Print Before You Write the Application"
 published: false
 tags: devchallenge, hf26challenge
 ---
@@ -8,50 +8,57 @@ tags: devchallenge, hf26challenge
 
 ## What I Built
 
-An accepted conference poster can be good news and an expensive next step. Before writing a travel-award application, a researcher needs to answer a less exciting question: **do the rules actually fit my situation?**
+An accepted conference poster can be good news followed by an expensive question: how will I get there? A travel award might help—until an enrollment requirement, regional restriction or funding cap makes the application a dead end.
 
-I built **FundPilot AI** for that first check. Choose a fictional researcher, read a fictional funding call, and get a downloadable report with MATCH, NOT MATCH and UNKNOWN findings. Each finding points to the exact source sentence. The useful output is a short list of reasons and questions to verify before investing more time in the application.
+**FundPilot AI checks the fine print before the writing starts.** Its three-step Gradio workflow compares supplied facts with a funding call and produces a downloadable report: MATCH, NOT MATCH or UNKNOWN, with the exact source sentence beside each finding. The intended benefit is less time spent applying where the rules do not fit, and a clearer list of questions for the sponsor.
 
-My intended customer is an independent researcher or a small mentoring program without a dedicated grants office. A $9 readiness report or a $39/month advising workspace is a pricing hypothesis, not validated willingness to pay. I have no sales or first-user testimonial to report. The prototype helps test the product idea before adding billing, accounts or hosting.
+I built this prototype for independent researchers and small mentoring programs without a grants office. A **$9 readiness report or $39/month workspace** is a commercial hypothesis. Neither price is validated; I have no customers, sales or first-user feedback to claim. All built-in calls and profiles are fictional.
 
 ## Demo
 
-The application runs locally in Gradio. The repository contains an [authentic live Gemma UI screenshot](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/live-ui-graduate.png), a [downloaded live report](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/live-ui-downloaded-report.md), and actual model request/response records. A public video has not yet been recorded or uploaded; the exact recording steps are in `docs/LOCAL_CAPTURE_STEPS.md`. This draft remains unpublished until a real demo URL is added and reviewed.
+**Video URL: [INSERT VERIFIED PUBLIC VIDEO URL WHEN AVAILABLE]**
 
-The walkthrough uses three fictional scenarios: Alex appears to meet an early-career travel call, Alex is not eligible for a graduate-only call, and Casey lacks confirmed presentation acceptance. The UI labels reference fixtures as **NO AI**. Select **Live local Gemma** for actual inference; a fixture demonstration is never substituted for a model run.
+*Publication blocker: record and review the real local walkthrough, upload it, then replace this placeholder. There is no deployed app or public video yet.*
+
+Existing evidence includes an [authentic live Gemma screenshot](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/live-ui-graduate.png) and its [downloaded report](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/live-ui-downloaded-report.md). The [capture procedure](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/LOCAL_CAPTURE_STEPS.md) shows three scenarios: Alex meets a travel call's supplied conditions, Alex fails a graduate-only call, and Casey needs presentation acceptance verified.
+
+Select **Live local Gemma** for inference. The separate **Curated reference demo (NO AI)** mode uses authored fixtures; it is never evidence of model behavior.
 
 ## Code
 
-The independently authored application is MIT licensed. [View the public GitHub repository](https://github.com/siamakenna/fundpilot-ai-week2-2026). All fixture JSON is unchanged from the supplied Week 2 starter. The source and evidence review is documented in `docs/PROVENANCE_AND_LICENSES.md`.
+[FundPilot AI on GitHub](https://github.com/siamakenna/fundpilot-ai-week2-2026) contains the MIT-licensed application, unchanged starter fixtures, tests and raw model responses—including failures. The [provenance review](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/PROVENANCE_AND_LICENSES.md) records the owner's Week 2 authorship attestation and separate dependency terms. Gemma weights are downloaded separately under Google's terms.
 
 ## How I Built It
 
-I began with the independent starter, ran its 19 tests, and imported the application. Then I tried the real model. That changed the project more than another feature would have.
+**The first real model runs failed the useful part of the task.** The starter's 19 tests passed, but three live runs mapped every clause to “unsupported.” Later prompts produced invented quote text and inconsistent dollar caps. Those responses are [retained](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/README.md). Passing tests with reference data had not established that Gemma could interpret the calls.
 
-The first three live runs quoted the source but mapped every clause to “unsupported.” Later prompts improved some mappings while introducing other errors: invented example text, zero-dollar caps, or a dollar amount attached to a non-money condition. Those failed outputs are still in the repository. A successful API response was clearly not enough.
+The lesson was to narrow the model's job. The release runs **Gemma 3 1B, Q4_K_M, through Ollama 0.40.4**. Python splits the source into sentences. Gemma classifies each sentence's criterion, mandatory flag and amount under a strict schema. Python attaches the original sentence verbatim and compares the result with profile facts deterministically. **Exact quotes come from Python, not model generation.** Only call text goes to Gemma; the profile stays in Python.
 
-The release uses **Gemma 3 1B, Q4_K_M, through local Ollama 0.40.4**. Python splits the call into sentences; Gemma classifies each one into a supported criterion, a mandatory flag and an amount. Sentences containing a currency marker get a narrower schema. Python copies the input sentence as evidence, so **quotes are not generated by the model**. The profile stays in Python for deterministic comparison.
+Built-in calls have an authored checklist that detects omitted or mismatched clauses without replacing the model's answer. Custom calls always remain NEEDS VERIFICATION, with UNKNOWN findings: exact text is no guarantee of correct interpretation.
 
-For the built-in calls, an authored clause checklist detects omissions and mismatched labels, quotes, amounts or mandatory flags. It never fills in the model's answer. Custom text always needs human verification, because a sentence classifier cannot establish that it understood a whole funding document.
+The [six-call development evaluation](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/EVALUATION.md) returned 21 classifications against 21 reference clauses:
 
-The actual release evaluation covered **six distinct fictional calls and 21 clauses**. It matched **20/21 clauses: 95.24% precision and 95.24% recall**. Five of six reports passed validation and agreed with the reference verdict; one report was rejected because its cap classification and numeric field contradicted each other. Of the valid reports, one needed verification because the profile did not establish its software license.
+| Measure | Actual result |
+| --- | --- |
+| Exact reference clause matches | 20/21 returned and 20/21 expected: **95.24% precision and recall** |
+| Validated reports | **5/6**; one rejected an inconsistent amount mapping |
+| NEEDS VERIFICATION | **1/6 attempts**, or 1/5 valid reports |
+| Observed workflow time | **13.715–48.203 seconds; mean 24.878 seconds, n=6**, including the rejection |
 
-That rejected report is a useful result: the application displayed no fabricated eligibility verdict. It is also a limitation, not a success to hide. The prompt was developed using these fixtures, so this score is not evidence of accuracy on unseen grants.
+These are **tuned synthetic development cases, not held-out accuracy**. Some timing overlapped another run. A separate CLI run had an unexplained 1,878.9-second shell-time outlier versus about 80.5 seconds inside the adapter; reliable responsiveness remains unresolved.
 
-Observed six-case wall times were **13.715–48.203 seconds**, with a **24.878-second mean**. Part of the run overlapped another development run on the same Intel laptop; these are measured workflow times, not isolated performance claims. The evaluation document includes every denominator and raw response. A separate Casey CLI run recorded a 1,878.9-second shell wall-time outlier versus about 80.5 seconds inside the adapter; the cause is unverified, and reliable responsiveness remains unfinished.
-
-The final **50-test** suite covers missing models, malformed JSON, unsupported criteria, omitted or downgraded mandatory clauses, invalid caps and profile values, stale downloads and custom-call review. Mock transport tests are identified separately from actual local inference. Five live safety probes all stopped short of an eligibility claim, but the model misclassified both an astronaut requirement and “exceptional promise.” Custom-call findings therefore stay UNKNOWN; the guard is doing useful work, and the model is still fallible.
+The suite now passes **50 tests**, including explicit adapter mocks for malformed JSON and forced omissions. Separate live safety probes produced **5/5 conservative application outcomes**, but Gemma misread an astronaut requirement and “exceptional promise.” The application guard prevented eligibility claims; the model did not understand everything correctly. Sentence boundaries, exceptions and cross-sentence conditions remain limitations.
 
 ## Why Does Open Innovation Matter?
 
-Running Gemma locally gives me control over the model, prompt, schema and failure handling. I can inspect a bad response, change the contract and rerun the same synthetic inputs without sending applicant information to a hosted model API. After installation and model download, inference uses the local runtime. Hardware and electricity still cost something; there is no claim that compute is free.
+Local open-weight inference lets me inspect failures, change the prompt and schema, and reproduce the workflow without a hosted model API. Installation and model download require internet; subsequent inference uses local Ollama. Hardware and electricity still have costs.
 
-The open-weight model is integral to the live path: it interprets the sentences before the rule engine compares facts. Replacing it with the authored fixtures would turn the app into a reference demo, and the UI says exactly that. This project does not demonstrate that Gemma beats a keyword baseline or a closed API; neither comparison was measured.
+Gemma is integral to the live path: it interprets each sentence before Python checks the facts. The fixtures cannot stand in for that work. I have not measured a keyword baseline or closed model, so I claim no superiority over either.
 
-The next useful experiment is a held-out set of public, permitted calls, followed by a consenting independent tester using fictional profiles. The hard question is whether the report helps someone make a better application decision. Adding a payment button would not answer it.
+The next useful test is a held-out set of permitted public calls and a consenting tester using fictional profiles. Before charging for a report, I need evidence that it helps someone decide where to spend their application time.
 
 ## Prize Categories
 
-- **Best Use of Gemma** — real local Gemma inference is implemented, measured and integral to the live classification path. The recorded errors and the six-case development-set limitation are part of that evidence.
+- **Best Use of Gemma** — local Gemma classification is implemented, measured and integral to the live workflow. Its errors and the limits of this evaluation are part of the evidence.
 
 #devchallenge #hf26challenge

@@ -1,0 +1,18 @@
+app.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+app.py:30:13: TRY004 Prefer `TypeError` exception for invalid type
+app.py:89:12: BLE001 Do not catch blind exception: `Exception`
+fundpilot/cli.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+fundpilot/fixtures.py:2:1: I001 [*] Import block is un-sorted or un-formatted
+fundpilot/gemma.py:7:1: I001 [*] Import block is un-sorted or un-formatted
+fundpilot/logic.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+fundpilot/models.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+scripts/adversarial.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+scripts/adversarial.py:31:12: BLE001 Do not catch blind exception: `Exception`
+scripts/evaluate.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+scripts/evaluate.py:59:16: BLE001 Do not catch blind exception: `Exception`
+scripts/evaluate.py:97:41: UP017 [*] Use `datetime.UTC` alias
+tests/test_gemma_contract.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+tests/test_reference.py:1:1: I001 [*] Import block is un-sorted or un-formatted
+tests/test_safety.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+Found 16 errors.
+[*] 12 fixable with `--fix`.

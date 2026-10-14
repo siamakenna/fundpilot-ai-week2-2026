@@ -1,14 +1,22 @@
-# Two-minute judge demo storyboard
+# Judge walkthrough: check the fine print
 
-**Use the real local Gemma mode during filming.** If Gemma fails and only the reference fixture mode works, don't submit the reference demo as a Gemma demonstration.
+Record the real Gradio UI with **Live local Gemma** selected throughout. Target
+2–3 minutes of explanation, plus actual inference waits. A longer honest recording
+is preferable to an implied speed claim. If a run fails, show the error; do not
+replace it with a fixture result. The outcomes below are previously observed,
+not promises about the next model run.
 
-| Time | Narration / action | Evidence |
-| --- | --- | --- |
-| 0:00–0:17 | Finding conference funding can take hours; hidden eligibility clauses waste time. FundPilot is a narrow, privacy-first eligibility second opinion. | Landing screen / two-line problem statement |
-| 0:17–0:40 | Show eligible fictional Alex + early-career travel call. Click **Live local Gemma** then analyze. | Source quotes and MATCH rows; real model request/runtime |
-| 0:40–1:01 | Switch to graduate student-only call. Alex is employed but not enrolled; the report must say NOT ELIGIBLE. | Highlight contradictory source quote; export |
-| 1:01–1:22 | Switch to Casey, accepted-presentation unknown. Report must say NEEDS VERIFICATION. | Show unknown status and specific next action |
-| 1:22–1:43 | Show extraction code, exact-substring validation, deterministic checks, no unsupported eligibility answer. | GitHub source / failing hallucination test |
-| 1:43–2:00 | Who might pay: researchers/mentors for $9 readiness report. Explain it's a **hypothesis**, not a live business. | Brief business mockup/DEV article |
+| Action | Suggested narration / point to show |
+| --- | --- |
+| Open the three-step UI | “Before writing a funding application, check whether its conditions fit. This prototype is for independent researchers and small mentoring programs. Everything on screen is fictional.” |
+| Alex Morgan → Early Career Science Conference Travel Award → Live local Gemma → Analyze requirements | “Gemma classifies the call sentences locally. Python attaches their exact text and checks the profile. Alex previously matched these supplied conditions.” Show the actual verdict and source evidence. |
+| Alex → Enrolled Graduate Student Mobility Grant → Analyze requirements | “The new inputs clear the old result. Alex is not enrolled, and the request exceeds this call's cap.” Show NOT MATCH findings if returned. |
+| Casey Rivera → Early Career Science Conference Travel Award → Analyze requirements | “Casey's presentation acceptance is unknown. The next step is to verify it, rather than infer an answer.” Show the actual result. |
+| Download Markdown report; open it | Show model/mode, quotes, findings and verification questions in the real downloaded file. |
+| Open the evaluation document | “The tuned development set matched 20 of 21 clauses, and only five of six reports validated. This is not accuracy on unseen grants. Custom calls always require review.” |
+| Finish on the repository | “The $9 report and $39 monthly workspace are unvalidated hypotheses. My next test is whether this saves application time for a consenting tester.” |
 
-**Recording acceptance:** actual on-screen live model result at least once, three verdict types, no invented performance, citations to original source spans, final URL/code and link in DEV post. Plan for ~2 minutes and keep editing lightweight.
+Keep live waits visible or explicitly label trimmed waits. Do not use an old report
+as if just generated, show reference fixtures as AI, invent a customer, or claim
+that source attachment proves semantic correctness. Review the recording before
+uploading. See [capture steps](LOCAL_CAPTURE_STEPS.md).

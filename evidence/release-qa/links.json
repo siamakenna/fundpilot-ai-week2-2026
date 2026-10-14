@@ -1,0 +1,188 @@
+{
+  "scope": "Markdown links in README, docs/*.md and evidence/README.md; public HTTP requests without credentials; placeholder is not a URL",
+  "local_links": [
+    {
+      "source": "README.md",
+      "target": "docs/DEV_SUBMISSION_DRAFT.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "evidence/live-ui-graduate.png",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "evidence/live-ui-downloaded-report.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/LOCAL_CAPTURE_STEPS.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/RELEASE_READINESS.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/EVALUATION.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/COMMANDS_RUN.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "evidence/UI_CHECKS.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/LOCAL_CAPTURE_STEPS.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/DEV_SUBMISSION_DRAFT.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/PROVENANCE_AND_LICENSES.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "LICENSE",
+      "exists": true
+    },
+    {
+      "source": "docs/JUDGE_DEMO_SCRIPT.md",
+      "target": "docs/LOCAL_CAPTURE_STEPS.md",
+      "exists": true
+    },
+    {
+      "source": "docs/RELEASE_READINESS.md",
+      "target": "docs/../evidence/release-qa/audit.json",
+      "exists": true
+    },
+    {
+      "source": "docs/RELEASE_READINESS.md",
+      "target": "docs/../evidence/release-qa/smoke.json",
+      "exists": true
+    },
+    {
+      "source": "docs/RELEASE_READINESS.md",
+      "target": "docs/../evidence/release-qa/links.json",
+      "exists": true
+    },
+    {
+      "source": "docs/RELEASE_READINESS.md",
+      "target": "docs/LOCAL_CAPTURE_STEPS.md",
+      "exists": true
+    },
+    {
+      "source": "docs/LOCAL_CAPTURE_STEPS.md",
+      "target": "docs/JUDGE_DEMO_SCRIPT.md",
+      "exists": true
+    },
+    {
+      "source": "docs/EVALUATION.md",
+      "target": "docs/RELEASE_READINESS.md",
+      "exists": true
+    }
+  ],
+  "public_links": [
+    {
+      "url": "https://ai.google.dev/gemma/terms",
+      "http_status": 200,
+      "resolved_url": "https://ai.google.dev/gemma/terms",
+      "curl_exit_code": 0
+    },
+    {
+      "url": "https://dev.to/challenges/hacktoberfest-week2-2026-10-12",
+      "http_status": 200,
+      "resolved_url": "https://dev.to/challenges/hacktoberfest-week2-2026-10-12",
+      "curl_exit_code": 0
+    },
+    {
+      "url": "https://dev.to/page/hacktoberfest-week2-2026-10-12-contest-rules",
+      "http_status": 200,
+      "resolved_url": "https://dev.to/page/hacktoberfest-week2-2026-10-12-contest-rules",
+      "curl_exit_code": 0
+    },
+    {
+      "url": "https://github.com/ollama/ollama/blob/main/LICENSE",
+      "http_status": 200,
+      "resolved_url": "https://github.com/ollama/ollama/blob/main/LICENSE",
+      "curl_exit_code": 0
+    },
+    {
+      "url": "https://github.com/siamakenna/fundpilot-ai-week2-2026",
+      "http_status": 200,
+      "resolved_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026",
+      "curl_exit_code": 0
+    },
+    {
+      "url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/EVALUATION.md",
+      "http_status": 200,
+      "resolved_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/EVALUATION.md",
+      "curl_exit_code": 0,
+      "previous_attempt": {
+        "url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/EVALUATION.md",
+        "http_status": 503,
+        "resolved_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/EVALUATION.md",
+        "curl_exit_code": 56,
+        "error": "curl: (56) The requested URL returned error: 503"
+      }
+    },
+    {
+      "url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/LOCAL_CAPTURE_STEPS.md",
+      "http_status": 200,
+      "resolved_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/LOCAL_CAPTURE_STEPS.md",
+      "curl_exit_code": 0
+    },
+    {
+      "url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/PROVENANCE_AND_LICENSES.md",
+      "http_status": 200,
+      "resolved_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/PROVENANCE_AND_LICENSES.md",
+      "curl_exit_code": 0
+    },
+    {
+      "url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/README.md",
+      "http_status": 200,
+      "resolved_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/README.md",
+      "curl_exit_code": 0
+    },
+    {
+      "url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/live-ui-downloaded-report.md",
+      "http_status": 200,
+      "resolved_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/live-ui-downloaded-report.md",
+      "curl_exit_code": 0
+    },
+    {
+      "url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/live-ui-graduate.png",
+      "http_status": 200,
+      "resolved_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/live-ui-graduate.png",
+      "curl_exit_code": 0
+    },
+    {
+      "url": "https://ollama.com/",
+      "http_status": 200,
+      "resolved_url": "https://ollama.com/",
+      "curl_exit_code": 0
+    },
+    {
+      "url": "https://ollama.com/library/gemma3:1b",
+      "http_status": 200,
+      "resolved_url": "https://ollama.com/library/gemma3:1b",
+      "curl_exit_code": 0
+    }
+  ],
+  "initial_python_https_check": "Local Python trust store could not validate issuers. Retried with system curl using normal TLS verification; no certificate checks disabled."
+}

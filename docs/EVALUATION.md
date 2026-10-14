@@ -131,3 +131,8 @@ live-model events. These five probes are separate from the six-case extraction
 metric. The four inference probes took 23.521, 9.264, 11.373 and 13.233 seconds;
 the missing-model HTTP failure took 0.008 seconds. One run of each is too small to
 establish general prompt-injection resistance.
+
+## Submission-readiness QA
+
+The subsequent [release audit](RELEASE_READINESS.md) reran the 50 automated tests
+and lightweight smoke checks. It did not rerun inference or change these metrics.
