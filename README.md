@@ -10,14 +10,28 @@ questions that still need the sponsor's answer.
 [Official sources](docs/OFFICIAL_SOURCES.md) · [Measured results](docs/REAL_WORLD_EVALUATION.md) · [Evaluation rubric](evaluation/RUBRIC.md) ·
 [Submission draft](docs/DEV_SUBMISSION_DRAFT.md)
 
+## See the real application
+
+![FundPilot AI prioritizing a real-source contradiction for sponsor verification](https://raw.githubusercontent.com/siamakenna/fundpilot-ai-week2-2026/main/evidence/verification-upgrade/contradiction.png)
+
+[46-second authentic v0.3.0 video](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.0/fundpilot-verification-queue-demo.webm) · [Contradiction report](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/verification-upgrade/contradiction-report.md) · [Unresolved presenter fact](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/verification-upgrade/unknown-report.md) · [Quick-start screenshot](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/verification-upgrade/quickstart.png)
+
+The recording uses three fictional applicant configurations on one real public funding passage. It shows actual local Gemma calls and does **not** claim that a full funding announcement was evaluated or that the app is publicly hosted.
+
 ## Three-step workflow
 
 1. Paste public eligibility text, including exclusions, amounts, dates and application
    instructions. Add the official URL for attribution; FundPilot does not fetch it.
+   Or choose **Load sample public excerpt**: the verified CNS snapshot (2026-10-14)
+   with fictional editable facts. It loads no predictions; Analyze runs real Gemma.
+   The short excerpt neither covers the full award nor confirms applications are open.
 2. Enter your career stage and Yes/No/Unknown facts. Leave unknown amounts blank.
    The form defaults to **Live local Gemma**; no JSON knowledge is needed.
-3. Review MATCH, NOT MATCH, UNKNOWN and informational rows, precise source evidence,
-   dates and next steps. Download the Markdown report. Changing inputs clears the
+3. Review the **Questions to verify before applying** queue: contradictions first,
+   one item per unresolved passage, exact evidence, reasons and suggested questions.
+   Missing facts point back to your records; unsupported interpretations need sponsor
+   clarification. The top three appear above the evidence table; the complete
+   numbered queue is in the expandable report. INFO is not counted as a risk item. Download the Markdown report. Changing inputs clears the
    previous result; inputs are locked during an in-flight analysis.
 
 MATCH means a supported textual comparison with a declared fact—not an independently
@@ -115,14 +129,18 @@ real customer, revenue or validated price is claimed. A $9 report or $39/month w
 
 ## Demo and submission
 
-**[Watch/download the authentic 47-second demo](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.2.0/fundpilot-public-call-demo.webm)** · [Release and recording notes](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.2.0)
+**[Watch/download the new v0.3.0 demo](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.0/fundpilot-verification-queue-demo.webm)** · [Release notes](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.3.0) · [Release checks](docs/VERIFICATION_QUEUE_RELEASE.md)
 
-The public WebM download contains three actual Gemma calls on one CNS passage,
-a real report download and stale-report invalidation. Its fictional facts and
-short-excerpt scope are explicit; it is not a full eligibility assessment.
+The 45.64-second public WebM contains three actual Gemma calls on one CNS passage,
+three real report downloads, prioritized verification questions and stale-report
+invalidation. Its fictional facts and excerpt scope are explicit. The [original
+47-second v0.2.0 demonstration](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.2.0/fundpilot-public-call-demo.webm)
+and all original evidence remain unchanged.
 
-The DEV article remains unpublished. The [demo evidence](evidence/public-ui/) identifies actual
-model runs; curated fixtures are never passed off as live inference.
+The DEV article remains unpublished. The [new demo evidence](evidence/verification-upgrade/)
+identifies actual model runs; curated fixtures are never passed off as live inference.
+93 automated tests pass, including 14 new presentation tests. No model retuning or
+benchmark rerun was needed for this upgrade.
 
 ## License and provenance
 

@@ -1,0 +1,13 @@
+{
+  "browser": "151.0.7922.34",
+  "viewport": {
+    "body": 390,
+    "viewport": 390
+  },
+  "keyboard_quickstart": true,
+  "rule_mode_label": true,
+  "accordion": true,
+  "stale_report_cleared": true,
+  "sample_restores_live": true,
+  "scope": "Basic keyboard, small-viewport and behavior checks; not a comprehensive WCAG audit"
+}

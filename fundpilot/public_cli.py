@@ -4,7 +4,8 @@ import argparse
 import json
 from pathlib import Path
 
-from .realworld import Applicant, analyze, markdown
+from .realworld import Applicant, analyze
+from .verification import markdown
 
 
 def main():

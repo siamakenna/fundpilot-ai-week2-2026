@@ -1,0 +1,45 @@
+{
+  "filename": "fundpilot-verification-queue-demo.webm",
+  "sha256": "6def09dfcaa06b784c2f84edc1bed162cdd93ffec958839cf15707a79c87ede1",
+  "bytes": 4192999,
+  "audio": false,
+  "altered_or_sped_up": false,
+  "recording": "Three actual local Gemma UI requests; no fixtures or response mocks. Three real Markdown downloads.",
+  "source_sha256": "e27d9633aefe0d4538b36c6aab602f9e7a0d13ddbb53ddbfc782b3ddc951ad74",
+  "source_url": "https://www.cogneurosociety.org/travel-award/",
+  "source_retrieved": "2026-10-14",
+  "scope": "One short excerpt, three fictional editable profiles, not the full announcement or an accuracy evaluation.",
+  "earlier_takes": "Retained in ignored .local-reports/queue-demo (accordion ambiguity), queue-demo-verified (interrupted), queue-demo-final (exact accessible-name selector excluded arrow). Final take changes only capture scrolling and selectors, not model or UI.",
+  "public_video_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.0/fundpilot-verification-queue-demo.webm",
+  "duration_seconds": 45.64,
+  "width": 1440,
+  "height": 1000,
+  "ended": true,
+  "media_error": null,
+  "codec": "VP8 WebM",
+  "playback": "Complete Chromium playback to ended, no media error",
+  "download_counts_verified": {
+    "supported": {
+      "MATCH": 2,
+      "NOT MATCH": 0,
+      "UNKNOWN": 0,
+      "INFO": 0
+    },
+    "contradiction": {
+      "MATCH": 1,
+      "NOT MATCH": 1,
+      "UNKNOWN": 0,
+      "INFO": 0
+    },
+    "unknown": {
+      "MATCH": 1,
+      "NOT MATCH": 0,
+      "UNKNOWN": 1,
+      "INFO": 0
+    }
+  },
+  "public_http_status": 200,
+  "github_asset_sha256_matches": true,
+  "release_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.3.0",
+  "release_code_commit": "2380ccf1b9409a406563dbc972b20f59193ab85f"
+}

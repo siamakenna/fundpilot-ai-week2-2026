@@ -1,0 +1,105 @@
+{
+  "code_commit": "2380ccf1b9409a406563dbc972b20f59193ab85f",
+  "stage": "Pre-merge: new main-path links checked at the pushed code commit; verify main after merge.",
+  "remote_links": [
+    {
+      "url": "https://ai.google.dev/gemma/terms",
+      "checked_url": "https://ai.google.dev/gemma/terms",
+      "status": 200
+    },
+    {
+      "url": "https://dev.to/challenges/hacktoberfest-week2-2026-10-12",
+      "checked_url": "https://dev.to/challenges/hacktoberfest-week2-2026-10-12",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/siamakenna/fundpilot-ai-week2-2026",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/OFFICIAL_SOURCES.md",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/2380ccf1b9409a406563dbc972b20f59193ab85f/docs/OFFICIAL_SOURCES.md",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/REAL_WORLD_EVALUATION.md",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/2380ccf1b9409a406563dbc972b20f59193ab85f/docs/REAL_WORLD_EVALUATION.md",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/verification-upgrade/contradiction-report.md",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/2380ccf1b9409a406563dbc972b20f59193ab85f/evidence/verification-upgrade/contradiction-report.md",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/verification-upgrade/events.json",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/2380ccf1b9409a406563dbc972b20f59193ab85f/evidence/verification-upgrade/events.json",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/verification-upgrade/quickstart.png",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/2380ccf1b9409a406563dbc972b20f59193ab85f/evidence/verification-upgrade/quickstart.png",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/verification-upgrade/unknown-report.md",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/2380ccf1b9409a406563dbc972b20f59193ab85f/evidence/verification-upgrade/unknown-report.md",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.2.0/fundpilot-public-call-demo.webm",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.2.0/fundpilot-public-call-demo.webm",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.0/fundpilot-verification-queue-demo.webm",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.0/fundpilot-verification-queue-demo.webm",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.2.0",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.2.0",
+      "status": 200
+    },
+    {
+      "url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.3.0",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.3.0",
+      "status": 200
+    },
+    {
+      "url": "https://ollama.com/",
+      "checked_url": "https://ollama.com/",
+      "status": 200
+    },
+    {
+      "url": "https://raw.githubusercontent.com/siamakenna/fundpilot-ai-week2-2026/main/evidence/verification-upgrade/contradiction.png",
+      "checked_url": "https://raw.githubusercontent.com/siamakenna/fundpilot-ai-week2-2026/2380ccf1b9409a406563dbc972b20f59193ab85f/evidence/verification-upgrade/contradiction.png",
+      "status": 200
+    }
+  ],
+  "local_links_resolved": [
+    "LICENSE",
+    "docs/ANNOTATION_REVIEW.md",
+    "docs/DEV_SUBMISSION_DRAFT.md",
+    "docs/EVALUATION.md",
+    "docs/LOCAL_CAPTURE_STEPS.md",
+    "docs/OFFICIAL_SOURCES.md",
+    "docs/PRODUCT_AUDIT.md",
+    "docs/PROVENANCE_AND_LICENSES.md",
+    "docs/REAL_WORLD_EVALUATION.md",
+    "docs/VERIFICATION_QUEUE_RELEASE.md",
+    "evaluation/RUBRIC.md",
+    "evaluation/source_split.json",
+    "evidence/public-ui",
+    "evidence/public-ui/downloaded-report.md",
+    "evidence/public-ui/events.json",
+    "evidence/public-ui/recording-manifest.json",
+    "evidence/verification-upgrade",
+    "evidence/verification-upgrade/events.json",
+    "evidence/verification-upgrade/recording-manifest.json"
+  ],
+  "asset_digest_matches": true,
+  "asset_public_status": 200,
+  "original_v02_asset_unchanged": true
+}

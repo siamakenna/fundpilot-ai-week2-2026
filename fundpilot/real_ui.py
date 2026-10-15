@@ -8,7 +8,9 @@ from pathlib import Path
 import gradio as gr
 
 from .logic import safe_text
-from .realworld import Applicant, analyze, markdown
+from .quickstart import CNS_RETRIEVED, CNS_URL, sample_inputs
+from .realworld import Applicant, analyze
+from .verification import markdown, queue_markdown
 
 QUESTIONS = {
     "membership": "Current paid member of every organization required by this call?",
@@ -50,6 +52,7 @@ def run_public(source, title, url, stage, amount, currency, method, *answers, pr
         overview += f"\n\n{report['covered_units']}/{report['source_units']} source passages accounted for. Completed in {time.perf_counter() - tick:.1f}s. "
         overview += "**Live Gemma interpretation**" if mode == "gemma" else "**Rule baseline — NO AI**"
         overview += "\n\nSupported comparisons use your declared facts; they are not verified credentials. Every passage also requires a scope review for additional conditions, exceptions and linked rules. See the report for all review items. This is not a sponsor’s eligibility decision."
+        overview += "\n\n" + queue_markdown(report, limit=3)
         return overview, rows, md, target
     except Exception as exc:
         return (
@@ -71,6 +74,13 @@ def build_public_ui():
         "### Check the fine print before writing the application\nPaste a **public** announcement. Only its text goes to local Gemma; your applicant facts are compared in Python. Do not paste private grant documents. Fields start unknown rather than assuming eligibility."
     )
     gr.Markdown("## 1. Add the official announcement")
+    sample = gr.Button("Load sample public excerpt (CNS; fictional applicant)")
+    gr.Markdown(
+        f"Optional quick-start: one short [official CNS passage]({CNS_URL}), retrieved {CNS_RETRIEVED}. "
+        "Loads **fictional, editable facts**, not an analysis. Click **Analyze public announcement** "
+        "to run genuine local Gemma. This excerpt does not cover the full call or confirm that applications "
+        "are open. Replace it with your own public text at any time."
+    )
     with gr.Row():
         title = gr.Textbox(label="Opportunity title")
         url = gr.Textbox(label="Official source URL (attribution only; not fetched)")
@@ -132,16 +142,17 @@ def build_public_ui():
     outputs = [summary, table, report, download]
 
     def lock():
-        return [gr.update(interactive=False) for _ in inputs] + [gr.update(interactive=False)]
+        return [gr.update(interactive=False) for _ in inputs + [go, sample]]
 
     def unlock():
-        return [gr.update(interactive=True) for _ in inputs] + [gr.update(interactive=True)]
+        return [gr.update(interactive=True) for _ in inputs + [go, sample]]
 
     # Prevent an older in-flight result from overwriting edits. Inputs become
     # editable again after success or the handled error result.
-    event = go.click(lock, outputs=inputs + [go], queue=False)
+    sample.click(lambda: sample_inputs(QUESTIONS), outputs=inputs).then(clear_public, outputs=outputs)
+    event = go.click(lock, outputs=inputs + [go, sample], queue=False)
     event.then(run_public, inputs=inputs, outputs=outputs, concurrency_limit=1).then(
-        unlock, outputs=inputs + [go]
+        unlock, outputs=inputs + [go, sample]
     )
     for field in inputs:
         field.change(clear_public, outputs=outputs)
