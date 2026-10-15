@@ -16,13 +16,21 @@ I built it for independent researchers and small mentoring programs without a gr
 
 The original prototype depended heavily on fictional examples. The main workflow now accepts previously unseen public text and ordinary applicant facts. Fictional fixtures remain in a clearly labeled secondary tab. They never substitute for live model output.
 
+**The report should not end at UNKNOWN.** The new verification queue puts contradictions first, groups repeated findings from the same passage, and pairs each item with a next action, a suggested sponsor question, its reason and the exact evidence. Unknown presenter status? Check your records and update the form first. A first-author contradiction? Confirm your declared fact, then ask whether the published condition prevents applying and whether any published exception applies. The tool supplies questions, never invented sponsor answers.
+
+An optional CNS quick-start loads one verified public excerpt and clearly fictional, editable facts. It selects live Gemma, but produces no report until you click Analyze. You can replace the excerpt with another public call. This is early triage and preparation; the complete announcement and linked policies still need review.
+
 ## Demo
 
-**[Watch/download the real 47-second demo (WebM)](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.2.0/fundpilot-public-call-demo.webm)** · [Release notes](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.2.0)
+![An actual first-author contradiction, exact source evidence and a prioritized verification question](https://raw.githubusercontent.com/siamakenna/fundpilot-ai-week2-2026/main/evidence/verification-upgrade/contradiction.png)
 
-The file is publicly accessible without sign-in. Download and open it in a WebM-capable browser/player; it is a silent, unedited recording.
+**[Watch/download the new 46-second demo (WebM)](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.0/fundpilot-verification-queue-demo.webm)** · [v0.3.0 release](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.3.0)
 
-The walkthrough uses a short, attributed passage from the real CNS 2027 Travel Awards announcement and three fictional applicant configurations. Each analysis invokes local Gemma. It shows supported matches, a first-authorship contradiction, an unknown presenter fact, and an actual report download. This is a focused workflow demonstration, **not complete CNS eligibility analysis**.
+This silent, unedited recording shows the working local app, **not a publicly hosted interactive service**. The public download needs no sign-in; open it in a WebM-capable browser/player.
+
+**Watch for:** the editable CNS quick-start at 0:01; two supported comparisons with a full-source review warning at about 0:10; a first-author contradiction and priority-one sponsor question at 0:21; an unknown presenter fact and a concrete next action at 0:32; and the downloaded report at 0:39. Editing an input clears the old report before the recording ends. [Inspect the contradiction report](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/verification-upgrade/contradiction-report.md), [the UNKNOWN report](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/verification-upgrade/unknown-report.md), or [the event log](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/verification-upgrade/events.json).
+
+Each of the three analyses invokes real local Gemma on one short, attributed CNS 2027 Travel Awards passage with fictional applicant facts. Each report is actually downloaded and checked. This demonstrates the workflow on a simple condition, **not complete CNS eligibility analysis or improved extraction accuracy**. The authentic [v0.2.0 recording](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.2.0/fundpilot-public-call-demo.webm) remains unchanged.
 
 The broader [official-source evaluation](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/REAL_WORLD_EVALUATION.md) exercises selected passages from eight announcements, including current and historical opportunities. The [source ledger](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/OFFICIAL_SOURCES.md) distinguishes them and records retrieval limitations.
 
@@ -38,7 +46,7 @@ The final path uses **Gemma 3 1B, Q4_K_M, through Ollama 0.40.4** on a CPU lapto
 
 Lexical rules constrain candidate criteria and provide a measured baseline. A supported comparison is allowed only when the model and rules agree. Python then compares the condition with declared applicant facts. Applicant facts stay in Python; only public announcement text goes to Ollama. Exceptions, uncertain scope and unsupported conditions remain review items. Amount handling separates explicit request ceilings from sponsor benefits; dates retain their apparent purpose without inventing missing years or opening status.
 
-The useful product changes are concrete: no mandatory JSON editing, a live-model default, visible contradictions, source evidence beside findings, and a downloadable review checklist. Inputs lock during analysis; changing them clears the previous report. Missing models and invalid responses produce an error instead of a fabricated answer.
+The verification queue is a small deterministic layer over those frozen findings. It does not change model prompts, predictions, statuses, counts or source hashes. The top three questions appear beside the outcome; the full numbered list and all underlying criteria remain in the downloadable Markdown report. Award information is excluded from risk items, and even an all-MATCH excerpt retains a source-review warning. Inputs lock during analysis; changing them clears the previous report. Missing models and invalid responses produce an error instead of a fabricated answer.
 
 I tested alternative schemas on five development sources, froze the candidate, and reserved three additional sources for one held-out pass. An inaccessible reserved page was replaced before inference, with the substitution recorded. Eight paragraphs per source were selected; these are not whole-document completeness tests.
 
@@ -55,11 +63,11 @@ The held-out reports contained 24 UNKNOWN and three informational findings, with
 **no supported applicant matches or mismatches** for the evaluation profile. They
 all needed manual review. That is a real limitation, not a successful eligibility
 verdict. A tiny held-out F1 difference from rules does not establish superiority.
-The separate 95.24% synthetic prototype score is not real-world accuracy.
+The separate 95.24% synthetic prototype score is not real-world accuracy. This interface upgrade leaves those evaluations frozen; it improves what a researcher can do with uncertainty, not the measured extraction performance.
 
 The original development labels are provisional. A separately supplied AI reconciliation package proposed changes to 14 of 40 development records; all 40 passage hashes and five source snapshots matched the local cache. I preserved that proposal separately, without retuning or replacing historical scores. **AI reviewers are not independent human adjudicators.** Conflicting ISMB postdoc wording remains unresolved pending sponsor clarification.
 
-The suite has **79 passing tests**, including adapter mocks for malformed JSON, omitted IDs, timeout budgets and unsupported conditions. Five additional live safety probes kept injection, a membership exception and a negative cap unresolved, treated a stipend as information, and rejected a missing model. These checks demonstrate specific safeguards, not universal prompt-injection resistance or flawless interpretation.
+The suite now has **93 passing tests**: the original 79 plus 14 queue and quick-start tests. These include adapter mocks, not live accuracy measurements. The new checks cover missing facts, exclusions, repeated criteria, compound passages, award-versus-cap handling, escaping and live-path failure. Chromium verified the queue, downloads, keyboard quick-start and narrow-screen form. The earlier five live safety probes kept injection, a membership exception and a negative cap unresolved, treated a stipend as information, and rejected a missing model. These checks demonstrate specific safeguards, not universal prompt-injection resistance or flawless interpretation.
 
 ## Why Does Open Innovation Matter?
 

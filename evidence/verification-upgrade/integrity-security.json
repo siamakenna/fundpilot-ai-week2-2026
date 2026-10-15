@@ -1,0 +1,27 @@
+{
+  "baseline": "22f54af04feef4ae75d28cf8a822871a9788af5e",
+  "protected_files_unchanged": 196,
+  "changed_protected_files": [],
+  "frozen_engine_sha256": "7fb7ce091e1d16a7950bd131a9950c543777b6bfabe1f18f2c75d1e52f8674fc",
+  "original_benchmarks_rerun": false,
+  "cns_exact_cached_passage": true,
+  "cns_source_sha256": "e27d9633aefe0d4538b36c6aab602f9e7a0d13ddbb53ddbfc782b3ddc951ad74",
+  "new_presentation_span_checks": 11,
+  "span_method": "Deterministic presentation replay on the single demo excerpt; not live inference or accuracy scoring",
+  "scanned_files": 253,
+  "credential_pattern_matches": [],
+  "unexpected_document_weight_or_large_files": [],
+  "ruff_release": "F checks pass, same gate as v0.2.0",
+  "optional_ruff_baseline_diagnostics": 28,
+  "optional_ruff_current_diagnostics": 28,
+  "optional_new_diagnostics": [],
+  "manual_security_review": [
+    "No new network endpoint, remote fetching, model request or dependency.",
+    "Queue text uses fixed templates; source, reasons, title and URL are Markdown/HTML escaped.",
+    "Sample changes only editable inputs, explicitly chooses live Gemma, returns no predictions.",
+    "Inputs and quick-start locked during inference; changes clear stale output.",
+    "Reports remain local unencrypted temporary files, as documented; only synthetic profiles captured.",
+    "Original MIT and separate Gemma/source terms preserved; full source cache stays ignored."
+  ],
+  "limitations": "Scoped pattern and code review, not a penetration test, full dependency audit or proof of absence of all secrets."
+}
