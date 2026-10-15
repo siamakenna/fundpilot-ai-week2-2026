@@ -1,0 +1,13 @@
+{
+  "baseline": "910abcd77f71f940580ca78b48c4fd2f05dd1611",
+  "protected_files_byte_identical": 252,
+  "allowed_baseline_presentation_changes": [
+    "fundpilot/real_ui.py",
+    "fundpilot/verification.py"
+  ],
+  "frozen_candidate_hashes_unchanged": true,
+  "scoped_new_file_security_scan": "No credential patterns, private-document or model-weight formats, or files over 5MB found. Not a full security audit.",
+  "tests": "........................................................................ [ 52%]\n.................................................................        [100%]\n137 passed in 4.94s\n",
+  "ruff_F": "PASS",
+  "inference_release": "NO SHIP"
+}

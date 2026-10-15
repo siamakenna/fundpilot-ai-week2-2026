@@ -27,19 +27,19 @@ def main():
         manifest.append({'local_file':str(p),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
     (DEST/'private-evidence-manifest.json').write_text(json.dumps({'note':'Raw source-bearing evidence preserved locally, not published in full. No paths to personal documents.','files':manifest},indent=2)+'\n')
     lines=['# Atomic v0.4 evaluation — NO SHIP','',
-      'The experimental inference upgrade does not meet the release gates. Keep it on its feature branch. Ship the independently tested onboarding with the unchanged v0.3 engine.','',
+      'The experimental inference upgrade does not meet the release gates. Keep it on its feature branch. Ship the separately tested onboarding with the unchanged v0.3 engine.','',
       'All results below are against coding-assistant provisional annotations, **not independently human-validated ground truth**. Ten development passages / 20 atoms / 3 organizers; eight reserved passages / 20 atoms / 2 different organizers. All three systems use the same preregistered (passage, kind, criterion) unit. Expanded vocabulary disadvantages the legacy schema. These scores do not replace historical scores or establish general accuracy.','',
       '| Split / system | TP / predicted / reference | Precision | Recall | F1 | Mandatory | Exclusion | Reports | Mean seconds/case |',
       '|---|---|---|---|---|---|---|---|---|']
     for split,prefix in [('Development','dev'),('Reserved final','final')]:
         for label,suffix in [('v0.3 Gemma','A-service-restored' if prefix=='dev' else 'A'),('Atomic B3','B3' if prefix=='dev' else 'B'),('Rules','rules')]:
             m=results[prefix+'-'+suffix]['metrics'];mandatory=m['mandatory_recall'];ex=m['exclusion_recall'];c=m['completion']
-            lines.append(f"| {split} / {label} | {m['true_positive']} / {m['predicted']} / {m['reference']} | {m['precision']:.2%} | {m['recall']:.2%} | {m['f1']:.2%} | {mandatory['matched']}/{mandatory['reference']} | {ex['matched']}/{ex['reference']} | {c['complete']}/{c['cases']} | {m['latency_seconds']['mean']:.3f} |")
+            lines.append(f"| {split} / {label} | {m['true_positive']} / {m['predicted']} / {m['reference']} | {format(m['precision'], '.2%') if m['predicted'] else 'undefined (0 predictions)'} | {m['recall']:.2%} | {m['f1']:.2%} | {mandatory['matched']}/{mandatory['reference']} | {ex['matched']}/{ex['reference']} | {c['complete']}/{c['cases']} | {m['latency_seconds']['mean']:.3f} |")
     lines += ['', '| Split / system | UNKNOWN / non-INFO | False supported MATCH / all MATCH | False supported NOT MATCH / all NOT MATCH | Exact source spans / proposed | Completed passages / total |', '|---|---|---|---|---|---|']
     for name in ['dev-A-service-restored','dev-B3','dev-rules','final-A','final-B','final-rules']:
         m=results[name]['metrics'];u=m['unknown'];s=m['source_spans'];p=m['passages'];c=m['status_counts']
         lines.append(f"| {name} | {u['count']}/{u['non_informational']} | {m['false_supported_positive']}/{c.get('MATCH',0)} | {m['false_supported_negative']}/{c.get('NOT MATCH',0)} | {s['exact']}/{s['proposed']} | {p['completed']}/{p['total']} |")
-    lines += ['', 'Zero-denominator rates are undefined, not perfect safety. False-supported counts are disagreements with provisional reference comparison labels for ONE fictional profile, not confirmed real applicant eligibility errors. Kind accuracy uses the same matched/reference numerator and denominator; missing atoms count wrong. JSON files retain missing-atom counts and token totals.',
+    lines += ['', 'Zero-denominator rates are undefined, not perfect safety. Raw JSON uses 0 as a computational sentinel for undefined precision; the table marks it explicitly. False-supported counts are disagreements with provisional reference comparison labels for ONE fictional profile, not confirmed real applicant eligibility errors. Kind accuracy uses the same matched/reference numerator and denominator; missing atoms count wrong. JSON files retain missing-atom counts and token totals.',
        '', '## Failures and limitations',
        '- Initial development A: 0/3 reports because Ollama was stopped. All three failures are preserved separately. Service-restored A uses unchanged inference; there were no reserved-test retries.',
        '- B1: 0/3 reports, rejected invented applicability/dependency text. B2: 0/3, rejected absent dependency spans. B3 keeps full original context beside numbered span proposals; duplicate or inconsistent conditions still reject reports.',

@@ -1,6 +1,6 @@
 # Atomic v0.4 evaluation — NO SHIP
 
-The experimental inference upgrade does not meet the release gates. Keep it on its feature branch. Ship the independently tested onboarding with the unchanged v0.3 engine.
+The experimental inference upgrade does not meet the release gates. Keep it on its feature branch. Ship the separately tested onboarding with the unchanged v0.3 engine.
 
 All results below are against coding-assistant provisional annotations, **not independently human-validated ground truth**. Ten development passages / 20 atoms / 3 organizers; eight reserved passages / 20 atoms / 2 different organizers. All three systems use the same preregistered (passage, kind, criterion) unit. Expanded vocabulary disadvantages the legacy schema. These scores do not replace historical scores or establish general accuracy.
 
@@ -10,7 +10,7 @@ All results below are against coding-assistant provisional annotations, **not in
 | Development / Atomic B3 | 1 / 17 / 20 | 5.88% | 5.00% | 5.41% | 1/17 | 0/4 | 1/3 | 50.764 |
 | Development / Rules | 8 / 13 / 20 | 61.54% | 40.00% | 48.48% | 8/17 | 1/4 | 3/3 | 0.005 |
 | Reserved final / v0.3 Gemma | 1 / 9 / 20 | 11.11% | 5.00% | 6.90% | 1/18 | 0/2 | 2/2 | 16.841 |
-| Reserved final / Atomic B3 | 0 / 0 / 20 | 0.00% | 0.00% | 0.00% | 0/18 | 0/2 | 0/2 | 79.504 |
+| Reserved final / Atomic B3 | 0 / 0 / 20 | undefined (0 predictions) | 0.00% | 0.00% | 0/18 | 0/2 | 0/2 | 79.504 |
 | Reserved final / Rules | 0 / 9 / 20 | 0.00% | 0.00% | 0.00% | 0/18 | 0/2 | 2/2 | 0.007 |
 
 | Split / system | UNKNOWN / non-INFO | False supported MATCH / all MATCH | False supported NOT MATCH / all NOT MATCH | Exact source spans / proposed | Completed passages / total |
@@ -22,7 +22,7 @@ All results below are against coding-assistant provisional annotations, **not in
 | final-B | 0/0 | 0/0 | 0/0 | 58/58 | 5/8 |
 | final-rules | 8/8 | 0/0 | 0/0 | 9/9 | 8/8 |
 
-Zero-denominator rates are undefined, not perfect safety. False-supported counts are disagreements with provisional reference comparison labels for ONE fictional profile, not confirmed real applicant eligibility errors. Kind accuracy uses the same matched/reference numerator and denominator; missing atoms count wrong. JSON files retain missing-atom counts and token totals.
+Zero-denominator rates are undefined, not perfect safety. Raw JSON uses 0 as a computational sentinel for undefined precision; the table marks it explicitly. False-supported counts are disagreements with provisional reference comparison labels for ONE fictional profile, not confirmed real applicant eligibility errors. Kind accuracy uses the same matched/reference numerator and denominator; missing atoms count wrong. JSON files retain missing-atom counts and token totals.
 
 ## Failures and limitations
 - Initial development A: 0/3 reports because Ollama was stopped. All three failures are preserved separately. Service-restored A uses unchanged inference; there were no reserved-test retries.
