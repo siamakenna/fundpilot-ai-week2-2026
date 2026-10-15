@@ -1,0 +1,13 @@
+{
+  "replaced_id": "seb_travel",
+  "reason": "HTTP 401 via curl and web lookup; no source body obtained or model run",
+  "replacement": {
+    "id": "rsc_researcher_travel",
+    "split": "holdout",
+    "url": "https://www.rsc.org/funding-and-support/funding/researcher-development-and-travel-grant"
+  },
+  "selected_at_utc": "2026-10-15T03:06:12.607290+00:00",
+  "candidate_already_frozen": true,
+  "model_requests_started": false,
+  "retrieval_note": "RSC direct curl returned 403. Public web retrieval returned current official page text. That normalized text is the recorded snapshot; no access control bypass."
+}

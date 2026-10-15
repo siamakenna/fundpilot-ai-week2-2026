@@ -1,0 +1,248 @@
+{
+  "reviewer": "Codex assistant, source-reviewed separately from evaluated Gemma; NOT independently human-verified",
+  "protocol": "Original committed rubric; no revised development-v2 scoring or candidate tuning. Labels finalized before first held-out inference. Mandatory means selected rubric category, not all binding obligations.",
+  "cases": [
+    {
+      "id": "biochemical_online",
+      "source_sha256": "2b662eb6fc7f0bb6552043b6714abfe477578c098729a9110f882e3cc7d24b65",
+      "clauses": [
+        {
+          "source_line": 99,
+          "kind": "award",
+          "keys": [
+            "membership",
+            "career_stage"
+          ],
+          "mandatory": false,
+          "passage_sha256": "4708e6c2c977e5773e67db14a1fcfbb711fb043ec30621e60cf420a3a0ebb9a8"
+        },
+        {
+          "source_line": 103,
+          "kind": "deadline",
+          "keys": [
+            "unknown"
+          ],
+          "mandatory": false,
+          "passage_sha256": "20d604c3ecc204597ee80bff25a68d16d6c38640ae83f7bdcfcb5e2efda8fad7"
+        },
+        {
+          "source_line": 107,
+          "kind": "unclear",
+          "keys": [
+            "membership"
+          ],
+          "mandatory": false,
+          "passage_sha256": "d011356e473a732116c8d9048dfe7b3c9dbd6332691f759f5bc475e9c71b9d1c"
+        },
+        {
+          "source_line": 108,
+          "kind": "exclusion",
+          "keys": [
+            "prior_award"
+          ],
+          "mandatory": true,
+          "passage_sha256": "a923a3e8eccc75a5df74dfa0176ee63b6681bfea337e940cb53466d7cb914018"
+        },
+        {
+          "source_line": 109,
+          "kind": "funding_limit",
+          "keys": [
+            "unknown"
+          ],
+          "mandatory": true,
+          "passage_sha256": "76fd75836fa4e120e5c2c7ed9763d902308a075b3c07429d25b7ab51881bd139"
+        },
+        {
+          "source_line": 110,
+          "kind": "unclear",
+          "keys": [
+            "abstract_submitted",
+            "unknown"
+          ],
+          "mandatory": false,
+          "passage_sha256": "bb904991a231a215aa25e63fbcad601b19bc7ba435c5f6bdf6318d29373b8e15"
+        },
+        {
+          "source_line": 123,
+          "kind": "document",
+          "keys": [
+            "documents"
+          ],
+          "mandatory": true,
+          "passage_sha256": "71c81019b434d413262be438c395aacf8b922756f43ec40bfd49d925ca116064"
+        },
+        {
+          "source_line": 143,
+          "kind": "exclusion",
+          "keys": [
+            "unknown"
+          ],
+          "mandatory": true,
+          "passage_sha256": "a6ec0d124457f17d3b2b3225d6e21659b3f668063ae01d173127c689bbd91374"
+        }
+      ]
+    },
+    {
+      "id": "ismb_dependent_care",
+      "source_sha256": "4c3587318bd680a74c390f7140ab42f1ee7404f6e3f61c24fa6acb28568e28b7",
+      "clauses": [
+        {
+          "source_line": 118,
+          "kind": "award",
+          "keys": [
+            "membership"
+          ],
+          "mandatory": false,
+          "passage_sha256": "7d291612c51b8e829c2a65b2ea64bffcdbd42fde22cb5c483df0112cda629f0b"
+        },
+        {
+          "source_line": 123,
+          "kind": "requirement",
+          "keys": [
+            "membership"
+          ],
+          "mandatory": true,
+          "passage_sha256": "7ebfe061da23c6bb9d4e311472f8959dff67d2c3b68d4c1a2b11da509c5c49c3"
+        },
+        {
+          "source_line": 124,
+          "kind": "requirement",
+          "keys": [
+            "abstract_accepted",
+            "presenting_author"
+          ],
+          "mandatory": true,
+          "passage_sha256": "e868849eb635fde8d5814c8cc49effd3043ea53a0e228f81fe1d746f35bbe657"
+        },
+        {
+          "source_line": 125,
+          "kind": "requirement",
+          "keys": [
+            "unknown"
+          ],
+          "mandatory": true,
+          "passage_sha256": "01607451c4059c323139059b793e145ae1c53da5b1a4c1aac82aba6e58f3a7de"
+        },
+        {
+          "source_line": 126,
+          "kind": "unclear",
+          "keys": [
+            "unknown"
+          ],
+          "mandatory": false,
+          "passage_sha256": "d502c5e5b6b7482f60ccee3dbbc6b8a0bd155f1dc9d458a2ee35e9e6eb930b57"
+        },
+        {
+          "source_line": 127,
+          "kind": "optional",
+          "keys": [
+            "career_stage",
+            "membership",
+            "unknown"
+          ],
+          "mandatory": false,
+          "passage_sha256": "092425f12a011fc7c3f9fc852040e831b021fc08547b734d6a3295f2a9297f56"
+        },
+        {
+          "source_line": 134,
+          "kind": "document",
+          "keys": [
+            "documents"
+          ],
+          "mandatory": true,
+          "passage_sha256": "d59b17274134f160fc4cd87f1ba9fd7bf731bc64c4092b19d0cc3fe9f17b4e12"
+        },
+        {
+          "source_line": 135,
+          "kind": "requirement",
+          "keys": [
+            "unknown"
+          ],
+          "mandatory": true,
+          "passage_sha256": "7dec580f678e1f85d73ee32ed36fe20ea385d6e5db8b4bc44c1890511a5e5f3c"
+        }
+      ]
+    },
+    {
+      "id": "rsc_researcher_travel",
+      "source_sha256": "f9856804071d692a1d1108d0045e00092b0de7a9c3757816f75b330dd8a2aeea",
+      "clauses": [
+        {
+          "source_line": 231,
+          "kind": "exclusion",
+          "keys": [
+            "membership",
+            "career_stage"
+          ],
+          "mandatory": true,
+          "passage_sha256": "b7430f2abcadea7d915a150a89dacb8ba4a66ad8bd68644ae7f8957048a3a9ef"
+        },
+        {
+          "source_line": 232,
+          "kind": "unclear",
+          "keys": [
+            "career_stage",
+            "unknown"
+          ],
+          "mandatory": false,
+          "passage_sha256": "36ef12285b29a0cef64fa4e6247174ed97903d436d4f31436a679b36657511d7"
+        },
+        {
+          "source_line": 233,
+          "kind": "exclusion",
+          "keys": [
+            "unknown"
+          ],
+          "mandatory": true,
+          "passage_sha256": "97f7082cfc25d5353f91abc6a463916b14cad604e79daaf64e5a4ba0cdb627d0"
+        },
+        {
+          "source_line": 234,
+          "kind": "unclear",
+          "keys": [
+            "prior_award",
+            "unknown"
+          ],
+          "mandatory": false,
+          "passage_sha256": "a19eb18057ddeba3785a3f587a2e70c444c7a36f6956840ad78150ff64effa03"
+        },
+        {
+          "source_line": 238,
+          "kind": "award",
+          "keys": [
+            "unknown"
+          ],
+          "mandatory": false,
+          "passage_sha256": "226984645d307deac3ebbdb43a029c5c116f1e24287bb1a42f1c6fe25e82a719"
+        },
+        {
+          "source_line": 250,
+          "kind": "deadline",
+          "keys": [
+            "unknown"
+          ],
+          "mandatory": false,
+          "passage_sha256": "29bb82551355414aa6d70246421b8a6ba02072cae1d81d6b06970363c2709aca"
+        },
+        {
+          "source_line": 282,
+          "kind": "document",
+          "keys": [
+            "documents"
+          ],
+          "mandatory": true,
+          "passage_sha256": "63227a374fb37437b42d6cef0b574fa9e0f0f91b0e9709fb1c3b7585f5fba9ee"
+        },
+        {
+          "source_line": 287,
+          "kind": "funding_limit",
+          "keys": [
+            "request_limit"
+          ],
+          "mandatory": true,
+          "passage_sha256": "9548c6b0a3755b95dae100c83bacceaea75a6397a17159a237d9af38aac7fa11"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "basis": "Stored v4 live predictions replayed through unchanged deterministic checks, no new inference",
+  "readiness": "REVIEW REQUIRED",
+  "source_line": 151,
+  "findings": [
+    {
+      "id": 3,
+      "key": "career_stage",
+      "status": "UNKNOWN",
+      "reason": "Model and explicit rule interpretation do not agree; review this source passage."
+    },
+    {
+      "id": 3,
+      "key": "registration",
+      "status": "UNKNOWN",
+      "reason": "Model and explicit rule interpretation do not agree; review this source passage."
+    },
+    {
+      "id": 3,
+      "key": "us_federal_employee",
+      "status": "UNKNOWN",
+      "reason": "Model and explicit rule interpretation do not agree; review this source passage."
+    },
+    {
+      "id": 3,
+      "key": "scope_review",
+      "status": "UNKNOWN",
+      "reason": "Review the entire passage, its list heading and linked rules for additional conditions or exceptions beyond the supported comparisons. Span coverage does not prove semantic completeness."
+    }
+  ]
+}

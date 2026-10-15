@@ -78,10 +78,57 @@ Short excerpt: “Applicants cannot receive funding from the same scheme in cons
 
 ## Held-out sources
 
-The committed split reserves SEB Company of Biologists Travel Grant 2026,
-Biochemical Society Online Attendance Grants, and ISMB 2026 Dependent Care Grant.
-Their page bodies remain unopened during tuning. Add source-reviewed status and
-paraphrased conditions here after the candidate freeze, before the single evaluation.
+The candidate was frozen before these bodies were opened. The reserved SEB page
+returned HTTP 401 through direct and web retrieval. No SEB body or model result was
+obtained. An access-driven replacement was preregistered in
+`evaluation/holdout-source-amendment.json` before inference; the original split is
+unchanged. Eight sources are evaluated in total; one additional URL was inaccessible.
+
+### Biochemical Society Online Attendance Grants — current round
+
+[Official source](https://www.biochemistry.org/grants-and-awards/grants-and-bursaries/online-attendance-grants/).
+The current page lists November 2, 2026 for online events after December 1. Up to
+£500 covers registration; £2,000 across three years is an aggregate limit.
+Membership has a 12-month route and a six-month multiyear exception. Consecutive-year
+awards are excluded. Submitted abstracts demonstrate participation; events without
+abstracts allow a participation summary. Some career categories require support
+letters. Scientific relevance, financial need and career benefit matter. Late,
+incomplete and retrospective applications are excluded; funds cannot be transferred.
+
+Short excerpt: “Incomplete or late applications will not be accepted.”
+
+### ISMB 2026 Dependent Care Grant — historical cycle
+
+[Official source](https://www.iscb.org/ismb2026/general-info/dependent-care-grant).
+The $600 benefit supports care-related attendance costs. Current membership and
+accepted presenting work are prerequisites. The primary-caregiver route has an
+alternative for applicants who need caregiving assistance themselves. Early career,
+need and non-high-income locations are priorities, not universal requirements.
+Justification and care details are required; payment follows attendance evidence.
+The retrieved page's Key Dates section contains no visible exact deadline, so none
+is invented. The conference cycle is historical; this is not advertised as open.
+
+Short excerpt: “Be an ISCB member in good standing”
+
+### RSC Researcher Development and Travel Grant — replacement, current round
+
+[Official source](https://www.rsc.org/funding-and-support/funding/researcher-development-and-travel-grant).
+The current official web retrieval says applications are open and close October 19,
+2026 at 14:00 BST for activities from January 1, 2027. Membership categories,
+180-day Partner Scientist tenure, chemical-science research role and career stage
+apply. Some roles and membership categories are excluded. Career-break exceptions
+and prior-award timing require care. £500 is both the maximum grant and an explicit
+request limit. Essential costs and a third-party declaration matter; eligible
+applications may face random allocation when funding is insufficient. Linked terms
+contain additional conditions. An apparently inconsistent activity-date rejection
+bullet needs sponsor clarification and is not silently corrected.
+
+Short excerpt: “Your funding request exceeds £500”
+
+Direct curl returned 403; the public web retrieval successfully provided the current
+official text. Its normalized text snapshot and hash are recorded separately from
+HTML-derived snapshots. Search snippets had stale opening-status wording; only the
+current opened page informed this status. No access controls were bypassed.
 
 ## Limits of the evidence
 
