@@ -3,7 +3,7 @@
 This experiment is separate from the v0.3.0 submission. Previous development and
 held-out data are historical diagnostic material. Their files and scores stay intact.
 The fresh split contains three development organizers and two reserved organizers,
-all different from the historical benchmark. Four original passages per source are
+all different from the historical benchmark. Up to four coherent original passages per source are
 selected for meaningful obligations; this convenience sample is not full-page recall.
 
 ## Annotation and blinding

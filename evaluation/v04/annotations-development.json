@@ -1,0 +1,281 @@
+{
+  "version": "v04-provisional-1",
+  "reviewer": "Coding assistant; NOT independent or human-validated. Authored before candidate inference.",
+  "profile": {
+    "career_stage": "Graduate student",
+    "membership": true,
+    "first_author": false,
+    "presenting_author": true,
+    "abstract_submitted": true,
+    "in_person": true,
+    "registration": false,
+    "upfront_costs": true
+  },
+  "cases": [
+    {
+      "id": "sdb_meeting",
+      "source_url": "https://www.sdbonline.org/2026mtg_meeting_assistance",
+      "source_sha256": "9ac09c925e43b3f97857b3d025bfed1e16802937629c06bcf9cc6654cb4c554f",
+      "source_status": "Historical 2026 event; selected deadlines have passed or call explicitly closed. No current open-application claim.",
+      "passages": [
+        {
+          "source_line": 17,
+          "passage_sha256": "fb968c0a4164590969e87f6bb2439d38986b8cf5c8b653564e3a24d8894ed0e5",
+          "atoms": [
+            {
+              "kind": "eligibility",
+              "criterion": "career_stage",
+              "expected_status": "MATCH",
+              "relation": "NONE",
+              "evidence_start": 0,
+              "evidence_end": 671,
+              "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate."
+            },
+            {
+              "kind": "eligibility",
+              "criterion": "financial_need",
+              "expected_status": "UNKNOWN",
+              "relation": "NONE",
+              "evidence_start": 0,
+              "evidence_end": 671,
+              "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate."
+            },
+            {
+              "kind": "eligibility",
+              "criterion": "first_author",
+              "expected_status": "NOT MATCH",
+              "relation": "AND",
+              "evidence_start": 0,
+              "evidence_end": 671,
+              "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate."
+            },
+            {
+              "kind": "eligibility",
+              "criterion": "presenting_author",
+              "expected_status": "MATCH",
+              "relation": "AND",
+              "evidence_start": 0,
+              "evidence_end": 671,
+              "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate."
+            },
+            {
+              "kind": "eligibility",
+              "criterion": "abstract_submitted",
+              "expected_status": "MATCH",
+              "relation": "NONE",
+              "evidence_start": 0,
+              "evidence_end": 671,
+              "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate."
+            },
+            {
+              "kind": "eligibility",
+              "criterion": "membership",
+              "expected_status": "UNKNOWN",
+              "relation": "CONDITIONAL",
+              "evidence_start": 0,
+              "evidence_end": 671,
+              "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate."
+            },
+            {
+              "kind": "informational",
+              "criterion": "selection",
+              "expected_status": "INFO",
+              "relation": "NONE",
+              "evidence_start": 0,
+              "evidence_end": 671,
+              "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate."
+            },
+            {
+              "kind": "informational",
+              "criterion": "application_timing",
+              "expected_status": "INFO",
+              "relation": "NONE",
+              "evidence_start": 0,
+              "evidence_end": 671,
+              "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate."
+            }
+          ]
+        },
+        {
+          "source_line": 18,
+          "passage_sha256": "78c83f04e3cdc818e8ca570832e7854488bd106816a62341f43730d27dcd245b",
+          "atoms": [
+            {
+              "kind": "deadline",
+              "criterion": "application_timing",
+              "expected_status": "UNKNOWN",
+              "relation": "NONE",
+              "evidence_start": 0,
+              "evidence_end": 36,
+              "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "alba_travel",
+      "source_url": "https://www.alba.network/travel-awards-to-FENS2026",
+      "source_sha256": "7fe74b252aeda96c4a3d4b1b7ad853e061f88c79a2abf839f4f5fb6b4ae0c4a1",
+      "source_status": "Historical 2026 event; selected deadlines have passed or call explicitly closed. No current open-application claim.",
+      "passages": [
+        {
+          "source_line": 42,
+          "passage_sha256": "24f170296b7a72cf0d03ae78d5f70c157b73017c5b9d1fad6fd7f8be3f9a8380",
+          "atoms": [
+            {
+              "kind": "sponsor_benefit",
+              "criterion": "award_amount",
+              "expected_status": "INFO",
+              "relation": "CONDITIONAL",
+              "evidence_start": 0,
+              "evidence_end": 29,
+              "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate."
+            }
+          ]
+        },
+        {
+          "source_line": 47,
+          "passage_sha256": "bbdcc3cf1c7d767469d5fb25828caa2a6a91c8da87598a804fa07a8478f5fd54",
+          "atoms": [
+            {
+              "kind": "eligibility",
+              "criterion": "career_stage",
+              "expected_status": "UNKNOWN",
+              "relation": "CONDITIONAL",
+              "evidence_start": 0,
+              "evidence_end": 341,
+              "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate."
+            },
+            {
+              "kind": "required_material",
+              "criterion": "documents",
+              "expected_status": "UNKNOWN",
+              "relation": "CONDITIONAL",
+              "evidence_start": 0,
+              "evidence_end": 341,
+              "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate."
+            }
+          ]
+        },
+        {
+          "source_line": 50,
+          "passage_sha256": "0d135f0230a9380480a1866757bc7fbab6051ff7359cbebb12e8b0fc31745e0c",
+          "atoms": [
+            {
+              "kind": "eligibility",
+              "criterion": "membership",
+              "expected_status": "UNKNOWN",
+              "relation": "OR",
+              "evidence_start": 0,
+              "evidence_end": 93,
+              "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate."
+            }
+          ]
+        },
+        {
+          "source_line": 51,
+          "passage_sha256": "62035a478e0dda87aa3ef1161cb888ed2903ceb895652d126b4243bceacfa887",
+          "atoms": [
+            {
+              "kind": "exclusion",
+              "criterion": "other_funding",
+              "expected_status": "UNKNOWN",
+              "relation": "OR",
+              "evidence_start": 0,
+              "evidence_end": 229,
+              "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate."
+            },
+            {
+              "kind": "exclusion",
+              "criterion": "prior_award",
+              "expected_status": "UNKNOWN",
+              "relation": "OR",
+              "evidence_start": 0,
+              "evidence_end": 229,
+              "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gns_travel",
+      "source_url": "https://nwg-info.de/en/node/14775",
+      "source_sha256": "7594adc8b95b58cf36101aee1ac0048c49bf086447793c8918c982ab65666156",
+      "source_status": "Historical 2026 event; selected deadlines have passed or call explicitly closed. No current open-application claim.",
+      "passages": [
+        {
+          "source_line": 63,
+          "passage_sha256": "ec0b4ecb627b90a6be63376fdb61bf4062e3e4c0ba8fe8b5ff060ddd4ea659d4",
+          "atoms": [
+            {
+              "kind": "eligibility",
+              "criterion": "career_stage",
+              "expected_status": "UNKNOWN",
+              "relation": "OR",
+              "evidence_start": 0,
+              "evidence_end": 102,
+              "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate."
+            },
+            {
+              "kind": "eligibility",
+              "criterion": "career_duration",
+              "expected_status": "UNKNOWN",
+              "relation": "CONDITIONAL",
+              "evidence_start": 0,
+              "evidence_end": 102,
+              "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate."
+            }
+          ]
+        },
+        {
+          "source_line": 65,
+          "passage_sha256": "df3b2c378f4b27b24fbf8a5375a84e391cc754c5d7ef27869101935e7f314802",
+          "atoms": [
+            {
+              "kind": "exclusion",
+              "criterion": "other_funding",
+              "expected_status": "UNKNOWN",
+              "relation": "NONE",
+              "evidence_start": 0,
+              "evidence_end": 97,
+              "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate."
+            }
+          ]
+        },
+        {
+          "source_line": 66,
+          "passage_sha256": "100c3e67fa795128caa6d2c8102fb210a9e1456eb499d123eaa8772b8f5d57c0",
+          "atoms": [
+            {
+              "kind": "exclusion",
+              "criterion": "prior_award",
+              "expected_status": "UNKNOWN",
+              "relation": "NONE",
+              "evidence_start": 0,
+              "evidence_end": 120,
+              "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate."
+            }
+          ]
+        },
+        {
+          "source_line": 76,
+          "passage_sha256": "2974ab783d16a6f3140802517848ee52fc7d4ea19be8cf8759fd2855abad1c3b",
+          "atoms": [
+            {
+              "kind": "deadline",
+              "criterion": "application_timing",
+              "expected_status": "UNKNOWN",
+              "relation": "NONE",
+              "evidence_start": 0,
+              "evidence_end": 69,
+              "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "selection_note": "SDB includes two coherent trainee-program paragraphs rather than mixing four paragraphs from different awards. ALBA/GNS four passages each. 10 development passages, not originally targeted 12; selected before any new predictions."
+}
