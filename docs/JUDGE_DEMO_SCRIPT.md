@@ -1,4 +1,23 @@
-# Judge walkthrough — verification queue (v0.3.0)
+# Current judge walkthrough — onboarding (v0.3.1)
+
+[Public 60-second video](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.1/fundpilot-onboarding-demo.webm) · [Release checks](FIRST_RUN_RELEASE.md)
+
+59.72 seconds, silent, continuous and unedited. Real local Gemma, one short public
+CNS excerpt, three fictional applicant configurations. Not a hosted application or
+whole-call accuracy demonstration. Approximate timestamps:
+
+- 0:02–0:07: manual local model check, optional glossary and sample load.
+- 0:11–0:25: first real inference; two supported MATCH findings, source review required.
+- 0:32–0:35: second inference; first-author contradiction and verification question.
+- 0:42–0:45: third inference; missing presenter fact and records to check.
+- 0:32, 0:42, 0:53: actual reports downloaded and their bytes validated.
+- 0:54–0:59: expanded report, changed title, stale-output clearing and sample reload.
+
+[Events](../evidence/onboarding/events.json), [recording manifest](../evidence/onboarding/recording-manifest.json),
+[reports and screenshots](../evidence/onboarding/). Use `scripts/record_onboarding_demo.cjs`;
+see [reproduction instructions](FIRST_RUN_RELEASE.md). v0.4 inference is not shipped.
+
+# Preserved verification queue walkthrough (v0.3.0)
 
 [New public video](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.0/fundpilot-verification-queue-demo.webm) · [Release](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.3.0)
 
