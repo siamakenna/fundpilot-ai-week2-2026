@@ -115,9 +115,13 @@ real customer, revenue or validated price is claimed. A $9 report or $39/month w
 
 ## Demo and submission
 
-Video URL: **[INSERT VERIFIED PUBLIC VIDEO URL WHEN AVAILABLE]**
+**[Watch/download the authentic 47-second demo](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.2.0/fundpilot-public-call-demo.webm)** · [Release and recording notes](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.2.0)
 
-The DEV article remains unpublished. Demo evidence and links will identify actual
+The public WebM download contains three actual Gemma calls on one CNS passage,
+a real report download and stale-report invalidation. Its fictional facts and
+short-excerpt scope are explicit; it is not a full eligibility assessment.
+
+The DEV article remains unpublished. The [demo evidence](evidence/public-ui/) identifies actual
 model runs; curated fixtures are never passed off as live inference.
 
 ## License and provenance

@@ -2,8 +2,7 @@
 
 A completed Playwright recording is preserved locally at:
 `.local-reports/browser-demo-verified/fundpilot-public-call-demo.webm`.
-Its public release link is recorded in the README and submission article once the
-asset is published. Recording is already complete; no manual recapture is required.
+Its [public release](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.2.0) contains the verified video asset. Recording is already complete; no manual recapture is required.
 
 The existing Mac has Playwright, Chromium 151.0.7922.34 and its bundled FFmpeg.
 These are developer tools, not new application dependencies. The script captures

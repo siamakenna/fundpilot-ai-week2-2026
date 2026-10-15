@@ -1,0 +1,15 @@
+{
+  "verified_at_utc": "2026-10-15T03:18:37.679542+00:00",
+  "repository": "https://github.com/siamakenna/fundpilot-ai-week2-2026",
+  "visibility": "PUBLIC",
+  "implementation_pr": "https://github.com/siamakenna/fundpilot-ai-week2-2026/pull/1",
+  "implementation_merge": "adb5b4637d4bd704df77faf125ea6bdaccba8768",
+  "release_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.2.0",
+  "video_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.2.0/fundpilot-public-call-demo.webm",
+  "video_http_status": 200,
+  "video_content_type": "application/octet-stream; downloadable WebM",
+  "video_sha256": "7e006012f5ec8b7c0c52e6555975b35dd78cdc6f3fdbb05a7b2316c9f2d27bcc",
+  "bytes": 4854268,
+  "matches_locally_verified_file": true,
+  "DEV_status": "not authenticated in available browser; local draft only; unpublished"
+}
