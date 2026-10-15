@@ -1,0 +1,37 @@
+{
+  "application_commit": "ce3930211ab883b088655dec35640655282cd52e",
+  "model": "gemma3:1b Q4_K_M",
+  "ollama": "0.40.4",
+  "model_digest": "97558784bdc9175075a72655bf360b15da17df6b3b9e5182af9f8c0c8e58ba7c",
+  "source_sha256": "e27d9633aefe0d4538b36c6aab602f9e7a0d13ddbb53ddbfc782b3ddc951ad74",
+  "source_cache_match": true,
+  "live_analyses": 3,
+  "actual_downloads_verified": 3,
+  "recording": "Unedited, continuous, silent Playwright Chromium recording; no mocks or fixtures substituted",
+  "video": {
+    "name": "fundpilot-onboarding-demo.webm",
+    "bytes": 5489046,
+    "sha256": "a6215bea3ab527c6d06510d09a79de4785c6113ae8f754cff6b81536864510cf",
+    "duration_seconds": 59.72,
+    "width": 1440,
+    "height": 1000,
+    "playback_ended": true,
+    "media_error": null
+  },
+  "files": {
+    "contradiction-report.md": "890266b17c65e29b05ff46a5866d1188c7a4fa7a87d828bfae0937492220a818",
+    "events.json": "bda56a0b65686eb76dfddf30b3e698e04e90e431f3cd2c33b947697dbf702b0c",
+    "supported-report.md": "757fb6df65cdc96b05691a019e28afc2cd29225fc3cc5a45c93dc53a9581321d",
+    "offline-failure.png": "c5edd2304f90ef96c1783d2b2771814d095fafbda213e4f86528d955b1e400a9",
+    "supported.png": "f18b6ca3bcc97541b34f5ffae61e666154fbd064fbd7736a6635aef12d399edc",
+    "unknown.png": "f4313f92112ae09de8d8a417421d5609f12815b173534d3b8693dfc5f92f378f",
+    "contradiction.png": "014addc00be52b324cac0d38918634328c44d980a086a018fe7aa4a182e5b969",
+    "playback.json": "8043f20d85afbbcff5ec5932575d50e92f2eba0a42c7f885d3c4c9ba028bfca1",
+    "mobile-form.png": "58fd55e02f92f621f8911ff1c818c5150a7fee3a66476ced31dca9ce5ae4016b",
+    "unknown-report.md": "613538e5294a62e24ceb2ba6c7023f9257da38e221b267a9abfc80029617996d",
+    "checks.json": "a75655c48eb0ffc262c0a33949f0ec6d3300436a364d5aa0884e961a84bb22da",
+    "quickstart.png": "9d615b189a3fbcbcefccf32980ee77e095b8079d28fcf87d4719f10ca479bf09",
+    "smoke.json": "908bf4de1b5f8a5f7794a2ba07831e4225c00560e19d0d50639ab6d7abe452ca",
+    "mobile-tutorial.png": "c9804a899fe201ac4ba5a63e28cf221fe952d3d1d98c12d9ca94382adb88b4e7"
+  }
+}

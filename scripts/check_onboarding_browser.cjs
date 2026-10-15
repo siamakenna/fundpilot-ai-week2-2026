@@ -1,0 +1,32 @@
+/* Real browser checks of the local onboarding. No model responses are mocked. */
+const {chromium}=require('playwright');
+const fs=require('node:fs/promises');
+(async()=>{
+ const dir=process.argv[2]||'.local-reports/v04/onboarding-browser';await fs.mkdir(dir,{recursive:true});
+ const browser=await chromium.launch({headless:true});const page=await browser.newPage({viewport:{width:390,height:844}});
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('http://127.0.0.1:7863');
+ const check=page.getByRole('button',{name:'Check local model',exact:true});await check.waitFor();
+ if(!await page.getByText('Model not checked yet.',{exact:false}).count())throw Error('Automatic model check');
+ const tutorial=page.getByRole('button',{name:/How FundPilot works, results and privacy/});
+ await tutorial.focus();await page.keyboard.press('Enter');
+ await page.getByRole('heading',{name:'Understand your results',exact:true}).waitFor();
+ await page.screenshot({path:dir+'/mobile-tutorial.png',fullPage:true});
+ await tutorial.focus();await page.keyboard.press('Enter');
+ await check.focus();await page.keyboard.press('Enter');
+ await page.getByText('Local Gemma is available:',{exact:false}).waitFor();
+ const sample=page.getByRole('button',{name:'Load sample public excerpt (CNS; fictional applicant)',exact:true});
+ await sample.focus();await page.keyboard.press('Enter');
+ await page.getByText('CNS excerpt loaded.',{exact:false}).waitFor();
+ if(await page.getByTestId('download-link').count())throw Error('Preloaded report');
+ const width=await page.evaluate(()=>({viewport:innerWidth,document:document.documentElement.scrollWidth}));
+ if(width.document>width.viewport+1)throw Error('Mobile horizontal overflow '+JSON.stringify(width));
+ const text=page.getByLabel('Eligibility, exclusions, amounts, deadlines and application instructions',{exact:true});
+ await text.fill('Applicants must be a member.');
+ await page.getByText('Inputs changed. Analyze again before using or downloading a report.',{exact:true}).waitFor();
+ await page.getByText('CNS excerpt loaded.',{exact:false}).waitFor({state:'hidden'});
+ await page.screenshot({path:dir+'/mobile-form.png',fullPage:true});
+ await fs.writeFile(dir+'/smoke.json',JSON.stringify({browser:browser.version(),viewport:width,keyboard:true,model_check:'actual local tags endpoint',sample_has_no_report:true,source_edit_clears_sample_label:true,page_errors:errors},null,2));
+ if(errors.length)throw Error(errors.join(';'));
+ await browser.close();console.log('PASS onboarding keyboard/mobile/readiness/sample smoke');
+})().catch(e=>{console.error(e);process.exit(1)});

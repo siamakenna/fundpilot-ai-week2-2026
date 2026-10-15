@@ -1,0 +1,7 @@
+{
+  "ollama_deliberately_stopped": true,
+  "manual_status_unreachable": true,
+  "explicit_no_ai_success": true,
+  "live_connection_failure_clears_download": true,
+  "no_fallback": true
+}

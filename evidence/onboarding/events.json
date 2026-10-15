@@ -1,0 +1,61 @@
+{
+  "url": "http://127.0.0.1:7863",
+  "browser": "151.0.7922.34",
+  "recording": "Actual headless Chromium; no model mocks, edits or speed changes",
+  "scope": "One verified short CNS excerpt; three fictional applicant configurations, not complete announcement analysis",
+  "events": [
+    {
+      "name": "local_model_installation_checked",
+      "seconds": 1.672
+    },
+    {
+      "name": "quickstart_loaded",
+      "seconds": 6.258
+    },
+    {
+      "name": "start_supported",
+      "seconds": 10.865
+    },
+    {
+      "name": "complete_supported",
+      "seconds": 23.597
+    },
+    {
+      "name": "download_verified_supported",
+      "seconds": 31.073
+    },
+    {
+      "name": "start_contradiction",
+      "seconds": 31.28
+    },
+    {
+      "name": "complete_contradiction",
+      "seconds": 33.927
+    },
+    {
+      "name": "download_verified_contradiction",
+      "seconds": 41.381
+    },
+    {
+      "name": "start_unknown",
+      "seconds": 41.628
+    },
+    {
+      "name": "complete_unknown",
+      "seconds": 44.088
+    },
+    {
+      "name": "download_verified_unknown",
+      "seconds": 51.553
+    },
+    {
+      "name": "edited_input_invalidated_report",
+      "seconds": 57.818
+    },
+    {
+      "name": "sample_reload_verified",
+      "seconds": 57.893
+    }
+  ],
+  "page_errors": []
+}

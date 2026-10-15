@@ -1,0 +1,12 @@
+{
+  "browser": "151.0.7922.34",
+  "viewport": {
+    "viewport": 390,
+    "document": 390
+  },
+  "keyboard": true,
+  "model_check": "actual local tags endpoint",
+  "sample_has_no_report": true,
+  "source_edit_clears_sample_label": true,
+  "page_errors": []
+}

@@ -1,0 +1,139 @@
+{
+  "verified_at_utc": "2026-10-15T21:50:32.985962+00:00",
+  "pull_request": "https://github.com/siamakenna/fundpilot-ai-week2-2026/pull/5",
+  "release": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.3.1",
+  "release_target": "264d0bb82e149850bc7118dc4ee2b8ace38265f1",
+  "anonymous_download": {
+    "url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.1/fundpilot-onboarding-demo.webm",
+    "http_status": 200,
+    "bytes": 5489046,
+    "sha256": "a6215bea3ab527c6d06510d09a79de4785c6113ae8f754cff6b81536864510cf",
+    "matches_original_recording": true,
+    "matches_github_asset_digest": true
+  },
+  "final_focused_tests": "36 passed in 4.99s",
+  "full_suite_previously_verified": "115 passed in 5.76s; application files unchanged since that run",
+  "ruff_F": "PASS",
+  "focused_configured_ruff": "PASS",
+  "protected_baseline_files_identical": 249,
+  "original_v02_v03_asset_digests_unchanged": true,
+  "hosted_check_runs": 0,
+  "hosted_checks_note": "No hosted CI configured; local checks are recorded, not claimed as hosted checks",
+  "links": [
+    {
+      "document_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026",
+      "http_status": "200",
+      "ok": true
+    },
+    {
+      "document_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/feature/interpretation-v04/docs/v04/RESULTS.md",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/feature/interpretation-v04/docs/v04/RESULTS.md",
+      "http_status": "200",
+      "ok": true,
+      "initial_HEAD_status": "503",
+      "method": "GET after transient HEAD failure"
+    },
+    {
+      "document_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/README.md",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/264d0bb82e149850bc7118dc4ee2b8ace38265f1/README.md",
+      "http_status": "200",
+      "ok": true
+    },
+    {
+      "document_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/DEV_SUBMISSION_DRAFT.md",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/264d0bb82e149850bc7118dc4ee2b8ace38265f1/docs/DEV_SUBMISSION_DRAFT.md",
+      "http_status": "200",
+      "ok": true
+    },
+    {
+      "document_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/OFFICIAL_SOURCES.md",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/264d0bb82e149850bc7118dc4ee2b8ace38265f1/docs/OFFICIAL_SOURCES.md",
+      "http_status": "200",
+      "ok": true
+    },
+    {
+      "document_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/REAL_WORLD_EVALUATION.md",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/264d0bb82e149850bc7118dc4ee2b8ace38265f1/docs/REAL_WORLD_EVALUATION.md",
+      "http_status": "200",
+      "ok": true,
+      "initial_HEAD_status": "503",
+      "method": "GET after transient HEAD failure"
+    },
+    {
+      "document_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/onboarding/contradiction-report.md",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/264d0bb82e149850bc7118dc4ee2b8ace38265f1/evidence/onboarding/contradiction-report.md",
+      "http_status": "200",
+      "ok": true,
+      "initial_HEAD_status": "503",
+      "method": "GET after transient HEAD failure"
+    },
+    {
+      "document_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/onboarding/events.json",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/264d0bb82e149850bc7118dc4ee2b8ace38265f1/evidence/onboarding/events.json",
+      "http_status": "200",
+      "ok": true
+    },
+    {
+      "document_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/onboarding/quickstart.png",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/264d0bb82e149850bc7118dc4ee2b8ace38265f1/evidence/onboarding/quickstart.png",
+      "http_status": "200",
+      "ok": true,
+      "initial_HEAD_status": "503",
+      "method": "GET after transient HEAD failure"
+    },
+    {
+      "document_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/onboarding/unknown-report.md",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/264d0bb82e149850bc7118dc4ee2b8ace38265f1/evidence/onboarding/unknown-report.md",
+      "http_status": "200",
+      "ok": true
+    },
+    {
+      "document_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/pull/4",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/pull/4",
+      "http_status": "200",
+      "ok": true
+    },
+    {
+      "document_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.2.0/fundpilot-public-call-demo.webm",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.2.0/fundpilot-public-call-demo.webm",
+      "http_status": "200",
+      "ok": true
+    },
+    {
+      "document_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.0/fundpilot-verification-queue-demo.webm",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.0/fundpilot-verification-queue-demo.webm",
+      "http_status": "200",
+      "ok": true
+    },
+    {
+      "document_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.1/fundpilot-onboarding-demo.webm",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.1/fundpilot-onboarding-demo.webm",
+      "http_status": "200",
+      "ok": true
+    },
+    {
+      "document_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.2.0",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.2.0",
+      "http_status": "200",
+      "ok": true
+    },
+    {
+      "document_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.3.0",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.3.0",
+      "http_status": "200",
+      "ok": true
+    },
+    {
+      "document_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.3.1",
+      "checked_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.3.1",
+      "http_status": "200",
+      "ok": true
+    }
+  ],
+  "atomic_experiment": {
+    "pr": 4,
+    "state": "open draft, not merged; excluded from this release"
+  },
+  "dev_article": "Unpublished; GitHub draft only"
+}

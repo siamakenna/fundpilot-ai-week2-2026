@@ -1,0 +1,126 @@
+{
+  "baseline": "910abcd77f71f940580ca78b48c4fd2f05dd1611",
+  "application_commit": "ce3930211ab883b088655dec35640655282cd52e",
+  "protected_files_byte_identical": 249,
+  "reviewed_changed_files": 26,
+  "security": "Scoped changed-file credential-pattern/format/size scan and transport/escaping/input-invalidation review passed. Not full penetration or dependency audit.",
+  "tests": "........................................................................ [ 62%]\n...........................................                              [100%]\n115 passed in 5.76s\n",
+  "ruff_F": "PASS",
+  "focused_configured_ruff": "PASS",
+  "local_links": [
+    {
+      "from": "README.md",
+      "to": "docs/OFFICIAL_SOURCES.md"
+    },
+    {
+      "from": "README.md",
+      "to": "docs/REAL_WORLD_EVALUATION.md"
+    },
+    {
+      "from": "README.md",
+      "to": "evaluation/RUBRIC.md"
+    },
+    {
+      "from": "README.md",
+      "to": "docs/DEV_SUBMISSION_DRAFT.md"
+    },
+    {
+      "from": "README.md",
+      "to": "docs/PRODUCT_AUDIT.md"
+    },
+    {
+      "from": "README.md",
+      "to": "evaluation/source_split.json"
+    },
+    {
+      "from": "README.md",
+      "to": "docs/EVALUATION.md"
+    },
+    {
+      "from": "README.md",
+      "to": "docs/ANNOTATION_REVIEW.md"
+    },
+    {
+      "from": "README.md",
+      "to": "docs/FIRST_RUN_RELEASE.md"
+    },
+    {
+      "from": "README.md",
+      "to": "evidence/onboarding/"
+    },
+    {
+      "from": "README.md",
+      "to": "docs/FIRST_RUN_RELEASE.md"
+    },
+    {
+      "from": "README.md",
+      "to": "LICENSE"
+    },
+    {
+      "from": "README.md",
+      "to": "docs/PROVENANCE_AND_LICENSES.md"
+    },
+    {
+      "from": "docs/JUDGE_DEMO_SCRIPT.md",
+      "to": "FIRST_RUN_RELEASE.md"
+    },
+    {
+      "from": "docs/JUDGE_DEMO_SCRIPT.md",
+      "to": "../evidence/onboarding/events.json"
+    },
+    {
+      "from": "docs/JUDGE_DEMO_SCRIPT.md",
+      "to": "../evidence/onboarding/recording-manifest.json"
+    },
+    {
+      "from": "docs/JUDGE_DEMO_SCRIPT.md",
+      "to": "../evidence/onboarding/"
+    },
+    {
+      "from": "docs/JUDGE_DEMO_SCRIPT.md",
+      "to": "FIRST_RUN_RELEASE.md"
+    },
+    {
+      "from": "docs/JUDGE_DEMO_SCRIPT.md",
+      "to": "../evidence/verification-upgrade/events.json"
+    },
+    {
+      "from": "docs/JUDGE_DEMO_SCRIPT.md",
+      "to": "../evidence/verification-upgrade/"
+    },
+    {
+      "from": "docs/JUDGE_DEMO_SCRIPT.md",
+      "to": "../evidence/verification-upgrade/recording-manifest.json"
+    },
+    {
+      "from": "docs/JUDGE_DEMO_SCRIPT.md",
+      "to": "LOCAL_CAPTURE_STEPS.md"
+    },
+    {
+      "from": "docs/JUDGE_DEMO_SCRIPT.md",
+      "to": "../evidence/public-ui/events.json"
+    },
+    {
+      "from": "docs/JUDGE_DEMO_SCRIPT.md",
+      "to": "../evidence/public-ui/"
+    },
+    {
+      "from": "docs/JUDGE_DEMO_SCRIPT.md",
+      "to": "../evidence/public-ui/downloaded-report.md"
+    },
+    {
+      "from": "docs/JUDGE_DEMO_SCRIPT.md",
+      "to": "../evidence/public-ui/recording-manifest.json"
+    },
+    {
+      "from": "docs/JUDGE_DEMO_SCRIPT.md",
+      "to": "LOCAL_CAPTURE_STEPS.md"
+    },
+    {
+      "from": "docs/FIRST_RUN_RELEASE.md",
+      "to": "../evidence/onboarding/"
+    }
+  ],
+  "reviewer": "Coding agent; no independent human review claimed",
+  "v04_inference": "Not included; experimental PR #4 remains unmerged"
+}

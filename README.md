@@ -12,11 +12,13 @@ questions that still need the sponsor's answer.
 
 ## See the real application
 
-![FundPilot AI prioritizing a real-source contradiction for sponsor verification](https://raw.githubusercontent.com/siamakenna/fundpilot-ai-week2-2026/main/evidence/verification-upgrade/contradiction.png)
+![FundPilot AI prioritizing a real-source contradiction for sponsor verification](https://raw.githubusercontent.com/siamakenna/fundpilot-ai-week2-2026/main/evidence/onboarding/contradiction.png)
 
-[46-second authentic v0.3.0 video](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.0/fundpilot-verification-queue-demo.webm) · [Contradiction report](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/verification-upgrade/contradiction-report.md) · [Unresolved presenter fact](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/verification-upgrade/unknown-report.md) · [Quick-start screenshot](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/verification-upgrade/quickstart.png)
+[60-second authentic v0.3.1 video](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.1/fundpilot-onboarding-demo.webm) · [Contradiction report](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/onboarding/contradiction-report.md) · [Unresolved presenter fact](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/onboarding/unknown-report.md) · [Quick-start screenshot](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/onboarding/quickstart.png)
 
 The recording uses three fictional applicant configurations on one real public funding passage. It shows actual local Gemma calls and does **not** claim that a full funding announcement was evaluated or that the app is publicly hosted.
+
+The optional first-run guide explains the workflow and result labels. **Check local model** checks installation only when clicked; it does not install software or run inference. A collapsed tutorial explains evidence, scope and local plaintext-report privacy.
 
 ## Three-step workflow
 
@@ -129,18 +131,20 @@ real customer, revenue or validated price is claimed. A $9 report or $39/month w
 
 ## Demo and submission
 
-**[Watch/download the new v0.3.0 demo](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.0/fundpilot-verification-queue-demo.webm)** · [Release notes](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.3.0) · [Release checks](docs/VERIFICATION_QUEUE_RELEASE.md)
+**[Watch/download the new v0.3.1 demo](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.1/fundpilot-onboarding-demo.webm)** · [Release notes](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.3.1) · [Release checks](docs/FIRST_RUN_RELEASE.md)
 
-The 45.64-second public WebM contains three actual Gemma calls on one CNS passage,
+The 59.72-second public WebM contains three actual Gemma calls on one CNS passage,
 three real report downloads, prioritized verification questions and stale-report
 invalidation. Its fictional facts and excerpt scope are explicit. The [original
 47-second v0.2.0 demonstration](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.2.0/fundpilot-public-call-demo.webm)
 and all original evidence remain unchanged.
 
-The DEV article remains unpublished. The [new demo evidence](evidence/verification-upgrade/)
+The DEV article remains unpublished. The [new demo evidence](evidence/onboarding/)
 identifies actual model runs; curated fixtures are never passed off as live inference.
-93 automated tests pass, including 14 new presentation tests. No model retuning or
-benchmark rerun was needed for this upgrade.
+115 automated tests pass, including the unchanged original 93. No inference changes
+ship in this release. The separate [v0.4 experiment](https://github.com/siamakenna/fundpilot-ai-week2-2026/pull/4)
+failed its frozen release evaluation and remains unmerged; [results and limitations](docs/FIRST_RUN_RELEASE.md) are disclosed.
+The [v0.3.0 video](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.0/fundpilot-verification-queue-demo.webm) also remains unchanged.
 
 ## License and provenance
 
