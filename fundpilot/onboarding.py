@@ -9,7 +9,7 @@ from .gemma import DEFAULT_MODEL, DEFAULT_OLLAMA, urlopen
 from .logic import safe_text
 
 INITIAL_STATUS = 'Model not checked yet. You can check whether local Ollama and Gemma are available.'
-SAMPLE_STATUS = ('**CNS sample loaded — fictional editable facts.** One public excerpt, not a full eligibility '
+SAMPLE_STATUS = ('**CNS excerpt loaded.** Sample defaults are fictional and editable. One public excerpt, not a full eligibility '
                  'assessment. Click Analyze for a new local model request; no result is preloaded.')
 INTRO = '''**Check the funding rules before writing the application.** Paste a public award announcement or load a short example. FundPilot highlights supported conditions, possible contradictions and questions to verify. **It cannot certify eligibility or guarantee an award.**
 

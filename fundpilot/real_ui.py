@@ -9,7 +9,7 @@ import gradio as gr
 
 from .logic import safe_text
 from .onboarding import INITIAL_STATUS, INTRO, SAMPLE_STATUS, TUTORIAL, check_local_model
-from .quickstart import CNS_RETRIEVED, CNS_URL, sample_inputs
+from .quickstart import CNS_EXCERPT, CNS_RETRIEVED, CNS_URL, sample_inputs
 from .realworld import Applicant, analyze
 from .verification import markdown, queue_markdown
 
@@ -158,7 +158,7 @@ def build_public_ui():
     sample.click(lambda: sample_inputs(QUESTIONS) + [SAMPLE_STATUS], outputs=inputs + [sample_status]).then(
         clear_public, outputs=outputs
     )
-    source.input(lambda: "", outputs=sample_status)
+    source.change(lambda text: SAMPLE_STATUS if text == CNS_EXCERPT else "", inputs=source, outputs=sample_status)
     event = go.click(lock, outputs=inputs + [go, sample], queue=False)
     event.then(run_public, inputs=inputs, outputs=outputs, concurrency_limit=1).then(
         unlock, outputs=inputs + [go, sample]
