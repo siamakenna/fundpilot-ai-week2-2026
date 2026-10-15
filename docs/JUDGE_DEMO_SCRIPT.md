@@ -1,5 +1,7 @@
 # Judge walkthrough — actual public-text workflow
 
+[Public video](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.2.0/fundpilot-public-call-demo.webm) · [Release](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.2.0)
+
 The automated recording is 47.32 seconds, silent, and unedited. It uses one short
 CNS 2027 eligibility passage, with explicit attribution and fictional applicant
 facts. It is a focused product demonstration, not a full-call eligibility decision.

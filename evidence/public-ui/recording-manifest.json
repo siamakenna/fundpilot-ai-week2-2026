@@ -10,5 +10,9 @@
   "recording": "Real headless Chromium interaction; three new local Gemma requests, no fixtures or response mocks",
   "verification": "Actual download bytes checked; source hash matches official CNS paragraph. Video metadata and frames at 11,22,33,42 seconds decoded.",
   "first_attempt": "Preserved locally in .local-reports/browser-demo-final; three genuine model runs succeeded but automation download locator was too restrictive. Only locator and table widths corrected; no engine changes.",
-  "playback": "Chromium played the entire 47.32-second file to ended with no media error"
+  "playback": "Chromium played the entire 47.32-second file to ended with no media error",
+  "public_video_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.2.0/fundpilot-public-call-demo.webm",
+  "release_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.2.0",
+  "public_http_status": 200,
+  "github_asset_sha256_matches": true
 }

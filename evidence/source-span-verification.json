@@ -1,0 +1,62 @@
+{
+  "method": "Deterministic replay of stored live predictions; no new inference or rescoring",
+  "checks": [
+    {
+      "split": "development",
+      "case": "cns_2027",
+      "exact_quote_spans": 19,
+      "passages_accounted": 8,
+      "counts_match_saved_evaluation": true
+    },
+    {
+      "split": "development",
+      "case": "ismb_2026",
+      "exact_quote_spans": 20,
+      "passages_accounted": 8,
+      "counts_match_saved_evaluation": true
+    },
+    {
+      "split": "development",
+      "case": "sfn_tpda",
+      "exact_quote_spans": 17,
+      "passages_accounted": 8,
+      "counts_match_saved_evaluation": true
+    },
+    {
+      "split": "development",
+      "case": "biologists_travel",
+      "exact_quote_spans": 16,
+      "passages_accounted": 8,
+      "counts_match_saved_evaluation": true
+    },
+    {
+      "split": "development",
+      "case": "biochemical_travel",
+      "exact_quote_spans": 16,
+      "passages_accounted": 8,
+      "counts_match_saved_evaluation": true
+    },
+    {
+      "split": "holdout",
+      "case": "biochemical_online",
+      "exact_quote_spans": 16,
+      "passages_accounted": 8,
+      "counts_match_saved_evaluation": true
+    },
+    {
+      "split": "holdout",
+      "case": "ismb_dependent_care",
+      "exact_quote_spans": 18,
+      "passages_accounted": 8,
+      "counts_match_saved_evaluation": true
+    },
+    {
+      "split": "holdout",
+      "case": "rsc_researcher_travel",
+      "exact_quote_spans": 17,
+      "passages_accounted": 8,
+      "counts_match_saved_evaluation": true
+    }
+  ],
+  "limit": "Exact spans and passage accounting do not prove complete or correct interpretation of every condition."
+}

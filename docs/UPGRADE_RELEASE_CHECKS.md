@@ -76,3 +76,15 @@ This release passes prototype mechanics and evidence gates, not general eligibil
 accuracy. Three held-out samples yielded no supported applicant comparisons. Human
 adjudication, sponsor clarification and consenting-user validation remain future
 work; they are not silently claimed complete. No payment service was opened.
+
+## Public release verification
+
+PR #1 merged to `adb5b4637d4bd704df77faf125ea6bdaccba8768`. The public `v0.2.0`
+prerelease holds the actual video. Anonymous asset HEAD returned HTTP 200; GitHub's
+asset SHA-256 and size match the locally played file. DEV video placeholders have
+been replaced with that verified link. The follow-up documentation PR records the
+final public state. No further model evaluation or code tuning occurred.
+
+PASS: required package artifacts, tests, demo and documentation.
+BLOCKED: public competition entry until the owner reviews and publishes the DEV
+article through their account. This is the only remaining submission action.

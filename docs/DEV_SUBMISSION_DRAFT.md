@@ -18,7 +18,9 @@ The original prototype depended heavily on fictional examples. The main workflow
 
 ## Demo
 
-**Video URL: [INSERT VERIFIED PUBLIC VIDEO URL WHEN AVAILABLE]**
+**[Watch/download the real 47-second demo (WebM)](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.2.0/fundpilot-public-call-demo.webm)** · [Release notes](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.2.0)
+
+The file is publicly accessible without sign-in. Download and open it in a WebM-capable browser/player; it is a silent, unedited recording.
 
 The walkthrough uses a short, attributed passage from the real CNS 2027 Travel Awards announcement and three fictional applicant configurations. Each analysis invokes local Gemma. It shows supported matches, a first-authorship contradiction, an unknown presenter fact, and an actual report download. This is a focused workflow demonstration, **not complete CNS eligibility analysis**.
 

@@ -145,3 +145,11 @@ simple rules. The practical improvements are a usable form, actual public text,
 explicit disagreement/unknown findings, separate money/date roles and traceable
 reports. Reliability on complex exclusions and dependencies remains a limitation.
 Commercial pricing, customer benefit and willingness to pay remain unvalidated.
+
+## Evidence-span validation
+
+A deterministic replay of stored final development and held-out predictions verified
+**139/139 attached quote spans across 64 passages in eight reports**, with all saved
+report counts unchanged. This required no new inference and no reference rescore.
+[The record](../evidence/source-span-verification.json) establishes exact attachment
+and passage accounting; it does not establish complete semantic extraction.
