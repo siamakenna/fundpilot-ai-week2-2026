@@ -8,7 +8,8 @@ from pathlib import Path
 import gradio as gr
 
 from .logic import safe_text
-from .quickstart import CNS_RETRIEVED, CNS_URL, sample_inputs
+from .onboarding import INITIAL_STATUS, INTRO, SAMPLE_STATUS, TUTORIAL, check_local_model
+from .quickstart import CNS_EXCERPT, CNS_RETRIEVED, CNS_URL, sample_inputs
 from .realworld import Applicant, analyze
 from .verification import markdown, queue_markdown
 
@@ -70,11 +71,16 @@ def clear_public(*_):
 
 
 def build_public_ui():
-    gr.Markdown(
-        "### Check the fine print before writing the application\nPaste a **public** announcement. Only its text goes to local Gemma; your applicant facts are compared in Python. Do not paste private grant documents. Fields start unknown rather than assuming eligibility."
-    )
+    gr.Markdown(INTRO)
+    with gr.Row():
+        sample = gr.Button("Load sample public excerpt (CNS; fictional applicant)", variant="primary")
+        status_button = gr.Button("Check local model")
+    model_status = gr.Markdown(INITIAL_STATUS)
+    sample_status = gr.Markdown("")
+    with gr.Accordion("How FundPilot works, results and privacy", open=False):
+        gr.Markdown(TUTORIAL)
+    status_button.click(check_local_model, outputs=model_status)
     gr.Markdown("## 1. Add the official announcement")
-    sample = gr.Button("Load sample public excerpt (CNS; fictional applicant)")
     gr.Markdown(
         f"Optional quick-start: one short [official CNS passage]({CNS_URL}), retrieved {CNS_RETRIEVED}. "
         "Loads **fictional, editable facts**, not an analysis. Click **Analyze public announcement** "
@@ -149,7 +155,10 @@ def build_public_ui():
 
     # Prevent an older in-flight result from overwriting edits. Inputs become
     # editable again after success or the handled error result.
-    sample.click(lambda: sample_inputs(QUESTIONS), outputs=inputs).then(clear_public, outputs=outputs)
+    sample.click(lambda: sample_inputs(QUESTIONS) + [SAMPLE_STATUS], outputs=inputs + [sample_status]).then(
+        clear_public, outputs=outputs
+    )
+    source.change(lambda text: SAMPLE_STATUS if text == CNS_EXCERPT else "", inputs=source, outputs=sample_status)
     event = go.click(lock, outputs=inputs + [go, sample], queue=False)
     event.then(run_public, inputs=inputs, outputs=outputs, concurrency_limit=1).then(
         unlock, outputs=inputs + [go, sample]

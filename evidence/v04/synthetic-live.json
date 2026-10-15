@@ -1,0 +1,333 @@
+{
+  "mode": "LIVE local Gemma 3 1B; no adapter mocks",
+  "inference_calls": 11,
+  "scenarios": [
+    {
+      "id": "first_author_presenter_yes",
+      "source_sha256": "3d7739c46c3c33b7b66be862860c61b095e2dccb895fd0d741cf2a3d885c2897",
+      "complete": true,
+      "accepted_behavior": false,
+      "counts": {
+        "MATCH": 0,
+        "NOT MATCH": 0,
+        "UNKNOWN": 5,
+        "INFO": 0
+      },
+      "proposed_kinds": [
+        "eligibility",
+        "funding_condition",
+        "funding_condition",
+        "funding_condition",
+        "funding_condition"
+      ],
+      "relations": [
+        "AND",
+        "NONE",
+        "NONE",
+        "NONE",
+        "NONE"
+      ]
+    },
+    {
+      "id": "first_author_no",
+      "source_sha256": "3d7739c46c3c33b7b66be862860c61b095e2dccb895fd0d741cf2a3d885c2897",
+      "complete": true,
+      "accepted_behavior": false,
+      "counts": {
+        "MATCH": 0,
+        "NOT MATCH": 0,
+        "UNKNOWN": 5,
+        "INFO": 0
+      },
+      "proposed_kinds": [
+        "eligibility",
+        "funding_condition",
+        "funding_condition",
+        "funding_condition",
+        "funding_condition"
+      ],
+      "relations": [
+        "AND",
+        "NONE",
+        "NONE",
+        "NONE",
+        "NONE"
+      ]
+    },
+    {
+      "id": "presenter_unknown",
+      "source_sha256": "3d7739c46c3c33b7b66be862860c61b095e2dccb895fd0d741cf2a3d885c2897",
+      "complete": true,
+      "accepted_behavior": false,
+      "counts": {
+        "MATCH": 0,
+        "NOT MATCH": 0,
+        "UNKNOWN": 5,
+        "INFO": 0
+      },
+      "proposed_kinds": [
+        "eligibility",
+        "funding_condition",
+        "funding_condition",
+        "funding_condition",
+        "funding_condition"
+      ],
+      "relations": [
+        "AND",
+        "NONE",
+        "NONE",
+        "NONE",
+        "NONE"
+      ]
+    },
+    {
+      "id": "conditional_membership_or",
+      "source_sha256": "00bfdd9a0262b9e682576432bbd0a1a8f63064640f299bf07bb8899fb0db452d",
+      "complete": true,
+      "accepted_behavior": false,
+      "counts": {
+        "MATCH": 0,
+        "NOT MATCH": 0,
+        "UNKNOWN": 4,
+        "INFO": 0
+      },
+      "proposed_kinds": [
+        "eligibility",
+        "funding_condition",
+        "funding_condition",
+        "funding_condition"
+      ],
+      "relations": [
+        "AND",
+        "AND",
+        "AND",
+        "AND"
+      ]
+    },
+    {
+      "id": "duration_and_membership_exception",
+      "source_sha256": "5ec69f2490328137180bcaeebbe158f242752f4855b624b21fc4d1396d292750",
+      "complete": true,
+      "accepted_behavior": false,
+      "counts": {
+        "MATCH": 0,
+        "NOT MATCH": 0,
+        "UNKNOWN": 3,
+        "INFO": 0
+      },
+      "proposed_kinds": [
+        "eligibility",
+        "funding_condition",
+        "funding_condition"
+      ],
+      "relations": [
+        "AND",
+        "NONE",
+        "AND"
+      ]
+    },
+    {
+      "id": "explicit_research_scientist_exclusion",
+      "source_sha256": "514c2ddb436b5265dabc4905437257ae104be5d6ff4e05e10c0e9334ff571b10",
+      "complete": true,
+      "accepted_behavior": true,
+      "counts": {
+        "MATCH": 0,
+        "NOT MATCH": 0,
+        "UNKNOWN": 13,
+        "INFO": 0
+      },
+      "proposed_kinds": [
+        "eligibility",
+        "exclusion",
+        "required_material",
+        "deadline",
+        "sponsor_benefit",
+        "funding_condition",
+        "funding_condition",
+        "informational",
+        "informational",
+        "required_material",
+        "required_material",
+        "required_material",
+        "required_material"
+      ],
+      "relations": [
+        "AND",
+        "AND",
+        "AND",
+        "AND",
+        "AND",
+        "AND",
+        "AND",
+        "AND",
+        "AND",
+        "AND",
+        "AND",
+        "AND",
+        "AND"
+      ]
+    },
+    {
+      "id": "past_recipient_wait",
+      "source_sha256": "c558e7ee1f11dfe1e55659f5833c55084aaca0baf6e434365e522187b2f1d4b5",
+      "complete": true,
+      "accepted_behavior": false,
+      "counts": {
+        "MATCH": 0,
+        "NOT MATCH": 0,
+        "UNKNOWN": 2,
+        "INFO": 0
+      },
+      "proposed_kinds": [
+        "eligibility",
+        "eligibility"
+      ],
+      "relations": [
+        "AND",
+        "NONE"
+      ]
+    },
+    {
+      "id": "sponsor_stipend_not_request_cap",
+      "source_sha256": "8e657e5124c74856ffc097be961993320a8c7bf3d109535eb3a4fc18df1736c3",
+      "complete": false,
+      "accepted_behavior": false,
+      "error": "Atomic Gemma response rejected; no fabricated or rule-substituted report. Duplicated atomic condition; no silent deduplication."
+    },
+    {
+      "id": "sponsor_award_up_to_not_request_cap",
+      "source_sha256": "8b21e66eaa4ed1660e714e9d17b7c8cbeb5ebff176c986f35b5f2cf3ba46f8c6",
+      "complete": true,
+      "accepted_behavior": false,
+      "counts": {
+        "MATCH": 0,
+        "NOT MATCH": 0,
+        "UNKNOWN": 4,
+        "INFO": 0
+      },
+      "proposed_kinds": [
+        "eligibility",
+        "funding_condition",
+        "eligibility",
+        "eligibility"
+      ],
+      "relations": [
+        "AND",
+        "AND",
+        "EXCEPT",
+        "EXCEPT"
+      ]
+    },
+    {
+      "id": "explicit_request_cap_exceeded",
+      "source_sha256": "a657c92728e84d3112bb47bca5dea36338fa97a7f9da8c2bdd2af7e4384f9004",
+      "complete": true,
+      "accepted_behavior": false,
+      "counts": {
+        "MATCH": 0,
+        "NOT MATCH": 0,
+        "UNKNOWN": 3,
+        "INFO": 0
+      },
+      "proposed_kinds": [
+        "funding_condition",
+        "funding_condition",
+        "funding_condition"
+      ],
+      "relations": [
+        "NONE",
+        "NONE",
+        "NONE"
+      ]
+    },
+    {
+      "id": "explicit_request_cap_currency_mismatch",
+      "source_sha256": "a657c92728e84d3112bb47bca5dea36338fa97a7f9da8c2bdd2af7e4384f9004",
+      "complete": true,
+      "accepted_behavior": true,
+      "counts": {
+        "MATCH": 0,
+        "NOT MATCH": 0,
+        "UNKNOWN": 3,
+        "INFO": 0
+      },
+      "proposed_kinds": [
+        "funding_condition",
+        "funding_condition",
+        "funding_condition"
+      ],
+      "relations": [
+        "NONE",
+        "NONE",
+        "NONE"
+      ]
+    },
+    {
+      "id": "mixed_eligibility_and_exclusion",
+      "source_sha256": "41328485b4d87536001353324e796af97baa07499bf20942bf8156400c475134",
+      "complete": true,
+      "accepted_behavior": true,
+      "counts": {
+        "MATCH": 0,
+        "NOT MATCH": 0,
+        "UNKNOWN": 3,
+        "INFO": 0
+      },
+      "proposed_kinds": [
+        "eligibility",
+        "exclusion",
+        "required_material"
+      ],
+      "relations": [
+        "AND",
+        "AND",
+        "AND"
+      ]
+    },
+    {
+      "id": "deadline_and_required_material",
+      "source_sha256": "0d1d4ed766d19011f760dbecee0bbde77c6acf00e7b24d6d2c94f7cf8325d427",
+      "complete": true,
+      "accepted_behavior": false,
+      "counts": {
+        "MATCH": 0,
+        "NOT MATCH": 0,
+        "UNKNOWN": 3,
+        "INFO": 0
+      },
+      "proposed_kinds": [
+        "eligibility",
+        "funding_condition",
+        "funding_condition"
+      ],
+      "relations": [
+        "AND",
+        "AND",
+        "AND"
+      ]
+    },
+    {
+      "id": "untrusted_source_instruction",
+      "source_sha256": "bd5eae7f72f5cecdf32771d9d46585dbeec76975a0334906257535f708c20f32",
+      "complete": true,
+      "accepted_behavior": true,
+      "counts": {
+        "MATCH": 0,
+        "NOT MATCH": 0,
+        "UNKNOWN": 3,
+        "INFO": 0
+      },
+      "proposed_kinds": [
+        "eligibility",
+        "eligibility",
+        "funding_condition"
+      ],
+      "relations": [
+        "AND",
+        "AND",
+        "AND"
+      ]
+    }
+  ]
+}

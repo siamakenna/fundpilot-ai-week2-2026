@@ -1,0 +1,267 @@
+{
+  "version": "v04-final-provisional-1",
+  "reviewer": "Coding assistant, NOT independent or human-validated; authored after candidate freeze and before any final predictions.",
+  "created_at_utc": "2026-10-15T17:11:28.273590+00:00",
+  "profile": {
+    "career_stage": "Graduate student",
+    "membership": true,
+    "first_author": false,
+    "presenting_author": true,
+    "abstract_submitted": true,
+    "in_person": true,
+    "registration": false,
+    "upfront_costs": true
+  },
+  "cases": [
+    {
+      "id": "embo_exchange",
+      "source_url": "https://www.embo.org/funding/fellowships-grants-and-career-support/scientific-exchange-grants/eligibility/",
+      "source_sha256": "a1511d3ba1ea2e4e415489aa9788133a83598f0a83504fea680a3dd84feac7a7",
+      "source_status": "Official live page retrieved October 15, 2026; selected excerpt does not establish current application availability. Full linked handbook/policies require review.",
+      "passages": [
+        {
+          "source_line": 205,
+          "passage_sha256": "70d15201c52bdcdf914b99c9d96b397e811ef7af245b3f8cadf9ee0888e9a687",
+          "atoms": [
+            {
+              "kind": "eligibility",
+              "criterion": "active_researcher",
+              "expected_status": "UNKNOWN",
+              "relation": "NONE",
+              "evidence_start": 0,
+              "evidence_end": 164,
+              "evidence_scope": "Full original paragraph supports provisional label; not a gold minimal semantic span."
+            },
+            {
+              "kind": "eligibility",
+              "criterion": "career_duration",
+              "expected_status": "UNKNOWN",
+              "relation": "OR",
+              "evidence_start": 0,
+              "evidence_end": 164,
+              "evidence_scope": "Full original paragraph supports provisional label; not a gold minimal semantic span."
+            }
+          ]
+        },
+        {
+          "source_line": 213,
+          "passage_sha256": "14386671060eca65f8e0e0cadb78f87643f521f360912c6606e275b2da343ca4",
+          "atoms": [
+            {
+              "kind": "informational",
+              "criterion": "research_topic",
+              "expected_status": "INFO",
+              "relation": "NONE",
+              "evidence_start": 0,
+              "evidence_end": 267,
+              "evidence_scope": "Full original paragraph supports provisional label; not a gold minimal semantic span."
+            },
+            {
+              "kind": "exclusion",
+              "criterion": "prior_collaboration",
+              "expected_status": "UNKNOWN",
+              "relation": "OR",
+              "evidence_start": 0,
+              "evidence_end": 267,
+              "evidence_scope": "Full original paragraph supports provisional label; not a gold minimal semantic span."
+            }
+          ]
+        },
+        {
+          "source_line": 214,
+          "passage_sha256": "d372e9aeea8ef4572528909b615a30fba530954523830463ae9eeac20b69330b",
+          "atoms": [
+            {
+              "kind": "exclusion",
+              "criterion": "event_attendance",
+              "expected_status": "UNKNOWN",
+              "relation": "NONE",
+              "evidence_start": 0,
+              "evidence_end": 332,
+              "evidence_scope": "Full original paragraph supports provisional label; not a gold minimal semantic span."
+            },
+            {
+              "kind": "funding_condition",
+              "criterion": "expense_scope",
+              "expected_status": "UNKNOWN",
+              "relation": "CONDITIONAL",
+              "evidence_start": 0,
+              "evidence_end": 332,
+              "evidence_scope": "Full original paragraph supports provisional label; not a gold minimal semantic span."
+            }
+          ]
+        },
+        {
+          "source_line": 215,
+          "passage_sha256": "3fd38fcd3ff4fc0318e53a429d54952abeffb161ed0c1fb28465ef5600a3bd3e",
+          "atoms": [
+            {
+              "kind": "eligibility",
+              "criterion": "return_to_home_lab",
+              "expected_status": "UNKNOWN",
+              "relation": "CONDITIONAL",
+              "evidence_start": 0,
+              "evidence_end": 228,
+              "evidence_scope": "Full original paragraph supports provisional label; not a gold minimal semantic span."
+            },
+            {
+              "kind": "eligibility",
+              "criterion": "return_duration",
+              "expected_status": "UNKNOWN",
+              "relation": "CONDITIONAL",
+              "evidence_start": 0,
+              "evidence_end": 228,
+              "evidence_scope": "Full original paragraph supports provisional label; not a gold minimal semantic span."
+            },
+            {
+              "kind": "required_material",
+              "criterion": "documents",
+              "expected_status": "UNKNOWN",
+              "relation": "CONDITIONAL",
+              "evidence_start": 0,
+              "evidence_end": 228,
+              "evidence_scope": "Full original paragraph supports provisional label; not a gold minimal semantic span."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eacr_fellowship",
+      "source_url": "https://www.eacr.org/travel-fellowships",
+      "source_sha256": "d53326cb5228806600d8aca240adc56344c5b6478b0c9a444141ee14c36e47dd",
+      "source_status": "Official live page retrieved October 15, 2026; selected excerpt does not establish current application availability. Full linked handbook/policies require review.",
+      "passages": [
+        {
+          "source_line": 159,
+          "passage_sha256": "21c5cf39b3c28eb52b2b52d2f7a5d67cf259d9be6a584a7deb98b4d5be37afd8",
+          "atoms": [
+            {
+              "kind": "sponsor_benefit",
+              "criterion": "award_amount",
+              "expected_status": "INFO",
+              "relation": "NONE",
+              "evidence_start": 0,
+              "evidence_end": 225,
+              "evidence_scope": "Full original paragraph supports provisional label; not a gold minimal semantic span."
+            },
+            {
+              "kind": "eligibility",
+              "criterion": "career_stage",
+              "expected_status": "UNKNOWN",
+              "relation": "NONE",
+              "evidence_start": 0,
+              "evidence_end": 225,
+              "evidence_scope": "Full original paragraph supports provisional label; not a gold minimal semantic span."
+            },
+            {
+              "kind": "eligibility",
+              "criterion": "research_topic",
+              "expected_status": "UNKNOWN",
+              "relation": "NONE",
+              "evidence_start": 0,
+              "evidence_end": 225,
+              "evidence_scope": "Full original paragraph supports provisional label; not a gold minimal semantic span."
+            },
+            {
+              "kind": "eligibility",
+              "criterion": "research_exchange_location",
+              "expected_status": "UNKNOWN",
+              "relation": "NONE",
+              "evidence_start": 0,
+              "evidence_end": 225,
+              "evidence_scope": "Full original paragraph supports provisional label; not a gold minimal semantic span."
+            }
+          ]
+        },
+        {
+          "source_line": 163,
+          "passage_sha256": "35f48f1c3fed61a1617582221755b1de8036934023350ce5af7cf0cb378222eb",
+          "atoms": [
+            {
+              "kind": "eligibility",
+              "criterion": "membership",
+              "expected_status": "MATCH",
+              "relation": "NONE",
+              "evidence_start": 0,
+              "evidence_end": 174,
+              "evidence_scope": "Full original paragraph supports provisional label; not a gold minimal semantic span."
+            },
+            {
+              "kind": "eligibility",
+              "criterion": "career_duration",
+              "expected_status": "UNKNOWN",
+              "relation": "EXCEPT",
+              "evidence_start": 0,
+              "evidence_end": 174,
+              "evidence_scope": "Full original paragraph supports provisional label; not a gold minimal semantic span."
+            }
+          ]
+        },
+        {
+          "source_line": 165,
+          "passage_sha256": "3b9b4b855d11dc6bb85f88345dcdb95a9a756a6455c9f4dc9eb8d08fdf38c3b8",
+          "atoms": [
+            {
+              "kind": "eligibility",
+              "criterion": "current_position",
+              "expected_status": "UNKNOWN",
+              "relation": "NONE",
+              "evidence_start": 0,
+              "evidence_end": 108,
+              "evidence_scope": "Full original paragraph supports provisional label; not a gold minimal semantic span."
+            },
+            {
+              "kind": "eligibility",
+              "criterion": "research_topic",
+              "expected_status": "UNKNOWN",
+              "relation": "NONE",
+              "evidence_start": 0,
+              "evidence_end": 108,
+              "evidence_scope": "Full original paragraph supports provisional label; not a gold minimal semantic span."
+            },
+            {
+              "kind": "eligibility",
+              "criterion": "institution",
+              "expected_status": "UNKNOWN",
+              "relation": "NONE",
+              "evidence_start": 0,
+              "evidence_end": 108,
+              "evidence_scope": "Full original paragraph supports provisional label; not a gold minimal semantic span."
+            }
+          ]
+        },
+        {
+          "source_line": 168,
+          "passage_sha256": "fc590e63fc701b5d91b9d6c021d4e9b97ab161569298a990c7dbf47508917ebc",
+          "atoms": [
+            {
+              "kind": "required_material",
+              "criterion": "documents",
+              "expected_status": "UNKNOWN",
+              "relation": "NONE",
+              "evidence_start": 0,
+              "evidence_end": 188,
+              "evidence_scope": "Full original paragraph supports provisional label; not a gold minimal semantic span."
+            },
+            {
+              "kind": "deadline",
+              "criterion": "application_timing",
+              "expected_status": "UNKNOWN",
+              "relation": "CONDITIONAL",
+              "evidence_start": 0,
+              "evidence_end": 188,
+              "evidence_scope": "Full original paragraph supports provisional label; not a gold minimal semantic span."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "selection_note": "Four original paragraphs per organizer, chosen for compound requirements, exclusions, benefits and deadlines before inference. Limited selected-passage recall; full policies/handbooks not evaluated. Novel source concepts retain descriptive names without post-result aliases.",
+  "annotation_ambiguities": [
+    "EMBO expense scope is provisionally a funding_condition rather than exclusion; organizer excludes costs explicitly. Independent review may differ.",
+    "EACR introductory benefit paragraph includes purpose/recipient scope; provisional positive constraints may be read as descriptive.",
+    "EACR membership fact is provisionally MATCH in isolation; duration exception still UNKNOWN and overall eligibility remains unresolved."
+  ]
+}

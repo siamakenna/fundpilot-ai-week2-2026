@@ -1,0 +1,798 @@
+{
+  "method": "Deterministic accounting/replay of saved v4/old-heldout labels; no inference or historical rescore against revised labels. Cue groups overlap and are not causal diagnoses.",
+  "annotation_records_changed_in_proposed_v2": 14,
+  "results": [
+    {
+      "split": "development",
+      "counts": {
+        "passages": 40,
+        "segmentation_id_or_count_failures": 0,
+        "paragraphs_with_multiple_reference_keys": 7,
+        "reference_tuples": 48,
+        "predicted_tuples": 47,
+        "true_positive": 20,
+        "false_negative_tuples": 28,
+        "false_positive_tuples": 27,
+        "category_errors": 20,
+        "named_reference_keys_outside_candidates": 0,
+        "unknown_reference_tuples": 18,
+        "exclusion_passages": 12,
+        "exclusion_kind_misses": 6,
+        "compound_cue_passages": 21,
+        "compound_passages_with_tuple_errors": 14,
+        "temporal_scope_cue_passages": 20,
+        "temporal_passages_with_tuple_errors": 12,
+        "model_rule_category_disagreements": 22,
+        "model_rule_key_disagreements": 1,
+        "outcome_UNKNOWN": 38,
+        "outcome_NOT MATCH": 1,
+        "outcome_MATCH": 4,
+        "outcome_INFO": 5
+      },
+      "unknown_reason_counts": {
+        "Model and explicit rule interpretation do not agree; review this source passage.": 24,
+        "Explicit source condition compared deterministically with the applicant\u2019s declared first author fact (not independently verified).": 1,
+        "Explicit source condition compared deterministically with the applicant\u2019s declared presenting author fact (not independently verified).": 2,
+        "Dated milestone: confirm its event, year, time and timezone with the sponsor.": 1,
+        "Exclusion, required materials or unsupported scope needs explicit sponsor review.": 6,
+        "Sponsor award/benefit information, not an applicant request restriction.": 4,
+        "Conditional, duration or prior-award rule needs sponsor review; no unconditional comparison made.": 2,
+        "Explicit source condition compared deterministically with the applicant\u2019s declared membership fact (not independently verified).": 1,
+        "Declared career stage compared with explicit source stages: Graduate student, Postbaccalaureate, Postdoc, Undergraduate.": 1,
+        "Unclassified source passage. It has not been dropped from the coverage review.": 5,
+        "No single nonnegative applicant request cap is established; award amounts are not request caps.": 1
+      },
+      "tuple_errors": [
+        {
+          "case": "cns_2027",
+          "passage": 0,
+          "source_line": 82,
+          "missing": [
+            [
+              "requirement",
+              "career_stage"
+            ],
+            [
+              "requirement",
+              "membership"
+            ]
+          ],
+          "extra": [
+            [
+              "funding_limit",
+              "career_stage"
+            ],
+            [
+              "funding_limit",
+              "membership"
+            ]
+          ]
+        },
+        {
+          "case": "cns_2027",
+          "passage": 2,
+          "source_line": 85,
+          "missing": [
+            [
+              "requirement",
+              "abstract_submitted"
+            ]
+          ],
+          "extra": [
+            [
+              "document",
+              "abstract_submitted"
+            ]
+          ]
+        },
+        {
+          "case": "cns_2027",
+          "passage": 5,
+          "source_line": 93,
+          "missing": [
+            [
+              "requirement",
+              "in_person"
+            ],
+            [
+              "requirement",
+              "presenting_author"
+            ]
+          ],
+          "extra": [
+            [
+              "document",
+              "in_person"
+            ],
+            [
+              "document",
+              "presenting_author"
+            ]
+          ]
+        },
+        {
+          "case": "ismb_2026",
+          "passage": 0,
+          "source_line": 145,
+          "missing": [
+            [
+              "exclusion",
+              "abstract_accepted"
+            ],
+            [
+              "exclusion",
+              "unknown"
+            ]
+          ],
+          "extra": [
+            [
+              "document",
+              "abstract_accepted"
+            ],
+            [
+              "document",
+              "abstract_submitted"
+            ]
+          ]
+        },
+        {
+          "case": "ismb_2026",
+          "passage": 1,
+          "source_line": 149,
+          "missing": [
+            [
+              "exclusion",
+              "membership"
+            ]
+          ],
+          "extra": [
+            [
+              "requirement",
+              "membership"
+            ]
+          ]
+        },
+        {
+          "case": "ismb_2026",
+          "passage": 2,
+          "source_line": 150,
+          "missing": [
+            [
+              "exclusion",
+              "abstract_accepted"
+            ],
+            [
+              "exclusion",
+              "presenting_author"
+            ]
+          ],
+          "extra": [
+            [
+              "requirement",
+              "abstract_accepted"
+            ],
+            [
+              "requirement",
+              "presenting_author"
+            ]
+          ]
+        },
+        {
+          "case": "ismb_2026",
+          "passage": 3,
+          "source_line": 151,
+          "missing": [
+            [
+              "exclusion",
+              "career_stage"
+            ],
+            [
+              "exclusion",
+              "us_federal_employee"
+            ]
+          ],
+          "extra": [
+            [
+              "requirement",
+              "career_stage"
+            ],
+            [
+              "requirement",
+              "registration"
+            ]
+          ]
+        },
+        {
+          "case": "ismb_2026",
+          "passage": 4,
+          "source_line": 152,
+          "missing": [
+            [
+              "deadline",
+              "registration"
+            ]
+          ],
+          "extra": [
+            [
+              "requirement",
+              "registration"
+            ]
+          ]
+        },
+        {
+          "case": "ismb_2026",
+          "passage": 6,
+          "source_line": 156,
+          "missing": [
+            [
+              "funding_limit",
+              "unknown"
+            ]
+          ],
+          "extra": [
+            [
+              "award",
+              "career_stage"
+            ]
+          ]
+        },
+        {
+          "case": "ismb_2026",
+          "passage": 7,
+          "source_line": 159,
+          "missing": [
+            [
+              "deadline",
+              "unknown"
+            ]
+          ],
+          "extra": [
+            [
+              "requirement",
+              "unknown"
+            ]
+          ]
+        },
+        {
+          "case": "sfn_tpda",
+          "passage": 0,
+          "source_line": 201,
+          "missing": [
+            [
+              "unclear",
+              "in_person"
+            ],
+            [
+              "unclear",
+              "presenting_author"
+            ],
+            [
+              "unclear",
+              "unknown"
+            ]
+          ],
+          "extra": [
+            [
+              "funding_limit",
+              "in_person"
+            ],
+            [
+              "funding_limit",
+              "presenting_author"
+            ]
+          ]
+        },
+        {
+          "case": "sfn_tpda",
+          "passage": 1,
+          "source_line": 202,
+          "missing": [
+            [
+              "unclear",
+              "in_person"
+            ]
+          ],
+          "extra": [
+            [
+              "exclusion",
+              "in_person"
+            ]
+          ]
+        },
+        {
+          "case": "sfn_tpda",
+          "passage": 4,
+          "source_line": 222,
+          "missing": [
+            [
+              "exclusion",
+              "unknown"
+            ]
+          ],
+          "extra": [
+            [
+              "requirement",
+              "abstract_submitted"
+            ]
+          ]
+        },
+        {
+          "case": "sfn_tpda",
+          "passage": 6,
+          "source_line": 224,
+          "missing": [
+            [
+              "unclear",
+              "career_stage"
+            ]
+          ],
+          "extra": [
+            [
+              "requirement",
+              "career_stage"
+            ]
+          ]
+        },
+        {
+          "case": "sfn_tpda",
+          "passage": 7,
+          "source_line": 225,
+          "missing": [
+            [
+              "exclusion",
+              "prior_award"
+            ]
+          ],
+          "extra": [
+            [
+              "requirement",
+              "prior_award"
+            ]
+          ]
+        },
+        {
+          "case": "biologists_travel",
+          "passage": 0,
+          "source_line": 74,
+          "missing": [
+            [
+              "award",
+              "career_stage"
+            ]
+          ],
+          "extra": [
+            [
+              "funding_limit",
+              "career_stage"
+            ]
+          ]
+        },
+        {
+          "case": "biologists_travel",
+          "passage": 2,
+          "source_line": 82,
+          "missing": [
+            [
+              "requirement",
+              "unknown"
+            ]
+          ],
+          "extra": [
+            [
+              "exclusion",
+              "unknown"
+            ]
+          ]
+        },
+        {
+          "case": "biologists_travel",
+          "passage": 6,
+          "source_line": 86,
+          "missing": [
+            [
+              "requirement",
+              "career_stage"
+            ]
+          ],
+          "extra": [
+            [
+              "document",
+              "career_stage"
+            ]
+          ]
+        },
+        {
+          "case": "biochemical_travel",
+          "passage": 3,
+          "source_line": 112,
+          "missing": [
+            [
+              "unclear",
+              "membership"
+            ]
+          ],
+          "extra": [
+            [
+              "requirement",
+              "membership"
+            ]
+          ]
+        },
+        {
+          "case": "biochemical_travel",
+          "passage": 5,
+          "source_line": 114,
+          "missing": [
+            [
+              "funding_limit",
+              "unknown"
+            ]
+          ],
+          "extra": [
+            [
+              "funding_limit",
+              "request_limit"
+            ]
+          ]
+        },
+        {
+          "case": "biochemical_travel",
+          "passage": 6,
+          "source_line": 115,
+          "missing": [
+            [
+              "requirement",
+              "abstract_submitted"
+            ]
+          ],
+          "extra": [
+            [
+              "document",
+              "abstract_submitted"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "split": "historical_holdout",
+      "counts": {
+        "passages": 24,
+        "segmentation_id_or_count_failures": 0,
+        "paragraphs_with_multiple_reference_keys": 7,
+        "reference_tuples": 32,
+        "predicted_tuples": 26,
+        "true_positive": 10,
+        "false_negative_tuples": 22,
+        "false_positive_tuples": 16,
+        "category_errors": 11,
+        "named_reference_keys_outside_candidates": 6,
+        "unknown_reference_tuples": 13,
+        "exclusion_passages": 4,
+        "exclusion_kind_misses": 0,
+        "compound_cue_passages": 16,
+        "compound_passages_with_tuple_errors": 13,
+        "temporal_scope_cue_passages": 9,
+        "temporal_passages_with_tuple_errors": 6,
+        "model_rule_category_disagreements": 15,
+        "model_rule_key_disagreements": 1,
+        "outcome_UNKNOWN": 24,
+        "outcome_INFO": 3
+      },
+      "unknown_reason_counts": {
+        "Model and explicit rule interpretation do not agree; review this source passage.": 12,
+        "Unclassified source passage. It has not been dropped from the coverage review.": 6,
+        "Exclusion, required materials or unsupported scope needs explicit sponsor review.": 4,
+        "No single nonnegative applicant request cap is established; award amounts are not request caps.": 1,
+        "Conditional, duration or prior-award rule needs sponsor review; no unconditional comparison made.": 1,
+        "Sponsor award/benefit information, not an applicant request restriction.": 2,
+        "Dated milestone: confirm its event, year, time and timezone with the sponsor.": 1
+      },
+      "tuple_errors": [
+        {
+          "case": "biochemical_online",
+          "passage": 0,
+          "source_line": 99,
+          "missing": [
+            [
+              "award",
+              "career_stage"
+            ],
+            [
+              "award",
+              "membership"
+            ]
+          ],
+          "extra": [
+            [
+              "funding_limit",
+              "membership"
+            ]
+          ]
+        },
+        {
+          "case": "biochemical_online",
+          "passage": 2,
+          "source_line": 107,
+          "missing": [
+            [
+              "unclear",
+              "membership"
+            ]
+          ],
+          "extra": [
+            [
+              "requirement",
+              "membership"
+            ]
+          ]
+        },
+        {
+          "case": "biochemical_online",
+          "passage": 4,
+          "source_line": 109,
+          "missing": [
+            [
+              "funding_limit",
+              "unknown"
+            ]
+          ],
+          "extra": [
+            [
+              "funding_limit",
+              "request_limit"
+            ]
+          ]
+        },
+        {
+          "case": "biochemical_online",
+          "passage": 5,
+          "source_line": 110,
+          "missing": [
+            [
+              "unclear",
+              "abstract_submitted"
+            ],
+            [
+              "unclear",
+              "unknown"
+            ]
+          ],
+          "extra": [
+            [
+              "requirement",
+              "abstract_submitted"
+            ]
+          ]
+        },
+        {
+          "case": "ismb_dependent_care",
+          "passage": 2,
+          "source_line": 124,
+          "missing": [
+            [
+              "requirement",
+              "abstract_accepted"
+            ],
+            [
+              "requirement",
+              "presenting_author"
+            ]
+          ],
+          "extra": [
+            [
+              "document",
+              "membership"
+            ],
+            [
+              "document",
+              "presenting_author"
+            ]
+          ]
+        },
+        {
+          "case": "ismb_dependent_care",
+          "passage": 3,
+          "source_line": 125,
+          "missing": [
+            [
+              "requirement",
+              "unknown"
+            ]
+          ],
+          "extra": [
+            [
+              "document",
+              "unknown"
+            ]
+          ]
+        },
+        {
+          "case": "ismb_dependent_care",
+          "passage": 4,
+          "source_line": 126,
+          "missing": [
+            [
+              "unclear",
+              "unknown"
+            ]
+          ],
+          "extra": [
+            [
+              "funding_limit",
+              "membership"
+            ]
+          ]
+        },
+        {
+          "case": "ismb_dependent_care",
+          "passage": 5,
+          "source_line": 127,
+          "missing": [
+            [
+              "optional",
+              "unknown"
+            ]
+          ],
+          "extra": []
+        },
+        {
+          "case": "ismb_dependent_care",
+          "passage": 6,
+          "source_line": 134,
+          "missing": [
+            [
+              "document",
+              "documents"
+            ]
+          ],
+          "extra": [
+            [
+              "document",
+              "unknown"
+            ]
+          ]
+        },
+        {
+          "case": "ismb_dependent_care",
+          "passage": 7,
+          "source_line": 135,
+          "missing": [
+            [
+              "requirement",
+              "unknown"
+            ]
+          ],
+          "extra": [
+            [
+              "document",
+              "unknown"
+            ]
+          ]
+        },
+        {
+          "case": "rsc_researcher_travel",
+          "passage": 0,
+          "source_line": 231,
+          "missing": [
+            [
+              "exclusion",
+              "membership"
+            ]
+          ],
+          "extra": []
+        },
+        {
+          "case": "rsc_researcher_travel",
+          "passage": 1,
+          "source_line": 232,
+          "missing": [
+            [
+              "unclear",
+              "career_stage"
+            ],
+            [
+              "unclear",
+              "unknown"
+            ]
+          ],
+          "extra": [
+            [
+              "exclusion",
+              "career_stage"
+            ]
+          ]
+        },
+        {
+          "case": "rsc_researcher_travel",
+          "passage": 2,
+          "source_line": 233,
+          "missing": [
+            [
+              "exclusion",
+              "unknown"
+            ]
+          ],
+          "extra": [
+            [
+              "exclusion",
+              "membership"
+            ]
+          ]
+        },
+        {
+          "case": "rsc_researcher_travel",
+          "passage": 3,
+          "source_line": 234,
+          "missing": [
+            [
+              "unclear",
+              "prior_award"
+            ],
+            [
+              "unclear",
+              "unknown"
+            ]
+          ],
+          "extra": [
+            [
+              "optional",
+              "unknown"
+            ]
+          ]
+        },
+        {
+          "case": "rsc_researcher_travel",
+          "passage": 4,
+          "source_line": 238,
+          "missing": [
+            [
+              "award",
+              "unknown"
+            ]
+          ],
+          "extra": [
+            [
+              "document",
+              "unknown"
+            ]
+          ]
+        },
+        {
+          "case": "rsc_researcher_travel",
+          "passage": 6,
+          "source_line": 282,
+          "missing": [
+            [
+              "document",
+              "documents"
+            ]
+          ],
+          "extra": [
+            [
+              "document",
+              "unknown"
+            ]
+          ]
+        },
+        {
+          "case": "rsc_researcher_travel",
+          "passage": 7,
+          "source_line": 287,
+          "missing": [
+            [
+              "funding_limit",
+              "request_limit"
+            ]
+          ],
+          "extra": [
+            [
+              "award",
+              "unknown"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

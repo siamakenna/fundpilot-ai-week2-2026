@@ -1,0 +1,14 @@
+{
+  "version": "v04-1",
+  "created": "2026-10-15",
+  "baseline": "910abcd77f71f940580ca78b48c4fd2f05dd1611",
+  "policy": "Fresh source- and organizer-disjoint from previous benchmarks. Development search snippets inspected. Reserved source eligibility bodies must not be inspected until code/prompt/scoring freeze. EACR landing HTML was fetched only to inspect hrefs; no body text inspected. Prior benchmarks are historical diagnostics, not untouched tests. Four selected passages per source; not whole-document completeness. Independent human annotation review pending.",
+  "sources": [
+    {"id":"sdb_meeting", "split":"development", "organizer":"Society for Developmental Biology", "url":"https://www.sdbonline.org/2026mtg_meeting_assistance"},
+    {"id":"alba_travel", "split":"development", "organizer":"ALBA Network", "url":"https://www.alba.network/travel-awards-to-FENS2026"},
+    {"id":"gns_travel", "split":"development", "organizer":"German Neuroscience Society", "url":"https://nwg-info.de/en/node/14775"},
+    {"id":"embo_exchange", "split":"final", "organizer":"EMBO", "url":"https://www.embo.org/funding/fellowships-grants-and-career-support/scientific-exchange-grants/eligibility/"},
+    {"id":"eacr_fellowship", "split":"final", "organizer":"European Association for Cancer Research", "url":"https://www.eacr.org/travel-fellowships"}
+  ],
+  "selection_limitations": "Small convenience sample. Development calls include expired 2026 events and related neuroscience meetings despite different organizers. No claim of population representativeness or current application availability. Reserved URLs chosen from official indexes/URL metadata, not eligibility content. Failed URL discovery checks (404/403) were not reserved or evaluated."
+}

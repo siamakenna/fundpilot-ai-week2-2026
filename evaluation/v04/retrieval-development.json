@@ -1,0 +1,38 @@
+[
+  {
+    "id": "sdb_meeting",
+    "split": "development",
+    "organizer": "Society for Developmental Biology",
+    "url": "https://www.sdbonline.org/2026mtg_meeting_assistance",
+    "retrieved_at_utc": "2026-10-15T15:54:47.873675+00:00",
+    "text_sha256": "8051446e15dc6a76a6e77ce70d0d7e137ae299843582d16123a4132d7b9041fb",
+    "html_sha256": "5f63f5ae44e8137c3c2d24a16a5fa7c35d942fe34c593c48e38f29c12668af8b",
+    "characters": 6505,
+    "paragraphs_sha256": "9ac09c925e43b3f97857b3d025bfed1e16802937629c06bcf9cc6654cb4c554f",
+    "normalization": "Collapse whitespace within HTML data nodes, preserve structural paragraph/list separators; raw HTML and first extraction retained."
+  },
+  {
+    "id": "alba_travel",
+    "split": "development",
+    "organizer": "ALBA Network",
+    "url": "https://www.alba.network/travel-awards-to-FENS2026",
+    "retrieved_at_utc": "2026-10-15T15:54:48.665608+00:00",
+    "text_sha256": "948e29e1989a3d0532a3ffe088121a50d5bb2300e958ddf00fb39233ee0e08c6",
+    "html_sha256": "b6536ff77e1f5bbda0459218ceff1ec5ad6ab5bc38ee6dd7d5c219f6e9b2be44",
+    "characters": 4934,
+    "paragraphs_sha256": "7fe74b252aeda96c4a3d4b1b7ad853e061f88c79a2abf839f4f5fb6b4ae0c4a1",
+    "normalization": "Collapse whitespace within HTML data nodes, preserve structural paragraph/list separators; raw HTML and first extraction retained."
+  },
+  {
+    "id": "gns_travel",
+    "split": "development",
+    "organizer": "German Neuroscience Society",
+    "url": "https://nwg-info.de/en/node/14775",
+    "retrieved_at_utc": "2026-10-15T15:54:49.811619+00:00",
+    "text_sha256": "58a3f4598a42c153742b575e59ac00ea44ca6fcc6e47d5d3cb125ce468364b48",
+    "html_sha256": "4cb95d42b7386c0b43dd9e3b3a14c4e97a220eb1c23f4f31a64b64801515bcc8",
+    "characters": 2850,
+    "paragraphs_sha256": "7594adc8b95b58cf36101aee1ac0048c49bf086447793c8918c982ab65666156",
+    "normalization": "Collapse whitespace within HTML data nodes, preserve structural paragraph/list separators; raw HTML and first extraction retained."
+  }
+]

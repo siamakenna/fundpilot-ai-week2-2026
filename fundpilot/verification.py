@@ -121,7 +121,7 @@ def queue_markdown(report, *, limit=None):
             f"   - **Exact source passage** (characters {item['start']}:{item['end']}): “{safe_text(item['quote'])}”",
             "",
         ]
-    if limit is not None:
+    if limit is not None and items:
         lines += [
             (
                 f"Showing {min(limit, len(items))} of {len(items)} verification items. "

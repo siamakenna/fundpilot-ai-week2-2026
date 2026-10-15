@@ -1,0 +1,550 @@
+{
+  "variant": "B",
+  "model": "gemma3:1b",
+  "annotation_status": "Coding assistant; NOT independent or human-validated. Authored before candidate inference.",
+  "metrics": {
+    "true_positive": 1,
+    "predicted": 17,
+    "reference": 20,
+    "precision": 0.058823529411764705,
+    "recall": 0.05,
+    "f1": 0.05405405405405406,
+    "reference_kind_accuracy": {
+      "correct": 1,
+      "reference": 20
+    },
+    "mandatory_recall": {
+      "matched": 1,
+      "reference": 17
+    },
+    "exclusion_recall": {
+      "matched": 0,
+      "reference": 4
+    },
+    "missing_reference_atoms": 19,
+    "false_supported_positive": 0,
+    "false_supported_negative": 0,
+    "status_counts": {
+      "UNKNOWN": 17
+    },
+    "unknown": {
+      "count": 17,
+      "non_informational": 17
+    },
+    "completion": {
+      "complete": 1,
+      "cases": 3
+    },
+    "passages": {
+      "completed": 5,
+      "total": 10
+    },
+    "source_spans": {
+      "exact": 60,
+      "proposed": 60
+    },
+    "latency_seconds": {
+      "total": 152.291,
+      "mean": 50.764,
+      "cases": 3
+    },
+    "tokens": {
+      "prompt": 3727,
+      "generated": 3696
+    },
+    "metered_api_fees_usd": 0,
+    "electricity_cost": "not measured"
+  },
+  "cases": [
+    {
+      "id": "sdb_meeting",
+      "input_sha256": "7df63d75f618acc2153dd0a23166a7afe65b181e10989d660331fd3998be910e",
+      "passages": 2,
+      "reference": [
+        {
+          "kind": "eligibility",
+          "criterion": "career_stage",
+          "expected_status": "MATCH",
+          "relation": "NONE",
+          "evidence_start": 0,
+          "evidence_end": 671,
+          "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate.",
+          "passage": 0
+        },
+        {
+          "kind": "eligibility",
+          "criterion": "financial_need",
+          "expected_status": "UNKNOWN",
+          "relation": "NONE",
+          "evidence_start": 0,
+          "evidence_end": 671,
+          "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate.",
+          "passage": 0
+        },
+        {
+          "kind": "eligibility",
+          "criterion": "first_author",
+          "expected_status": "NOT MATCH",
+          "relation": "AND",
+          "evidence_start": 0,
+          "evidence_end": 671,
+          "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate.",
+          "passage": 0
+        },
+        {
+          "kind": "eligibility",
+          "criterion": "presenting_author",
+          "expected_status": "MATCH",
+          "relation": "AND",
+          "evidence_start": 0,
+          "evidence_end": 671,
+          "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate.",
+          "passage": 0
+        },
+        {
+          "kind": "eligibility",
+          "criterion": "abstract_submitted",
+          "expected_status": "MATCH",
+          "relation": "NONE",
+          "evidence_start": 0,
+          "evidence_end": 671,
+          "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate.",
+          "passage": 0
+        },
+        {
+          "kind": "eligibility",
+          "criterion": "membership",
+          "expected_status": "UNKNOWN",
+          "relation": "CONDITIONAL",
+          "evidence_start": 0,
+          "evidence_end": 671,
+          "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate.",
+          "passage": 0
+        },
+        {
+          "kind": "informational",
+          "criterion": "selection",
+          "expected_status": "INFO",
+          "relation": "NONE",
+          "evidence_start": 0,
+          "evidence_end": 671,
+          "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate.",
+          "passage": 0
+        },
+        {
+          "kind": "informational",
+          "criterion": "application_timing",
+          "expected_status": "INFO",
+          "relation": "NONE",
+          "evidence_start": 0,
+          "evidence_end": 671,
+          "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate.",
+          "passage": 0
+        },
+        {
+          "kind": "deadline",
+          "criterion": "application_timing",
+          "expected_status": "UNKNOWN",
+          "relation": "NONE",
+          "evidence_start": 0,
+          "evidence_end": 36,
+          "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate.",
+          "passage": 1
+        }
+      ],
+      "predictions": [],
+      "findings": [],
+      "complete": false,
+      "completed_passages": 0,
+      "exact_spans": 15,
+      "proposed_spans": 15,
+      "prompt_tokens": 713,
+      "generated_tokens": 826,
+      "error_type": "RuntimeError",
+      "seconds": 33.53
+    },
+    {
+      "id": "alba_travel",
+      "input_sha256": "25c9f1144e9364c609074ad98adcdac6ee0afd46517f68ad28d26e29595acd6f",
+      "passages": 4,
+      "reference": [
+        {
+          "kind": "sponsor_benefit",
+          "criterion": "award_amount",
+          "expected_status": "INFO",
+          "relation": "CONDITIONAL",
+          "evidence_start": 0,
+          "evidence_end": 29,
+          "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate.",
+          "passage": 0
+        },
+        {
+          "kind": "eligibility",
+          "criterion": "career_stage",
+          "expected_status": "UNKNOWN",
+          "relation": "CONDITIONAL",
+          "evidence_start": 0,
+          "evidence_end": 341,
+          "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate.",
+          "passage": 1
+        },
+        {
+          "kind": "required_material",
+          "criterion": "documents",
+          "expected_status": "UNKNOWN",
+          "relation": "CONDITIONAL",
+          "evidence_start": 0,
+          "evidence_end": 341,
+          "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate.",
+          "passage": 1
+        },
+        {
+          "kind": "eligibility",
+          "criterion": "membership",
+          "expected_status": "UNKNOWN",
+          "relation": "OR",
+          "evidence_start": 0,
+          "evidence_end": 93,
+          "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate.",
+          "passage": 2
+        },
+        {
+          "kind": "exclusion",
+          "criterion": "other_funding",
+          "expected_status": "UNKNOWN",
+          "relation": "OR",
+          "evidence_start": 0,
+          "evidence_end": 229,
+          "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate.",
+          "passage": 3
+        },
+        {
+          "kind": "exclusion",
+          "criterion": "prior_award",
+          "expected_status": "UNKNOWN",
+          "relation": "OR",
+          "evidence_start": 0,
+          "evidence_end": 229,
+          "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate.",
+          "passage": 3
+        }
+      ],
+      "predictions": [],
+      "findings": [],
+      "complete": false,
+      "completed_passages": 1,
+      "exact_spans": 28,
+      "proposed_spans": 28,
+      "prompt_tokens": 1068,
+      "generated_tokens": 1617,
+      "error_type": "RuntimeError",
+      "seconds": 57.981
+    },
+    {
+      "id": "gns_travel",
+      "input_sha256": "082e83ff703f9f5a6cc2fa1fbddbdfcbbc1d48e1fd26d2433682a0c473a72a34",
+      "passages": 4,
+      "reference": [
+        {
+          "kind": "eligibility",
+          "criterion": "career_stage",
+          "expected_status": "UNKNOWN",
+          "relation": "OR",
+          "evidence_start": 0,
+          "evidence_end": 102,
+          "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate.",
+          "passage": 0
+        },
+        {
+          "kind": "eligibility",
+          "criterion": "career_duration",
+          "expected_status": "UNKNOWN",
+          "relation": "CONDITIONAL",
+          "evidence_start": 0,
+          "evidence_end": 102,
+          "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate.",
+          "passage": 0
+        },
+        {
+          "kind": "exclusion",
+          "criterion": "other_funding",
+          "expected_status": "UNKNOWN",
+          "relation": "NONE",
+          "evidence_start": 0,
+          "evidence_end": 97,
+          "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate.",
+          "passage": 1
+        },
+        {
+          "kind": "exclusion",
+          "criterion": "prior_award",
+          "expected_status": "UNKNOWN",
+          "relation": "NONE",
+          "evidence_start": 0,
+          "evidence_end": 120,
+          "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate.",
+          "passage": 2
+        },
+        {
+          "kind": "deadline",
+          "criterion": "application_timing",
+          "expected_status": "UNKNOWN",
+          "relation": "NONE",
+          "evidence_start": 0,
+          "evidence_end": 69,
+          "evidence_scope": "Full original paragraph supports this provisional label; independent reviewer should tighten spans where appropriate.",
+          "passage": 3
+        }
+      ],
+      "predictions": [
+        {
+          "passage": 0,
+          "kind": "eligibility",
+          "criterion": "applicant_restriction"
+        },
+        {
+          "passage": 0,
+          "kind": "exclusion",
+          "criterion": "expense"
+        },
+        {
+          "passage": 0,
+          "kind": "required_material",
+          "criterion": "document"
+        },
+        {
+          "passage": 0,
+          "kind": "deadline",
+          "criterion": "deadline"
+        },
+        {
+          "passage": 0,
+          "kind": "sponsor_benefit",
+          "criterion": "sponsor_benefit"
+        },
+        {
+          "passage": 0,
+          "kind": "funding_condition",
+          "criterion": "funding_condition"
+        },
+        {
+          "passage": 0,
+          "kind": "funding_condition",
+          "criterion": "applicant_request_cap"
+        },
+        {
+          "passage": 0,
+          "kind": "funding_condition",
+          "criterion": "submission_date"
+        },
+        {
+          "passage": 0,
+          "kind": "funding_condition",
+          "criterion": "selection"
+        },
+        {
+          "passage": 1,
+          "kind": "eligibility",
+          "criterion": "applicant_restrictions"
+        },
+        {
+          "passage": 1,
+          "kind": "exclusion",
+          "criterion": "expense_cap"
+        },
+        {
+          "passage": 1,
+          "kind": "required_material",
+          "criterion": "document"
+        },
+        {
+          "passage": 2,
+          "kind": "eligibility",
+          "criterion": "applicant_past_travel_grant_history"
+        },
+        {
+          "passage": 2,
+          "kind": "exclusion",
+          "criterion": "past_travel_grant_history"
+        },
+        {
+          "passage": 3,
+          "kind": "deadline",
+          "criterion": "application_timing"
+        },
+        {
+          "passage": 3,
+          "kind": "deadline",
+          "criterion": "deadline"
+        },
+        {
+          "passage": 3,
+          "kind": "deadline",
+          "criterion": "deadline"
+        }
+      ],
+      "findings": [
+        {
+          "passage": 0,
+          "kind": "eligibility",
+          "criterion": "applicant_restriction",
+          "status": "UNKNOWN",
+          "start": 0,
+          "end": 102,
+          "evidence_sha256": "ec0b4ecb627b90a6be63376fdb61bf4062e3e4c0ba8fe8b5ff060ddd4ea659d4"
+        },
+        {
+          "passage": 0,
+          "kind": "exclusion",
+          "criterion": "expense",
+          "status": "UNKNOWN",
+          "start": 0,
+          "end": 102,
+          "evidence_sha256": "ec0b4ecb627b90a6be63376fdb61bf4062e3e4c0ba8fe8b5ff060ddd4ea659d4"
+        },
+        {
+          "passage": 0,
+          "kind": "required_material",
+          "criterion": "document",
+          "status": "UNKNOWN",
+          "start": 0,
+          "end": 102,
+          "evidence_sha256": "ec0b4ecb627b90a6be63376fdb61bf4062e3e4c0ba8fe8b5ff060ddd4ea659d4"
+        },
+        {
+          "passage": 0,
+          "kind": "deadline",
+          "criterion": "deadline",
+          "status": "UNKNOWN",
+          "start": 0,
+          "end": 102,
+          "evidence_sha256": "ec0b4ecb627b90a6be63376fdb61bf4062e3e4c0ba8fe8b5ff060ddd4ea659d4"
+        },
+        {
+          "passage": 0,
+          "kind": "sponsor_benefit",
+          "criterion": "sponsor_benefit",
+          "status": "UNKNOWN",
+          "start": 0,
+          "end": 102,
+          "evidence_sha256": "ec0b4ecb627b90a6be63376fdb61bf4062e3e4c0ba8fe8b5ff060ddd4ea659d4"
+        },
+        {
+          "passage": 0,
+          "kind": "funding_condition",
+          "criterion": "funding_condition",
+          "status": "UNKNOWN",
+          "start": 0,
+          "end": 102,
+          "evidence_sha256": "ec0b4ecb627b90a6be63376fdb61bf4062e3e4c0ba8fe8b5ff060ddd4ea659d4"
+        },
+        {
+          "passage": 0,
+          "kind": "funding_condition",
+          "criterion": "applicant_request_cap",
+          "status": "UNKNOWN",
+          "start": 0,
+          "end": 102,
+          "evidence_sha256": "ec0b4ecb627b90a6be63376fdb61bf4062e3e4c0ba8fe8b5ff060ddd4ea659d4"
+        },
+        {
+          "passage": 0,
+          "kind": "funding_condition",
+          "criterion": "submission_date",
+          "status": "UNKNOWN",
+          "start": 0,
+          "end": 102,
+          "evidence_sha256": "ec0b4ecb627b90a6be63376fdb61bf4062e3e4c0ba8fe8b5ff060ddd4ea659d4"
+        },
+        {
+          "passage": 0,
+          "kind": "funding_condition",
+          "criterion": "selection",
+          "status": "UNKNOWN",
+          "start": 0,
+          "end": 102,
+          "evidence_sha256": "ec0b4ecb627b90a6be63376fdb61bf4062e3e4c0ba8fe8b5ff060ddd4ea659d4"
+        },
+        {
+          "passage": 1,
+          "kind": "eligibility",
+          "criterion": "applicant_restrictions",
+          "status": "UNKNOWN",
+          "start": 103,
+          "end": 200,
+          "evidence_sha256": "df3b2c378f4b27b24fbf8a5375a84e391cc754c5d7ef27869101935e7f314802"
+        },
+        {
+          "passage": 1,
+          "kind": "exclusion",
+          "criterion": "expense_cap",
+          "status": "UNKNOWN",
+          "start": 103,
+          "end": 200,
+          "evidence_sha256": "df3b2c378f4b27b24fbf8a5375a84e391cc754c5d7ef27869101935e7f314802"
+        },
+        {
+          "passage": 1,
+          "kind": "required_material",
+          "criterion": "document",
+          "status": "UNKNOWN",
+          "start": 103,
+          "end": 200,
+          "evidence_sha256": "df3b2c378f4b27b24fbf8a5375a84e391cc754c5d7ef27869101935e7f314802"
+        },
+        {
+          "passage": 2,
+          "kind": "eligibility",
+          "criterion": "applicant_past_travel_grant_history",
+          "status": "UNKNOWN",
+          "start": 201,
+          "end": 321,
+          "evidence_sha256": "100c3e67fa795128caa6d2c8102fb210a9e1456eb499d123eaa8772b8f5d57c0"
+        },
+        {
+          "passage": 2,
+          "kind": "exclusion",
+          "criterion": "past_travel_grant_history",
+          "status": "UNKNOWN",
+          "start": 201,
+          "end": 321,
+          "evidence_sha256": "100c3e67fa795128caa6d2c8102fb210a9e1456eb499d123eaa8772b8f5d57c0"
+        },
+        {
+          "passage": 3,
+          "kind": "deadline",
+          "criterion": "application_timing",
+          "status": "UNKNOWN",
+          "start": 322,
+          "end": 391,
+          "evidence_sha256": "2974ab783d16a6f3140802517848ee52fc7d4ea19be8cf8759fd2855abad1c3b"
+        },
+        {
+          "passage": 3,
+          "kind": "deadline",
+          "criterion": "deadline",
+          "status": "UNKNOWN",
+          "start": 322,
+          "end": 384,
+          "evidence_sha256": "6a0dd21fed9f5095677afe731aa996364492e6a25b864d2e74ab819bb5829cc5"
+        },
+        {
+          "passage": 3,
+          "kind": "deadline",
+          "criterion": "deadline",
+          "status": "UNKNOWN",
+          "start": 385,
+          "end": 391,
+          "evidence_sha256": "d6672bc28bffb32ab71755a36d98b86af9233787c352d513c5e94910d9ae3c79"
+        }
+      ],
+      "complete": true,
+      "completed_passages": 4,
+      "exact_spans": 17,
+      "proposed_spans": 17,
+      "prompt_tokens": 1946,
+      "generated_tokens": 1253,
+      "seconds": 60.78
+    }
+  ]
+}
