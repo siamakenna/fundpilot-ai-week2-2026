@@ -94,3 +94,17 @@ Browser scripts default to port 7863. Start the app on that port for reproductio
 `python -c 'from app import demo; demo.launch(server_name="127.0.0.1", server_port=7863, share=False)'`.
 No hosted CI is configured; these are recorded local checks. Review is by the coding
 agent, not independent human approval. No DEV article or challenge entry was published.
+
+## Public release verification
+
+[v0.3.1](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.3.1)
+is published with the original 5,489,046-byte recording. Anonymous download returned
+HTTP 200 and SHA-256 `a6215bea3ab527c6d06510d09a79de4785c6113ae8f754cff6b81536864510cf`,
+matching both the local artifact and GitHub asset metadata. All 17 pre-merge repository,
+release and evidence links resolved against the release commit; transient HEAD 503
+responses were rechecked successfully with GET. The original two video digests match.
+
+[Onboarding-only PR #5](https://github.com/siamakenna/fundpilot-ai-week2-2026/pull/5)
+contains the release. [Verification evidence](../evidence/onboarding/public-release-verification.json)
+records the final checks. Atomic PR #4 remains draft and unmerged. No DEV publication
+or challenge submission was performed.
