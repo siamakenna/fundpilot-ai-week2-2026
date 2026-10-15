@@ -1,0 +1,26 @@
+[
+  {
+    "id": "embo_exchange",
+    "split": "final",
+    "organizer": "EMBO",
+    "url": "https://www.embo.org/funding/fellowships-grants-and-career-support/scientific-exchange-grants/eligibility/",
+    "retrieved_at_utc": "2026-10-15T17:09:50.505444+00:00",
+    "text_sha256": "b0dfc2228e5678e05d1401a288f486764603bb1e7b7c033bb3418a05d563ceef",
+    "html_sha256": "f3e2e24d75a63e6000aa9d63d77e0e9f85c152e31247e1b5b047b6465b5bb34d",
+    "characters": 11071,
+    "paragraphs_sha256": "a1511d3ba1ea2e4e415489aa9788133a83598f0a83504fea680a3dd84feac7a7",
+    "normalization": "Derived view collapses whitespace inside HTML text nodes; structural paragraph breaks retained. Original HTML and text unchanged."
+  },
+  {
+    "id": "eacr_fellowship",
+    "split": "final",
+    "organizer": "European Association for Cancer Research",
+    "url": "https://www.eacr.org/travel-fellowships",
+    "retrieved_at_utc": "2026-10-15T17:09:51.137634+00:00",
+    "text_sha256": "d53326cb5228806600d8aca240adc56344c5b6478b0c9a444141ee14c36e47dd",
+    "html_sha256": "cd660d2c48915382074e68b639247c74b0c5210a5dd631aaef652fa93ce0fc89",
+    "characters": 6066,
+    "paragraphs_sha256": "d53326cb5228806600d8aca240adc56344c5b6478b0c9a444141ee14c36e47dd",
+    "normalization": "Derived view collapses whitespace inside HTML text nodes; structural paragraph breaks retained. Original HTML and text unchanged."
+  }
+]
