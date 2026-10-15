@@ -1,0 +1,167 @@
+{
+  "model": "gemma3:1b",
+  "source_sha256": "6d7685cae61355e529994ff80d18e3eff0ceb20eb549c208aaf9c379a2e3ba10",
+  "calls": [
+    {
+      "ids": [
+        0
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-15T03:07:09.862466Z",
+        "response": "{\"passage_0\": {\"kind\": \"funding_limit\", \"criteria\": {\"membership\": true, \"unknown\": false}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 8606721466,
+        "load_duration": 3460103155,
+        "prompt_eval_count": 433,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 3405737000,
+        "eval_count": 30,
+        "eval_duration": 1704037000
+      },
+      "seconds": 8.667
+    },
+    {
+      "ids": [
+        1
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-15T03:07:14.061784Z",
+        "response": "{\"passage_1\": {\"kind\": \"deadline\", \"criteria\": {\"unknown\": false}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 4190475785,
+        "load_duration": 2642376,
+        "prompt_eval_count": 392,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 2879278000,
+        "eval_count": 20,
+        "eval_duration": 1298451000
+      },
+      "seconds": 4.196
+    },
+    {
+      "ids": [
+        2
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-15T03:07:19.704309Z",
+        "response": "{\"passage_2\": {\"kind\": \"requirement\", \"criteria\": {\"membership\": true, \"unknown\": false}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 5636236618,
+        "load_duration": 6332825,
+        "prompt_eval_count": 455,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 3988678000,
+        "eval_count": 27,
+        "eval_duration": 1625822000
+      },
+      "seconds": 5.643
+    },
+    {
+      "ids": [
+        3
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-15T03:07:24.424406Z",
+        "response": "{\"passage_3\": {\"kind\": \"exclusion\", \"criteria\": {\"prior_award\": true, \"unknown\": false}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 4712594042,
+        "load_duration": 1205065,
+        "prompt_eval_count": 403,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 3102815000,
+        "eval_count": 28,
+        "eval_duration": 1598044000
+      },
+      "seconds": 4.718
+    },
+    {
+      "ids": [
+        4
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-15T03:07:29.391526Z",
+        "response": "{\"passage_4\": {\"kind\": \"funding_limit\", \"criteria\": {\"request_limit\": true, \"unknown\": false}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 4961663659,
+        "load_duration": 786348,
+        "prompt_eval_count": 420,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 3189217000,
+        "eval_count": 31,
+        "eval_duration": 1761203000
+      },
+      "seconds": 4.968
+    },
+    {
+      "ids": [
+        5
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-15T03:07:34.287069Z",
+        "response": "{\"passage_5\": {\"kind\": \"requirement\", \"criteria\": {\"abstract_submitted\": true, \"unknown\": false}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 4888741596,
+        "load_duration": 1194889,
+        "prompt_eval_count": 442,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 3286817000,
+        "eval_count": 29,
+        "eval_duration": 1588030000
+      },
+      "seconds": 4.894
+    },
+    {
+      "ids": [
+        6
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-15T03:07:38.964373Z",
+        "response": "{\"passage_6\": {\"kind\": \"document\", \"criteria\": {\"documents\": true, \"unknown\": false}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 4670878096,
+        "load_duration": 1183581,
+        "prompt_eval_count": 411,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 3160753000,
+        "eval_count": 27,
+        "eval_duration": 1496844000
+      },
+      "seconds": 4.676
+    },
+    {
+      "ids": [
+        7
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-15T03:07:43.545424Z",
+        "response": "{\"passage_7\": {\"kind\": \"exclusion\", \"criteria\": {\"unknown\": false}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 4575911563,
+        "load_duration": 865710,
+        "prompt_eval_count": 401,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 3385515000,
+        "eval_count": 21,
+        "eval_duration": 1178835000
+      },
+      "seconds": 4.581
+    }
+  ],
+  "seconds": 42.347
+}

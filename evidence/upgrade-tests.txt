@@ -1,0 +1,20 @@
+Public-call release verification — October 14, 2026 local time
+
+Command: .venv/bin/python -m pytest -q
+Result: 79 passed in 5.42s
+
+Command: .venv/bin/python -m ruff check --select F fundpilot app.py scripts tests
+Result: All checks passed!
+
+Command: git diff --check
+Result: no whitespace errors
+
+Application smoke: import app and launch loopback port 7861; GET /config
+Result: Gradio 6.30.0, 65 components; real browser analyses and report download succeeded.
+
+Runtime: Ollama /api/version -> 0.40.4
+Model: gemma3:1b, 999.89M, Q4_K_M
+Model digest: 97558784bdc9175075a72655bf360b15da17df6b3b9e5182af9f8c0c8e58ba7c
+
+Tests include adapter mocks. Actual model evidence is separate in public-safety-live,
+realworld-development/evaluation-v4, realworld-heldout and public-ui.

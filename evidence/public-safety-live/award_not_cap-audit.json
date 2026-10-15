@@ -1,0 +1,27 @@
+{
+  "model": "gemma3:1b",
+  "source_sha256": "6fc0ba0ec65844e9f85611b65a3a1ca3bf5ce12d861c4ff1f1d27d09519ff8dd",
+  "calls": [
+    {
+      "ids": [
+        0
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-14T22:18:53.628506Z",
+        "response": "{\"passage_0\": {\"kind\": \"award\", \"criteria\": {\"unknown\": false}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 5662407259,
+        "load_duration": 1086148,
+        "prompt_eval_count": 383,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 4086724000,
+        "eval_count": 21,
+        "eval_duration": 1561552000
+      },
+      "seconds": 5.67
+    }
+  ],
+  "seconds": 5.67
+}

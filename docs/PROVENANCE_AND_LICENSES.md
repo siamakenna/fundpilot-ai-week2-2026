@@ -37,6 +37,8 @@ Official references: [Ollama license](https://github.com/ollama/ollama/blob/main
 [Gemma 3 model package](https://ollama.com/library/gemma3:1b).
 
 The public release excludes virtual environments, installed model/runtime binaries,
-credentials, temporary files and system logs. Evidence contains only synthetic
-requests and responses, test results and application screenshots. These checks
+credentials, temporary files and system logs. Baseline evidence contains synthetic requests and responses, tests and screenshots.
+The upgrade adds generated label responses from public official announcements,
+source hashes and short attributed excerpts. Full organizer pages and supplied
+review archives remain local and ignored; third-party text is not relicensed as MIT. These checks
 support a scoped release; they cannot independently establish all ownership facts.

@@ -1,0 +1,167 @@
+{
+  "model": "gemma3:1b",
+  "source_sha256": "8cf5f4c5290c69ed91136878647d9bd483a49c319950f0f8b8bc3d8fea5c7197",
+  "calls": [
+    {
+      "ids": [
+        0
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-15T03:07:48.193046Z",
+        "response": "{\"passage_0\": {\"kind\": \"award\", \"criteria\": {\"membership\": true, \"unknown\": false}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 4628804714,
+        "load_duration": 861196,
+        "prompt_eval_count": 413,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 3322409000,
+        "eval_count": 26,
+        "eval_duration": 1296595000
+      },
+      "seconds": 4.635
+    },
+    {
+      "ids": [
+        1
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-15T03:07:52.692115Z",
+        "response": "{\"passage_1\": {\"kind\": \"requirement\", \"criteria\": {\"membership\": true, \"unknown\": false}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 4492687947,
+        "load_duration": 1516790,
+        "prompt_eval_count": 395,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 3074398000,
+        "eval_count": 26,
+        "eval_duration": 1403758000
+      },
+      "seconds": 4.498
+    },
+    {
+      "ids": [
+        2
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-15T03:07:57.595147Z",
+        "response": "{\"passage_2\": {\"kind\": \"document\", \"criteria\": {\"membership\": true, \"presenting_author\": true, \"unknown\": false}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 4896142662,
+        "load_duration": 1137180,
+        "prompt_eval_count": 402,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 3083132000,
+        "eval_count": 34,
+        "eval_duration": 1799639000
+      },
+      "seconds": 4.903
+    },
+    {
+      "ids": [
+        3
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-15T03:08:01.862656Z",
+        "response": "{\"passage_3\": {\"kind\": \"document\", \"criteria\": {\"unknown\": false}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 4260430010,
+        "load_duration": 973421,
+        "prompt_eval_count": 404,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 3195349000,
+        "eval_count": 21,
+        "eval_duration": 1051903000
+      },
+      "seconds": 4.266
+    },
+    {
+      "ids": [
+        4
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-15T03:08:06.440155Z",
+        "response": "{\"passage_4\": {\"kind\": \"funding_limit\", \"criteria\": {\"membership\": true, \"unknown\": false}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 4571728370,
+        "load_duration": 812389,
+        "prompt_eval_count": 390,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 3017466000,
+        "eval_count": 28,
+        "eval_duration": 1544861000
+      },
+      "seconds": 4.577
+    },
+    {
+      "ids": [
+        5
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-15T03:08:11.57374Z",
+        "response": "{\"passage_5\": {\"kind\": \"optional\", \"criteria\": {\"career_stage\": true, \"membership\": true, \"unknown\": false}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 5127598911,
+        "load_duration": 1100713,
+        "prompt_eval_count": 420,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 3209237000,
+        "eval_count": 35,
+        "eval_duration": 1905738000
+      },
+      "seconds": 5.133
+    },
+    {
+      "ids": [
+        6
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-15T03:08:15.840722Z",
+        "response": "{\"passage_6\": {\"kind\": \"document\", \"criteria\": {\"unknown\": false}} }",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 4261145998,
+        "load_duration": 1675822,
+        "prompt_eval_count": 396,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 3010192000,
+        "eval_count": 22,
+        "eval_duration": 1240663000
+      },
+      "seconds": 4.266
+    },
+    {
+      "ids": [
+        7
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-15T03:08:20.031924Z",
+        "response": "{\"passage_7\": {\"kind\": \"document\", \"criteria\": {\"unknown\": false}} }",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 4185727337,
+        "load_duration": 1196439,
+        "prompt_eval_count": 392,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 2991169000,
+        "eval_count": 22,
+        "eval_duration": 1182416000
+      },
+      "seconds": 4.19
+    }
+  ],
+  "seconds": 36.473
+}

@@ -1,0 +1,53 @@
+{
+  "model": "gemma3:1b",
+  "source_sha256": "7299d9299e8935de49de534af9acfdfcd7fab4a8c59d2f06d290dceb06c6827a",
+  "calls": [
+    {
+      "ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-14T22:02:12.386931Z",
+        "response": "{\"passage_0\": {\"kind\": \"requirement\", \"keys\": [\"membership\", \"first_author\", \"presenting_author\"]}, \"passage_1\": {\"kind\": \"exclusion\", \"keys\": [\"first_author\"]}, \"passage_2\": {\"kind\": \"requirement\", \"keys\": [\"presenting_author\"]}, \"passage_3\": {\"kind\": \"requirement\", \"keys\": [\"presenting_author\"]}, \"passage_4\": {\"kind\": \"requirement\", \"keys\": [\"presenting_author\"]}, \"passage_5\": {\"kind\": \"requirement\", \"keys\": [\"membership\"]}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 12015761865,
+        "load_duration": 1622631,
+        "prompt_eval_count": 710,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 6712751000,
+        "eval_count": 126,
+        "eval_duration": 5260071000
+      },
+      "seconds": 12.024
+    },
+    {
+      "ids": [
+        6,
+        7
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-14T22:02:19.580509Z",
+        "response": "{\"passage_6\": {\"kind\": \"requirement\", \"keys\": [\"membership\", \"career_stage\"]}, \"passage_7\": {\"kind\": \"exclusion\", \"keys\": [\"prior_award\"]}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 7185194424,
+        "load_duration": 2984463,
+        "prompt_eval_count": 496,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 5255671000,
+        "eval_count": 44,
+        "eval_duration": 1890568000
+      },
+      "seconds": 7.223
+    }
+  ],
+  "seconds": 19.249
+}

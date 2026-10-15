@@ -1,0 +1,13 @@
+{
+  "frozen_at_utc": "2026-10-14T22:19:17.177230+00:00",
+  "candidate_commit": "35dbeb8af220ca0cc6ac56906dd30c715eed441f",
+  "realworld_sha256": "7fb7ce091e1d16a7950bd131a9950c543777b6bfabe1f18f2c75d1e52f8674fc",
+  "strategy": "v4, one paragraph per request, fixed Boolean candidate fields",
+  "model": "gemma3:1b",
+  "ollama_version": "0.40.4",
+  "temperature": 0,
+  "seed": 42,
+  "num_ctx": 8192,
+  "num_predict": 256,
+  "policy": "No held-out page bodies inspected before this freeze. No model/prompt/rule changes after held-out evaluation without a new independent set."
+}

@@ -1,0 +1,46 @@
+{
+  "split": "development",
+  "reviewer": "Codex assistant, source-reviewed separately from evaluated Gemma; NOT independently human-verified",
+  "live_model": {
+    "true_positive": 4,
+    "predicted": 32,
+    "reference": 48,
+    "precision": 0.125,
+    "recall": 0.08333333333333333,
+    "f1": 0.1,
+    "mandatory_matched": 4,
+    "mandatory_reference": 34,
+    "mandatory_recall": 0.11764705882352941,
+    "category_correct": 10,
+    "paragraphs": 40,
+    "exclusion_category_correct": 3,
+    "exclusion_paragraphs": 12,
+    "unsupported_predictions": 0
+  },
+  "rules_baseline": {
+    "true_positive": 30,
+    "predicted": 48,
+    "reference": 48,
+    "precision": 0.625,
+    "recall": 0.625,
+    "f1": 0.625,
+    "mandatory_matched": 23,
+    "mandatory_reference": 34,
+    "mandatory_recall": 0.6764705882352942,
+    "category_correct": 27,
+    "paragraphs": 40,
+    "exclusion_category_correct": 9,
+    "exclusion_paragraphs": 12,
+    "unsupported_predictions": 13
+  },
+  "cases": 5,
+  "completed": 3,
+  "failed": 2,
+  "latency_seconds": {
+    "mean": 16.6214,
+    "min": 13.807,
+    "max": 19.258
+  },
+  "inference": "actual local Gemma; no retries or fixture substitutions",
+  "scope": "Selected original paragraphs, not whole-document completeness or independently human-adjudicated eligibility accuracy"
+}

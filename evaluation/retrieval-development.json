@@ -1,0 +1,47 @@
+[
+  {
+    "id": "cns_2027",
+    "split": "development",
+    "url": "https://www.cogneurosociety.org/travel-award/",
+    "retrieved_at_utc": "2026-10-14T18:28:35.543415+00:00",
+    "text_sha256": "0a941310cb3ed1e65af4786954a127126d15887cf076e1b5b9da2325544a13c5",
+    "characters": 7628,
+    "storage": "ignored local cache; not redistributed"
+  },
+  {
+    "id": "ismb_2026",
+    "split": "development",
+    "url": "https://www.iscb.org/ismb2026/general-info/conference-fellowships",
+    "retrieved_at_utc": "2026-10-14T18:28:36.067414+00:00",
+    "text_sha256": "d32bb81e093ad37d8ffc75e62331126e2105efd614fae37527c4f28b7e487f81",
+    "characters": 8489,
+    "storage": "ignored local cache; not redistributed"
+  },
+  {
+    "id": "sfn_tpda",
+    "split": "development",
+    "url": "https://www.sfn.org/tpda",
+    "retrieved_at_utc": "2026-10-14T18:28:36.536360+00:00",
+    "text_sha256": "2d09af090fe082411956e2a31555fb8554246323c52ed7afc2794702d6544abf",
+    "characters": 9636,
+    "storage": "ignored local cache; not redistributed"
+  },
+  {
+    "id": "biologists_travel",
+    "split": "development",
+    "url": "https://www.biologists.com/grants/travelling-fellowships/",
+    "retrieved_at_utc": "2026-10-14T18:28:37.132167+00:00",
+    "text_sha256": "fd2bebea6313c6ac0d48ff1fbdc3cd6f61a8043bfcb6167150027eac0e7ef638",
+    "characters": 10500,
+    "storage": "ignored local cache; not redistributed"
+  },
+  {
+    "id": "biochemical_travel",
+    "split": "development",
+    "url": "https://www.biochemistry.org/grants-and-awards/grants-and-bursaries/general-travel-grants/",
+    "retrieved_at_utc": "2026-10-14T18:28:38.034036+00:00",
+    "text_sha256": "53817e569aefc6704c94c0db7d280730f23f06b1d90d6a2c47513566e2448fc2",
+    "characters": 13647,
+    "storage": "ignored local cache; not redistributed"
+  }
+]

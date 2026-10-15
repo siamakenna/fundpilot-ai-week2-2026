@@ -1,3 +1,5 @@
+> Historical baseline planning/QA record. The completed public-call upgrade is documented in [upgrade release checks](UPGRADE_RELEASE_CHECKS.md), [real-source evaluation](REAL_WORLD_EVALUATION.md), and [the current demo guide](JUDGE_DEMO_SCRIPT.md). Earlier pending steps below are superseded by those records.
+
 # Final submission readiness — October 14, 2026
 
 **Release QA passes. Competition publication is blocked by the missing public

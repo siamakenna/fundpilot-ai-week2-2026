@@ -1,0 +1,33 @@
+{
+  "model": "gemma3:1b",
+  "source_sha256": "603e41f5285d5216908c73cb747821a952257b885475c13494f1a8db5b7c67fc",
+  "calls": [
+    {
+      "ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-14T22:01:45.244313Z",
+        "response": "{\"passage_0\": {\"kind\": \"requirement\", \"keys\": [\"membership\", \"career_stage\"]}, \"passage_1\": {\"kind\": \"requirement\", \"keys\": [\"first_author\", \"presenting_author\", \"career_stage\"]}, \"passage_2\": {\"kind\": \"requirement\", \"keys\": [\"first_author\", \"presenting_author\"]}, \"passage_3\": {\"kind\": \"requirement\", \"keys\": [\"registration\", \"registration\", \"first_author\", \"presenting_author\"]}, \"passage_4\": {\"kind\": \"requirement\", \"keys\": [\"abstract_submitted\", \"documents\"]}, \"passage_5\": {\"kind\": \"requirement\", \"keys\": [\"registration\", \"registration\", \"presenting_author\"]}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 13733340580,
+        "load_duration": 2935177210,
+        "prompt_eval_count": 633,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 4543653000,
+        "eval_count": 164,
+        "eval_duration": 6212272000
+      },
+      "error": "ValueError: Model duplicated a criterion. Review the source and try again.",
+      "seconds": 13.805
+    }
+  ],
+  "seconds": 13.806
+}

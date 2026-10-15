@@ -1,0 +1,167 @@
+{
+  "model": "gemma3:1b",
+  "source_sha256": "c9b882c1dd0f1585d0640709edff872905c9bb0d0d6a11868597fe004f18f320",
+  "calls": [
+    {
+      "ids": [
+        0
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-14T22:12:08.190117Z",
+        "response": "{\"passage_0\": {\"kind\": \"document\", \"criteria\": {\"abstract_accepted\": true, \"abstract_submitted\": true, \"unknown\": false}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 7169068447,
+        "load_duration": 1713694,
+        "prompt_eval_count": 483,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 4432374000,
+        "eval_count": 39,
+        "eval_duration": 2706630000
+      },
+      "seconds": 7.18
+    },
+    {
+      "ids": [
+        1
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-14T22:12:16.171854Z",
+        "response": "{\"passage_1\": {\"kind\": \"requirement\", \"criteria\": {\"membership\": true, \"unknown\": false}} }",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 7969529392,
+        "load_duration": 2240023,
+        "prompt_eval_count": 426,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 5739667000,
+        "eval_count": 27,
+        "eval_duration": 2217783000
+      },
+      "seconds": 7.979
+    },
+    {
+      "ids": [
+        2
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-14T22:12:23.681277Z",
+        "response": "{\"passage_2\": {\"kind\": \"requirement\", \"criteria\": {\"abstract_accepted\": true, \"presenting_author\": true, \"unknown\": false}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 7499979663,
+        "load_duration": 841446,
+        "prompt_eval_count": 446,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 4213478000,
+        "eval_count": 43,
+        "eval_duration": 3257949000
+      },
+      "seconds": 7.506
+    },
+    {
+      "ids": [
+        3
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-14T22:12:31.090884Z",
+        "response": "{\"passage_3\": {\"kind\": \"requirement\", \"criteria\": {\"career_stage\": true, \"registration\": true, \"unknown\": false, \"us_federal_employee\": false}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 7402425198,
+        "load_duration": 1388817,
+        "prompt_eval_count": 439,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 4156313000,
+        "eval_count": 44,
+        "eval_duration": 3223210000
+      },
+      "seconds": 7.41
+    },
+    {
+      "ids": [
+        4
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-14T22:12:37.748023Z",
+        "response": "{\"passage_4\": {\"kind\": \"requirement\", \"criteria\": {\"registration\": true, \"unknown\": false}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 6648946914,
+        "load_duration": 1055472,
+        "prompt_eval_count": 462,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 4619333000,
+        "eval_count": 27,
+        "eval_duration": 2015705000
+      },
+      "seconds": 6.659
+    },
+    {
+      "ids": [
+        5
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-14T22:12:43.674455Z",
+        "response": "{\"passage_5\": {\"kind\": \"requirement\", \"criteria\": {\"unknown\": false, \"upfront_costs\": true}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 5914275425,
+        "load_duration": 1523701,
+        "prompt_eval_count": 436,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 4029913000,
+        "eval_count": 29,
+        "eval_duration": 1869712000
+      },
+      "seconds": 5.922
+    },
+    {
+      "ids": [
+        6
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-14T22:12:49.972956Z",
+        "response": "{\"passage_6\": {\"kind\": \"award\", \"criteria\": {\"career_stage\": true, \"unknown\": false}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 6291065712,
+        "load_duration": 2169148,
+        "prompt_eval_count": 459,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 4295768000,
+        "eval_count": 30,
+        "eval_duration": 1974967000
+      },
+      "seconds": 6.298
+    },
+    {
+      "ids": [
+        7
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-14T22:12:56.202919Z",
+        "response": "{\"passage_7\": {\"kind\": \"requirement\", \"criteria\": {\"unknown\": false}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 6220781310,
+        "load_duration": 1943332,
+        "prompt_eval_count": 520,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 4846373000,
+        "eval_count": 21,
+        "eval_duration": 1356779000
+      },
+      "seconds": 6.233
+    }
+  ],
+  "seconds": 55.195
+}

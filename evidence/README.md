@@ -34,3 +34,17 @@ accuracy study. Exact quote attachment is deterministic code, not a model score.
 
 - `release-qa/`: October 14 submission-readiness audit, lightweight smoke checks
   and link verification. No new model benchmark; original evidence is unchanged.
+
+## Public-call upgrade (separate from the synthetic benchmark)
+
+- `realworld-development/evaluation-v1` through `evaluation-v4`: actual strategy history, including rejected reports.
+- `realworld-heldout`: the frozen candidate's single three-source pass; no retries.
+- `public-safety-live`: five actual adversarial/missing-model probes.
+- `annotation-review`: local-cache verification of the separately proposed AI labels.
+- `public-ui`: real browser screenshots, actual downloaded report, events and video digest.
+- `upgrade-tests.txt` and `upgrade-security-check.json`: final scoped release checks.
+
+See [real-source evaluation](../docs/REAL_WORLD_EVALUATION.md) for denominators,
+failures and limits. Source quotes are attached by Python; generated labels remain
+model output. Full organizer pages are not redistributed. The original evidence
+files above remain byte-for-byte unchanged.

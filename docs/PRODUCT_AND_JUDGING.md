@@ -1,3 +1,5 @@
+> Historical baseline planning/QA record. The completed public-call upgrade is documented in [upgrade release checks](UPGRADE_RELEASE_CHECKS.md), [real-source evaluation](REAL_WORLD_EVALUATION.md), and [the current demo guide](JUDGE_DEMO_SCRIPT.md). Earlier pending steps below are superseded by those records.
+
 # FundPilot AI — judge-focused product curation (October 13, 2026)
 
 ## Product statement

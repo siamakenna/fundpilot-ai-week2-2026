@@ -1,0 +1,366 @@
+{
+  "milestones": [
+    {
+      "id": 5,
+      "text": "November 3, 2026",
+      "date": "2026-11-03",
+      "role": "application deadline",
+      "status": "FUTURE",
+      "note": "Date extracted from source; no opening status or exact cutoff time is inferred."
+    },
+    {
+      "id": 8,
+      "text": "November 3, 2026",
+      "date": "2026-11-03",
+      "role": "application deadline",
+      "status": "FUTURE",
+      "note": "Date extracted from source; no opening status or exact cutoff time is inferred."
+    }
+  ],
+  "readiness": "REVIEW REQUIRED",
+  "counts": {
+    "MATCH": 5,
+    "NOT MATCH": 0,
+    "UNKNOWN": 25,
+    "INFO": 0
+  },
+  "findings": [
+    {
+      "id": 0,
+      "start": 0,
+      "end": 17,
+      "key": "first_author",
+      "model_kind": "requirement",
+      "rule_kind": "unclear",
+      "status": "UNKNOWN",
+      "reason": "Model and explicit rule interpretation do not agree; review this source passage.",
+      "amounts": []
+    },
+    {
+      "id": 0,
+      "start": 0,
+      "end": 17,
+      "key": "presenting_author",
+      "model_kind": "requirement",
+      "rule_kind": "unclear",
+      "status": "UNKNOWN",
+      "reason": "Model and explicit rule interpretation do not agree; review this source passage.",
+      "amounts": []
+    },
+    {
+      "id": 0,
+      "start": 0,
+      "end": 17,
+      "key": "unknown",
+      "model_kind": "requirement",
+      "rule_kind": "unclear",
+      "status": "UNKNOWN",
+      "reason": "Unclassified source passage. It has not been dropped from the coverage review.",
+      "amounts": []
+    },
+    {
+      "id": 1,
+      "start": 18,
+      "end": 145,
+      "key": "career_stage",
+      "model_kind": "requirement",
+      "rule_kind": "requirement",
+      "status": "UNKNOWN",
+      "reason": "Model and explicit rule interpretation do not agree; review this source passage.",
+      "amounts": []
+    },
+    {
+      "id": 1,
+      "start": 18,
+      "end": 145,
+      "key": "membership",
+      "model_kind": "requirement",
+      "rule_kind": "requirement",
+      "status": "MATCH",
+      "reason": "Explicit source condition compared deterministically with the applicant\u2019s declared membership fact (not independently verified).",
+      "amounts": []
+    },
+    {
+      "id": 2,
+      "start": 146,
+      "end": 266,
+      "key": "first_author",
+      "model_kind": "requirement",
+      "rule_kind": "requirement",
+      "status": "MATCH",
+      "reason": "Explicit source condition compared deterministically with the applicant\u2019s declared first author fact (not independently verified).",
+      "amounts": []
+    },
+    {
+      "id": 2,
+      "start": 146,
+      "end": 266,
+      "key": "presenting_author",
+      "model_kind": "requirement",
+      "rule_kind": "requirement",
+      "status": "MATCH",
+      "reason": "Explicit source condition compared deterministically with the applicant\u2019s declared presenting author fact (not independently verified).",
+      "amounts": []
+    },
+    {
+      "id": 3,
+      "start": 267,
+      "end": 286,
+      "key": "registration",
+      "model_kind": "requirement",
+      "rule_kind": "unclear",
+      "status": "UNKNOWN",
+      "reason": "Model and explicit rule interpretation do not agree; review this source passage.",
+      "amounts": []
+    },
+    {
+      "id": 3,
+      "start": 267,
+      "end": 286,
+      "key": "unknown",
+      "model_kind": "requirement",
+      "rule_kind": "unclear",
+      "status": "UNKNOWN",
+      "reason": "Unclassified source passage. It has not been dropped from the coverage review.",
+      "amounts": []
+    },
+    {
+      "id": 4,
+      "start": 287,
+      "end": 367,
+      "key": "abstract_submitted",
+      "model_kind": "requirement",
+      "rule_kind": "requirement",
+      "status": "UNKNOWN",
+      "reason": "Model and explicit rule interpretation do not agree; review this source passage.",
+      "amounts": []
+    },
+    {
+      "id": 4,
+      "start": 287,
+      "end": 367,
+      "key": "registration",
+      "model_kind": "requirement",
+      "rule_kind": "requirement",
+      "status": "UNKNOWN",
+      "reason": "Model and explicit rule interpretation do not agree; review this source passage.",
+      "amounts": []
+    },
+    {
+      "id": 5,
+      "start": 368,
+      "end": 442,
+      "key": "registration",
+      "model_kind": "requirement",
+      "rule_kind": "deadline",
+      "status": "UNKNOWN",
+      "reason": "Model and explicit rule interpretation do not agree; review this source passage.",
+      "amounts": []
+    },
+    {
+      "id": 5,
+      "start": 368,
+      "end": 442,
+      "key": "unknown",
+      "model_kind": "requirement",
+      "rule_kind": "deadline",
+      "status": "UNKNOWN",
+      "reason": "Model and explicit rule interpretation do not agree; review this source passage.",
+      "amounts": []
+    },
+    {
+      "id": 6,
+      "start": 443,
+      "end": 580,
+      "key": "in_person",
+      "model_kind": "requirement",
+      "rule_kind": "requirement",
+      "status": "MATCH",
+      "reason": "Explicit source condition compared deterministically with the applicant\u2019s declared in person fact (not independently verified).",
+      "amounts": []
+    },
+    {
+      "id": 6,
+      "start": 443,
+      "end": 580,
+      "key": "presenting_author",
+      "model_kind": "requirement",
+      "rule_kind": "requirement",
+      "status": "MATCH",
+      "reason": "Explicit source condition compared deterministically with the applicant\u2019s declared presenting author fact (not independently verified).",
+      "amounts": []
+    },
+    {
+      "id": 6,
+      "start": 443,
+      "end": 580,
+      "key": "us_federal_employee",
+      "model_kind": "requirement",
+      "rule_kind": "requirement",
+      "status": "UNKNOWN",
+      "reason": "Model and explicit rule interpretation do not agree; review this source passage.",
+      "amounts": []
+    },
+    {
+      "id": 7,
+      "start": 581,
+      "end": 780,
+      "key": "registration",
+      "model_kind": "exclusion",
+      "rule_kind": "exclusion",
+      "status": "UNKNOWN",
+      "reason": "Model and explicit rule interpretation do not agree; review this source passage.",
+      "amounts": []
+    },
+    {
+      "id": 7,
+      "start": 581,
+      "end": 780,
+      "key": "unknown",
+      "model_kind": "exclusion",
+      "rule_kind": "exclusion",
+      "status": "UNKNOWN",
+      "reason": "Model and explicit rule interpretation do not agree; review this source passage.",
+      "amounts": []
+    },
+    {
+      "id": 8,
+      "start": 781,
+      "end": 819,
+      "key": "registration",
+      "model_kind": "deadline",
+      "rule_kind": "deadline",
+      "status": "UNKNOWN",
+      "reason": "Model and explicit rule interpretation do not agree; review this source passage.",
+      "amounts": []
+    },
+    {
+      "id": 8,
+      "start": 781,
+      "end": 819,
+      "key": "unknown",
+      "model_kind": "deadline",
+      "rule_kind": "deadline",
+      "status": "UNKNOWN",
+      "reason": "Model and explicit rule interpretation do not agree; review this source passage.",
+      "amounts": []
+    },
+    {
+      "id": 8,
+      "start": 781,
+      "end": 819,
+      "key": "us_federal_employee",
+      "model_kind": "deadline",
+      "rule_kind": "deadline",
+      "status": "UNKNOWN",
+      "reason": "Model and explicit rule interpretation do not agree; review this source passage.",
+      "amounts": []
+    },
+    {
+      "id": 0,
+      "start": 0,
+      "end": 17,
+      "key": "scope_review",
+      "model_kind": "requirement",
+      "rule_kind": "unclear",
+      "status": "UNKNOWN",
+      "reason": "Review the entire passage, its list heading and linked rules for additional conditions or exceptions beyond the supported comparisons. Span coverage does not prove semantic completeness.",
+      "amounts": []
+    },
+    {
+      "id": 1,
+      "start": 18,
+      "end": 145,
+      "key": "scope_review",
+      "model_kind": "requirement",
+      "rule_kind": "requirement",
+      "status": "UNKNOWN",
+      "reason": "Review the entire passage, its list heading and linked rules for additional conditions or exceptions beyond the supported comparisons. Span coverage does not prove semantic completeness.",
+      "amounts": []
+    },
+    {
+      "id": 2,
+      "start": 146,
+      "end": 266,
+      "key": "scope_review",
+      "model_kind": "requirement",
+      "rule_kind": "requirement",
+      "status": "UNKNOWN",
+      "reason": "Review the entire passage, its list heading and linked rules for additional conditions or exceptions beyond the supported comparisons. Span coverage does not prove semantic completeness.",
+      "amounts": []
+    },
+    {
+      "id": 3,
+      "start": 267,
+      "end": 286,
+      "key": "scope_review",
+      "model_kind": "requirement",
+      "rule_kind": "unclear",
+      "status": "UNKNOWN",
+      "reason": "Review the entire passage, its list heading and linked rules for additional conditions or exceptions beyond the supported comparisons. Span coverage does not prove semantic completeness.",
+      "amounts": []
+    },
+    {
+      "id": 4,
+      "start": 287,
+      "end": 367,
+      "key": "scope_review",
+      "model_kind": "requirement",
+      "rule_kind": "requirement",
+      "status": "UNKNOWN",
+      "reason": "Review the entire passage, its list heading and linked rules for additional conditions or exceptions beyond the supported comparisons. Span coverage does not prove semantic completeness.",
+      "amounts": []
+    },
+    {
+      "id": 5,
+      "start": 368,
+      "end": 442,
+      "key": "scope_review",
+      "model_kind": "requirement",
+      "rule_kind": "deadline",
+      "status": "UNKNOWN",
+      "reason": "Review the entire passage, its list heading and linked rules for additional conditions or exceptions beyond the supported comparisons. Span coverage does not prove semantic completeness.",
+      "amounts": []
+    },
+    {
+      "id": 6,
+      "start": 443,
+      "end": 580,
+      "key": "scope_review",
+      "model_kind": "requirement",
+      "rule_kind": "requirement",
+      "status": "UNKNOWN",
+      "reason": "Review the entire passage, its list heading and linked rules for additional conditions or exceptions beyond the supported comparisons. Span coverage does not prove semantic completeness.",
+      "amounts": []
+    },
+    {
+      "id": 7,
+      "start": 581,
+      "end": 780,
+      "key": "scope_review",
+      "model_kind": "exclusion",
+      "rule_kind": "exclusion",
+      "status": "UNKNOWN",
+      "reason": "Review the entire passage, its list heading and linked rules for additional conditions or exceptions beyond the supported comparisons. Span coverage does not prove semantic completeness.",
+      "amounts": []
+    },
+    {
+      "id": 8,
+      "start": 781,
+      "end": 819,
+      "key": "scope_review",
+      "model_kind": "deadline",
+      "rule_kind": "deadline",
+      "status": "UNKNOWN",
+      "reason": "Review the entire passage, its list heading and linked rules for additional conditions or exceptions beyond the supported comparisons. Span coverage does not prove semantic completeness.",
+      "amounts": []
+    }
+  ],
+  "source_sha256": "bbb2790df8dcbbd8fe9940a82e788c5aa21ba7885f2a2cb6dd2bb33fd4fc6e4f",
+  "source_units": 9,
+  "covered_units": 9,
+  "mode": "gemma",
+  "model": "gemma3:1b",
+  "date": "2026-10-14",
+  "warning": "Readiness aid only. Neither source completeness nor applicant facts are independently verified. This is never an official eligibility determination; competitive selection and funding availability remain with the sponsor."
+}

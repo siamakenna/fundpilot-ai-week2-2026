@@ -10,3 +10,7 @@ fundpilot_report.md
 .tools/
 *.egg-info/
 .ruff_cache/
+
+# Official-source retrievals and personal reports stay local.
+.source-cache/
+.local-reports/

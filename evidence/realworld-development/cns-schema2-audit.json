@@ -1,0 +1,54 @@
+{
+  "model": "gemma3:1b",
+  "source_sha256": "bbb2790df8dcbbd8fe9940a82e788c5aa21ba7885f2a2cb6dd2bb33fd4fc6e4f",
+  "calls": [
+    {
+      "ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-14T18:29:20.050611Z",
+        "response": "{\"passage_0\": {\"kind\": \"requirement\", \"keys\": [\"first_author\", \"presenting_author\"]}, \"passage_1\": {\"kind\": \"requirement\", \"keys\": [\"membership\"]}, \"passage_2\": {\"kind\": \"requirement\", \"keys\": [\"first_author\", \"presenting_author\"]}, \"passage_3\": {\"kind\": \"requirement\", \"keys\": [\"registration\"]}, \"passage_4\": {\"kind\": \"requirement\", \"keys\": [\"registration\"]}, \"passage_5\": {\"kind\": \"requirement\", \"keys\": [\"registration\"]}\n}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 9714988486,
+        "load_duration": 9422279,
+        "prompt_eval_count": 508,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 4317977000,
+        "eval_count": 121,
+        "eval_duration": 5355098000
+      },
+      "seconds": 9.729
+    },
+    {
+      "ids": [
+        6,
+        7,
+        8
+      ],
+      "response": {
+        "model": "gemma3:1b",
+        "created_at": "2026-10-14T18:29:27.539376Z",
+        "response": "{\"passage_6\": {\"kind\": \"requirement\", \"keys\": [\"presenting_author\", \"in_person\", \"us_federal_employee\"]}, \"passage_7\": {\"kind\": \"exclusion\", \"keys\": [\"registration\"]}, \"passage_8\": {\"kind\": \"deadline\", \"keys\": [\"registration\", \"us_federal_employee\"]}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 7478260709,
+        "load_duration": 1843548,
+        "prompt_eval_count": 454,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 3363916000,
+        "eval_count": 75,
+        "eval_duration": 4099296000
+      },
+      "seconds": 7.484
+    }
+  ],
+  "seconds": 17.214
+}

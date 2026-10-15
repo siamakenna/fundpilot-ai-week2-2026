@@ -1,0 +1,37 @@
+[
+  {
+    "id": "seb_travel",
+    "split": "holdout",
+    "url": "https://www.sebiology.org/submissions-grant/the-company-of-biologists-travel-grant-2026.html?parentpage=D79E0DE9-CE07-4734-9AC58A3D799E753E",
+    "retrieved_at_utc": "2026-10-14T22:19:42.091261+00:00",
+    "error": "HTTP 401 Unauthorized via curl and web retrieval; no body obtained or inference performed"
+  },
+  {
+    "id": "biochemical_online",
+    "split": "holdout",
+    "url": "https://www.biochemistry.org/grants-and-awards/grants-and-bursaries/online-attendance-grants/",
+    "retrieved_at_utc": "2026-10-14T22:19:44.170912+00:00",
+    "text_sha256": "2b662eb6fc7f0bb6552043b6714abfe477578c098729a9110f882e3cc7d24b65",
+    "characters": 11262,
+    "storage": "ignored local cache; not redistributed"
+  },
+  {
+    "id": "ismb_dependent_care",
+    "split": "holdout",
+    "url": "https://www.iscb.org/ismb2026/general-info/dependent-care-grant",
+    "retrieved_at_utc": "2026-10-14T22:19:44.847251+00:00",
+    "text_sha256": "4c3587318bd680a74c390f7140ab42f1ee7404f6e3f61c24fa6acb28568e28b7",
+    "characters": 4233,
+    "storage": "ignored local cache; not redistributed"
+  },
+  {
+    "id": "rsc_researcher_travel",
+    "split": "holdout",
+    "url": "https://www.rsc.org/funding-and-support/funding/researcher-development-and-travel-grant",
+    "retrieved_at_utc": "2026-10-15T03:06:12.611018+00:00",
+    "text_sha256": "f9856804071d692a1d1108d0045e00092b0de7a9c3757816f75b330dd8a2aeea",
+    "characters": 13643,
+    "method": "Public web retrieval; line markers, navigation formatting and citation markup normalized; original words retained",
+    "storage": "ignored local cache; not redistributed"
+  }
+]

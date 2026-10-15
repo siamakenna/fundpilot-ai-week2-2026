@@ -1,0 +1,14 @@
+{
+  "filename": "fundpilot-public-call-demo.webm",
+  "sha256": "7e006012f5ec8b7c0c52e6555975b35dd78cdc6f3fdbb05a7b2316c9f2d27bcc",
+  "bytes": 4854268,
+  "duration_seconds": 47.32,
+  "resolution": "1440x1000",
+  "codec": "VP8 WebM",
+  "audio": false,
+  "altered_or_sped_up": false,
+  "recording": "Real headless Chromium interaction; three new local Gemma requests, no fixtures or response mocks",
+  "verification": "Actual download bytes checked; source hash matches official CNS paragraph. Video metadata and frames at 11,22,33,42 seconds decoded.",
+  "first_attempt": "Preserved locally in .local-reports/browser-demo-final; three genuine model runs succeeded but automation download locator was too restrictive. Only locator and table widths corrected; no engine changes.",
+  "playback": "Chromium played the entire 47.32-second file to ended with no media error"
+}

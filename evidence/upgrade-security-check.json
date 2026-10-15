@@ -1,0 +1,11 @@
+{
+  "checked_at_utc": "2026-10-15T03:13:51.635042+00:00",
+  "baseline": "5b5d568c0dceb234bbe5e34db8d6a1c558d110e4",
+  "protected_files_compared": 116,
+  "changed_protected_files": [],
+  "frozen_engine_hash_matches": true,
+  "common_secret_pattern_files": [],
+  "unexpected_binary_or_large_files": [],
+  "scope": "Scoped repository review, not exhaustive secret or legal audit. No private institutional material identified. Source caches and supplied review archive ignored.",
+  "tracked_or_candidate_files": 226
+}
