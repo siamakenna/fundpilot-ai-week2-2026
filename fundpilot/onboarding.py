@@ -1,6 +1,5 @@
 """Nonblocking introduction and manual, bounded local-model availability check."""
 import json
-import socket
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlparse
 from urllib.request import Request
@@ -54,11 +53,11 @@ def check_local_model():
             raise ValueError('Oversized local response')
         data = json.loads(body)
         if not isinstance(data, dict) or not isinstance(data.get('models'), list):
-            raise ValueError('Invalid local response')
+            raise TypeError('Invalid local response')
         tags = set()
         for entry in data['models']:
             if not isinstance(entry, dict) or not isinstance(entry.get('name'), str):
-                raise ValueError('Invalid model entry')
+                raise TypeError('Invalid model entry')
             tags.add(entry['name'])
         model = safe_text(DEFAULT_MODEL)
         if DEFAULT_MODEL in tags:
@@ -66,10 +65,10 @@ def check_local_model():
         return f'Ollama is available, but {model} is missing. Run: `ollama pull {model}`. No download was started.'
     except HTTPError:
         return 'Unable to confirm local model status. Ollama returned an HTTP error or redirect; no redirect was followed.'
-    except (TimeoutError, socket.timeout):
+    except TimeoutError:
         return 'Unable to confirm local model status: the local check timed out. Check Ollama and try again.'
     except URLError as exc:
-        if isinstance(exc.reason, (TimeoutError, socket.timeout)):
+        if isinstance(exc.reason, TimeoutError):
             return 'Unable to confirm local model status: the local check timed out. Check Ollama and try again.'
         return 'Ollama is not reachable locally. Start Ollama, then check again.'
     except (ValueError, TypeError, OSError):

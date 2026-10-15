@@ -1,7 +1,6 @@
 """Availability checks use adapter mocks, not model-accuracy evidence."""
 import io
 import json
-import socket
 from urllib.error import HTTPError, URLError
 
 import pytest
@@ -41,8 +40,8 @@ def test_invalid_response_is_not_ready(monkeypatch,value):
 
 @pytest.mark.parametrize('error,expected',[
     (URLError(ConnectionRefusedError()),'not reachable'),
-    (URLError(socket.timeout()),'timed out'),
-    (socket.timeout(),'timed out'),
+    (URLError(TimeoutError()),'timed out'),
+    (TimeoutError(),'timed out'),
     (HTTPError('http://127.0.0.1:11434',302,'Redirect',{},None),'no redirect was followed'),
 ])
 def test_transport_errors_are_truthful(monkeypatch,error,expected):
@@ -65,7 +64,7 @@ def test_unsafe_configuration_never_makes_a_request(monkeypatch,url):
 
 def test_malformed_or_oversized_json_is_unknown(monkeypatch):
     for raw in [b'invalid',b'x'*(1024*1024+1)]:
-        monkeypatch.setattr(onboarding,'urlopen',lambda *a,**k:io.BytesIO(raw))
+        monkeypatch.setattr(onboarding,'urlopen',lambda *a, raw=raw, **k:io.BytesIO(raw))
         assert 'Unable to confirm' in onboarding.check_local_model()
 
 
@@ -78,6 +77,7 @@ def test_empty_queue_has_scope_warning_without_zero_of_zero():
 
 def test_building_ui_does_not_probe_model(monkeypatch):
     import gradio as gr
+
     from fundpilot.real_ui import build_public_ui
     def forbidden(*args,**kwargs):raise AssertionError('Startup model request')
     monkeypatch.setattr(onboarding,'urlopen',forbidden)
