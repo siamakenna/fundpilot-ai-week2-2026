@@ -45,13 +45,14 @@ const url=process.argv[3] || 'http://127.0.0.1:7861';
    await page.waitForTimeout(7000);
   }
   // Click the real report anchor exposed by Gradio; inspect actual downloaded bytes.
-  const link=page.locator('a[download]').filter({hasText:'.md'});
+  const link=page.getByTestId('download-link');
   if(await link.count()!==1)throw Error('Expected exactly one report download');
   const [download]=await Promise.all([page.waitForEvent('download'),link.click()]);
   const reportPath=path.join(base,'downloaded-report.md');await download.saveAs(reportPath);
   const report=await fs.readFile(reportPath,'utf8');
   if(!report.includes('**Mode:** gemma')||!report.includes('UNKNOWN')||!report.includes('MATCH'))throw Error('Downloaded report did not match the live scenario');
   note('download_verified');
+  await page.screenshot({path:path.join(base,'download-verified.png'),fullPage:true});
   await page.getByText('Full evidence report and passage review checklist',{exact:true}).click();
   await page.getByRole('heading',{name:'FundPilot AI — Application readiness report',exact:true}).scrollIntoViewIfNeeded();
   await page.waitForTimeout(7000);

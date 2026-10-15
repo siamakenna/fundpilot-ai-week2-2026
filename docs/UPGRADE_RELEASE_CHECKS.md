@@ -38,6 +38,41 @@ reference set and real consenting users remain future validation work.
   response initially decoded incorrectly; retrieval was corrected with `--compressed`
   before annotations were created. It was never evaluated as announcement text.
 
-Final test, UI, evaluation, video and repository results will be filled after the
-candidate freeze and release verification. DEV publication remains the owner's
-explicit decision and is not performed by this release.
+## Completed local gates
+
+- PASS: 79 tests, Ruff F checks and `git diff --check`; see `evidence/upgrade-tests.txt`.
+- PASS: app import/loopback launch and HTTP config smoke, Gradio 6.30.0.
+- PASS: three real browser Gemma calls, declared-fact MATCH/NOT MATCH/UNKNOWN,
+  real report download, in-flight input lock, and stale-report removal.
+- PASS: 116 protected baseline fixture/example/evidence files unchanged; common
+  credential patterns, unexpected document/weight files and large-file scan clear.
+- PASS: candidate engine hash unchanged after freeze. Only UI table widths and
+  recording automation were corrected afterward; no inference or rule changes.
+- PASS: one held-out pass, all 3 reports completed; poor interpretation scores and
+  24 UNKNOWN findings are disclosed. Original development scores remain unchanged.
+- PASS: supplied proposed annotation version kept separate; 40/40 passage and 5/5
+  source hashes verified. ISMB postdoc ambiguity remains unresolved.
+- PASS: genuine 47.32-second WebM saved; no fixtures, edits, narration or speed changes.
+- PASS: MIT attribution and separate Gemma/source terms preserved.
+
+The DEV editor was checked through the available browser and requires sign-in.
+No remote draft or published post was created. The article is complete locally;
+public video and final repository verification are recorded in release evidence.
+
+## Competition requirements checked
+
+The [official challenge](https://dev.to/challenges/hacktoberfest-week2-2026-10-12)
+and [contest announcement](https://dev.to/page/hacktoberfest-week2-2026-10-12-contest-rules)
+were opened during final QA. They require one new Week 2 project, a DEV template
+post, demo/deployment and code links, and an open-innovation explanation. Deadline:
+October 18, 2026 at 11:59 PM PDT. Writing has the highest judging weight. The draft
+keeps required headings and tags; optional first-user/session sections are omitted.
+Only Best Use of Gemma is claimed. Owner authorship is an attestation, not an
+independent historical audit. No DEV publication or challenge entry was submitted.
+
+## Limits that remain
+
+This release passes prototype mechanics and evidence gates, not general eligibility
+accuracy. Three held-out samples yielded no supported applicant comparisons. Human
+adjudication, sponsor clarification and consenting-user validation remain future
+work; they are not silently claimed complete. No payment service was opened.

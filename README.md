@@ -7,7 +7,7 @@ compares supported conditions with your declared facts. Download the evidence an
 questions that still need the sponsor's answer.
 
 [Code](https://github.com/siamakenna/fundpilot-ai-week2-2026) ·
-[Official sources](docs/OFFICIAL_SOURCES.md) · [Evaluation rubric](evaluation/RUBRIC.md) ·
+[Official sources](docs/OFFICIAL_SOURCES.md) · [Measured results](docs/REAL_WORLD_EVALUATION.md) · [Evaluation rubric](evaluation/RUBRIC.md) ·
 [Submission draft](docs/DEV_SUBMISSION_DRAFT.md)
 
 ## Three-step workflow
@@ -105,8 +105,13 @@ line references and labels. Tests distinguish mocks from actual local inference.
 The original **20/21 synthetic clause matches** are historical results only;
 [the baseline evaluation](docs/EVALUATION.md) cannot establish real-world accuracy.
 Failed real-source strategies remain in `evidence/realworld-development/`.
-No model victory over the rule baseline, real customer, revenue or validated price
-is assumed. A $9 report or $39/month workspace remains a business hypothesis.
+**Real-source limits:** final development F1 is 42.11% versus rules 62.50%;
+one held-out pass gives 34.48% versus rules 33.90% (10 exact matches each).
+All three held-out reports need review, with no supported applicant matches or
+mismatches for the evaluation profile. This is an inspectable prototype, not an
+automated eligibility service. The proposed [AI annotation audit](docs/ANNOTATION_REVIEW.md)
+remains separate from the original benchmark. No meaningful model superiority,
+real customer, revenue or validated price is claimed. A $9 report or $39/month workspace remains a business hypothesis.
 
 ## Demo and submission
 

@@ -1,22 +1,32 @@
-# Judge walkthrough: check the fine print
+# Judge walkthrough — actual public-text workflow
 
-Record the real Gradio UI with **Live local Gemma** selected throughout. Target
-2–3 minutes of explanation, plus actual inference waits. A longer honest recording
-is preferable to an implied speed claim. If a run fails, show the error; do not
-replace it with a fixture result. The outcomes below are previously observed,
-not promises about the next model run.
+The automated recording is 47.32 seconds, silent, and unedited. It uses one short
+CNS 2027 eligibility passage, with explicit attribution and fictional applicant
+facts. It is a focused product demonstration, not a full-call eligibility decision.
 
-| Action | Suggested narration / point to show |
+| Approximate point | What actually happens |
 | --- | --- |
-| Open the three-step UI | “Before writing a funding application, check whether its conditions fit. This prototype is for independent researchers and small mentoring programs. Everything on screen is fictional.” |
-| Alex Morgan → Early Career Science Conference Travel Award → Live local Gemma → Analyze requirements | “Gemma classifies the call sentences locally. Python attaches their exact text and checks the profile. Alex previously matched these supplied conditions.” Show the actual verdict and source evidence. |
-| Alex → Enrolled Graduate Student Mobility Grant → Analyze requirements | “The new inputs clear the old result. Alex is not enrolled, and the request exceeds this call's cap.” Show NOT MATCH findings if returned. |
-| Casey Rivera → Early Career Science Conference Travel Award → Analyze requirements | “Casey's presentation acceptance is unknown. The next step is to verify it, rather than infer an answer.” Show the actual result. |
-| Download Markdown report; open it | Show model/mode, quotes, findings and verification questions in the real downloaded file. |
-| Open the evaluation document | “The tuned development set matched 20 of 21 clauses, and only five of six reports validated. This is not accuracy on unseen grants. Custom calls always require review.” |
-| Finish on the repository | “The $9 report and $39 monthly workspace are unvalidated hypotheses. My next test is whether this saves application time for a consenting tester.” |
+| 0–6 s | Public source text and ordinary form fields; live Gemma selected |
+| 6–16 s | New inference with first-author Yes / presenter Yes: two MATCH findings, review still required |
+| 17–27 s | New inference with first-author No / presenter Yes: one NOT MATCH and one MATCH |
+| 28–38 s | New inference with first-author Yes / presenter Unknown: one MATCH and one UNKNOWN |
+| 38–45 s | Actual Markdown download verified, then full report opened |
+| 45–47 s | Title edited; old result and download cleared |
 
-Keep live waits visible or explicitly label trimmed waits. Do not use an old report
-as if just generated, show reference fixtures as AI, invent a customer, or claim
-that source attachment proves semantic correctness. Review the recording before
-uploading. See [capture steps](LOCAL_CAPTURE_STEPS.md).
+[Event timestamps](../evidence/public-ui/events.json),
+[screenshots](../evidence/public-ui/), and the
+[actual downloaded report](../evidence/public-ui/downloaded-report.md) support the
+walkthrough. The video digest and recording details are in
+[the manifest](../evidence/public-ui/recording-manifest.json).
+
+The broader eight-source evaluation is separate. All three held-out samples
+needed review and gave no supported applicant comparisons for that fictional
+profile. The video illustrates functionality on a simple condition, not general
+accuracy. No fixture, model-response mock, time compression or fabricated result
+appears in the recording.
+
+## Reproduction
+
+Start Ollama and the app, then run `scripts/record_demo.cjs` as documented in
+[local capture steps](LOCAL_CAPTURE_STEPS.md). Each click makes a new live request.
+Do not rerun the held-out evaluation to record a demo.

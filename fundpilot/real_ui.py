@@ -119,6 +119,7 @@ def build_public_ui():
     )
     table = gr.Dataframe(
         headers=["Passage", "Criterion", "Finding", "Exact evidence", "Reason"],
+        column_widths=[80, 160, 130, 420, 420],
         datatype=["number", "str", "str", "str", "str"],
         interactive=False,
         wrap=True,

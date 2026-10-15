@@ -1,0 +1,39 @@
+{
+  "url": "http://127.0.0.1:7861",
+  "recording": "actual headless Chromium; no model mocks, no edits or speed changes",
+  "scope": "One short official CNS passage; three fictional applicant configurations, not full-call eligibility",
+  "events": [
+    {
+      "name": "start_supported",
+      "seconds": 5.924
+    },
+    {
+      "name": "complete_supported",
+      "seconds": 9.446
+    },
+    {
+      "name": "start_contradiction",
+      "seconds": 16.889
+    },
+    {
+      "name": "complete_contradiction",
+      "seconds": 19.87
+    },
+    {
+      "name": "start_unknown",
+      "seconds": 27.502
+    },
+    {
+      "name": "complete_unknown",
+      "seconds": 30.556
+    },
+    {
+      "name": "download_verified",
+      "seconds": 38.017
+    },
+    {
+      "name": "edited_input_invalidated_report",
+      "seconds": 45.439
+    }
+  ]
+}

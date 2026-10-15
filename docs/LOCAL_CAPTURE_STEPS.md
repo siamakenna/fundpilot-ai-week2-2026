@@ -1,75 +1,43 @@
-# Finish the authentic video demo
+# Authentic automated capture
 
-## What automation verified
+A completed Playwright recording is preserved locally at:
+`.local-reports/browser-demo-verified/fundpilot-public-call-demo.webm`.
+Its public release link is recorded in the README and submission article once the
+asset is published. Recording is already complete; no manual recapture is required.
 
-On October 14, release QA found macOS `/usr/sbin/screencapture` with video support,
-but `CGPreflightScreenCaptureAccess()` returned **false** for the command process.
-No screen-recording permission was changed. `ffmpeg` and `obs` were not on PATH.
-The available browser automation exposes screenshots, not video recording; native
-app control is disabled. A metered remote browser recorder cannot reach this
-loopback-only app and was not used. No video was made or uploaded.
+The existing Mac has Playwright, Chromium 151.0.7922.34 and its bundled FFmpeg.
+These are developer tools, not new application dependencies. The script captures
+actual browser interactions and local Gemma results. It never mocks requests.
 
-The existing PNGs are authentic browser screenshots, not a video. The earlier
-`evidence/UI_CHECKS.md` describes the capabilities exposed during that session;
-this permission check is the more specific current recording result.
-
-## Record, review and upload (the remaining demo task)
-
-The app and Ollama answered health checks at QA time. Open
-http://127.0.0.1:7860. If it is still running, skip the startup commands below.
-
-1. Press **Shift–Command–5 → Record Selected Portion**. Frame only FundPilot;
-   hide unrelated windows and notifications. Choose a microphone under Options
-   if narrating. Click **Record**.
-2. Select **Live local Gemma** and analyze these three pairs, waiting for each real
-   result: **Alex Morgan / Early Career Science Conference Travel Award**;
-   **Alex Morgan / Enrolled Graduate Student Mobility Grant**;
-   **Casey Rivera / Early Career Science Conference Travel Award**.
-   Show the actual outcomes, even if a run fails. Keep waits visible or label cuts.
-3. Download and open the Markdown report. Explain that Python attaches source
-   sentences and checks profile facts; Gemma classifies requirements. End with
-   “20/21 clause matches on six tuned fictional calls; five reports validated;
-   real-world accuracy and pricing are unvalidated.” The
-   [short narration script](JUDGE_DEMO_SCRIPT.md) is optional.
-4. Stop with **Command–Control–Escape**, review the whole clip, and upload it to
-   your chosen video host with viewing available to anyone with the link. Open
-   that URL in a signed-out/private window to verify playback.
-5. Replace the video placeholder in `README.md` and
-   `docs/DEV_SUBMISSION_DRAFT.md` with the verified URL; remove the article's
-   publication-blocker note. Update the status in `docs/RELEASE_READINESS.md`,
-   commit and push those documentation changes. No benchmark rerun is needed.
-
-No editing, paid service or new infrastructure is required. Recording can be longer
-than 2–3 minutes if inference is slow. Do not substitute fixture mode for a live run.
-
-## Only if the local services have stopped
-
-In one Terminal:
+To reproduce on this Mac, from the repository:
 
 ```bash
-cd /Users/makennarodriguez/Downloads/fundpilot_side_hustle_starter
-OLLAMA_NO_CLOUD=1 .tools/ollama/ollama serve
+GRADIO_ANALYTICS_ENABLED=False .venv/bin/python -c "import app; app.demo.launch(server_name='127.0.0.1', server_port=7861, show_error=False)"
 ```
 
-An address-in-use message means a service already owns port 11434; check
-`.tools/ollama/ollama list` from the project directory. `gemma3:1b` was already
-installed during development; do not download it again unless it is absent.
-
-In another Terminal:
+Then in another terminal, while local Ollama is running:
 
 ```bash
-cd /Users/makennarodriguez/Downloads/fundpilot_side_hustle_starter
-GRADIO_ANALYTICS_ENABLED=False .venv/bin/python app.py
+NODE_PATH=/Users/makennarodriguez/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules \
+/Users/makennarodriguez/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node \
+scripts/record_demo.cjs .local-reports/new-recording http://127.0.0.1:7861
 ```
 
-## Publication remains the owner's decision
+On another computer, use an existing Node/Playwright installation with Chromium;
+set NODE_PATH only if needed to locate it. Use a new output folder. The script
+saves a WebM, screenshots, actual report bytes and an event log. Keep source and
+profile scope visible. Review the result before sharing it. Never present the
+fictional reference mode as model inference.
 
-DEV opened at sign-in during QA, so no authenticated draft could be saved. After
-adding the video, sign in to DEV, open the official challenge's Submission Template,
-and paste the completed article. Set the title and tags `devchallenge` and
-`hf26challenge` (front matter belongs in the Markdown editor, not the rendered
-article). Preview links and the video, then publish **one** entry only when ready.
-The deadline is October 18, 2026, 11:59 PM PDT (October 19, 2:59 AM EDT).
-Review the [official rules](https://dev.to/page/hacktoberfest-week2-2026-10-12-contest-rules)
-for personal eligibility and publication terms. This continuation did not publish
-or submit the entry.
+The first attempt remains in `.local-reports/browser-demo-final/`. Its three live
+runs succeeded; the download test's locator incorrectly expected the filename
+inside Gradio's link. The corrected locator targets the observed download control.
+A display-only column-width correction improved the table. The frozen extraction
+engine and all held-out results remained unchanged.
+
+## Publication remaining
+
+Review the finished DEV article and demo. Sign in to DEV, paste the article using
+the official Week 2 template, preserve its headings and `devchallenge` and
+`hf26challenge` tags, preview links, and publish one entry only when ready.
+Deadline: October 18, 2026, 11:59 PM PDT (October 19, 2:59 AM EDT).

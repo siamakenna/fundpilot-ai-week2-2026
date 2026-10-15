@@ -1,3 +1,5 @@
+> Historical synthetic benchmark. For the public-call upgrade and the frozen held-out pass, see [Real-source evaluation](REAL_WORLD_EVALUATION.md). These scores are not interchangeable.
+
 # Actual release evaluation
 
 Measured October 14, 2026. Source: `evidence/evaluation-release/summary.json`.
