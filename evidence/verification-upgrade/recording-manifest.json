@@ -37,5 +37,9 @@
       "UNKNOWN": 1,
       "INFO": 0
     }
-  }
+  },
+  "public_http_status": 200,
+  "github_asset_sha256_matches": true,
+  "release_url": "https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.3.0",
+  "release_code_commit": "2380ccf1b9409a406563dbc972b20f59193ab85f"
 }

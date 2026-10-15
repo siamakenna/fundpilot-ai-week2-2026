@@ -82,3 +82,17 @@ sections are omitted; no unsupported partner categories are claimed.
 Review the [completed article](DEV_SUBMISSION_DRAFT.md) and public video. Sign in to
 DEV, paste into the official template, preview the links/media and publish one entry
 only when you approve. No DEV article or challenge entry has been published by Codex.
+
+## Public asset verification before merge
+
+[PR #3](https://github.com/siamakenna/fundpilot-ai-week2-2026/pull/3) contains the
+upgrade. [v0.3.0](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.3.0)
+points to the tested application commit `2380ccf1b9409a406563dbc972b20f59193ab85f`.
+The anonymous video URL returns HTTP 200; GitHub's SHA-256 and byte size match the
+locally verified video. All 15 remote links checked at the pushed code commit and
+19 local documentation paths resolve. New `main` links are checked again after
+merge. The v0.2.0 asset digest is unchanged. See [link evidence](../evidence/verification-upgrade/links.json).
+
+All local release gates passed before marking the PR ready. No repository CI
+workflow is configured; these are recorded local checks, not a claimed hosted CI run.
+Public DEV publication remains the owner's final action.
