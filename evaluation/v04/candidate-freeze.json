@@ -1,0 +1,27 @@
+{
+  "frozen_at_utc": "2026-10-15T17:09:47.798694+00:00",
+  "candidate_commit": "083ab3873019c830d7a7c48da58b4735a61664a3",
+  "version": "atomic-v04-3",
+  "model": "gemma3:1b",
+  "digest": "97558784bdc9175075a72655bf360b15da17df6b3b9e5182af9f8c0c8e58ba7c",
+  "ollama": "0.40.4",
+  "variants": [
+    "A unchanged v0.3 Gemma1B",
+    "B atomic-v04-3 Gemma1B",
+    "rules unchanged v0.3"
+  ],
+  "final_access": "No reserved eligibility bodies fetched or read before this freeze. References will be authored from source after freeze, before predictions. No model tuning after access.",
+  "larger_model": "Not downloaded; see MODEL_AND_PROTOCOL.md",
+  "hashes": {
+    "fundpilot/atomic.py": "3beb8a8d438e6022e94f53a685aee538ddf10ba11ad836de3182d0344b108a8a",
+    "fundpilot/atomic_queue.py": "d829135c00c35c3b78f86191d9707198ca975dbd07f03af1691b0b705299404b",
+    "fundpilot/realworld.py": "7fb7ce091e1d16a7950bd131a9950c543777b6bfabe1f18f2c75d1e52f8674fc",
+    "scripts/evaluate_v04.py": "19438686c4765f7b4dbca337bca5f0e8bb63945f8afe7ac7349cfc23d2dc753a",
+    "scripts/regress_v04.py": "ef920449c2b5b07f64d43f3bd1d95c6d6606c9f7d15a5c3c45e44a29eb8da92b",
+    "scripts/fetch_v04_sources.py": "1eac17c9162fd830fb94eb712ddc367ddf08457e9351a4ee88c7874d0580c9d2",
+    "evaluation/v04/RUBRIC.md": "571e05e6b9648fe8311d0d73c04cb3ac5346b33cdc95834f52646aa044c1fe4c",
+    "evaluation/v04/source-split.json": "62d71e34c493742969d40dad4e8b8f6bb4f4dfe4206e9c0b6c290c2d69632653",
+    "evaluation/v04/annotations-development.json": "648c47ab144ca393da5322e29e22375b45c29c165735f514d421d5548fa95b95",
+    "evaluation/v04/retrieval-development.json": "d9df18472dfc4292c5239683c6591292c55c7fca3dfd29db5db11a3b363bfa96"
+  }
+}
