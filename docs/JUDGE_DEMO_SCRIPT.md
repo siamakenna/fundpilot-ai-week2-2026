@@ -90,5 +90,3 @@ appears in the recording.
 Start Ollama and the app, then run `scripts/record_demo.cjs` as documented in
 [local capture steps](LOCAL_CAPTURE_STEPS.md). Each click makes a new live request.
 Do not rerun the held-out evaluation to record a demo.
-
-
