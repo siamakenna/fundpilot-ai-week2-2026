@@ -78,3 +78,11 @@ appears in the recording.
 Start Ollama and the app, then run `scripts/record_demo.cjs` as documented in
 [local capture steps](LOCAL_CAPTURE_STEPS.md). Each click makes a new live request.
 Do not rerun the held-out evaluation to record a demo.
+
+
+## v0.3.2 dossier walkthrough (latest)
+
+Use the [69-second authentic recording](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.2/fundpilot-dossier-demo.webm).
+At 0:11, inspect the first-author contradiction and its exact source link; at 0:23, inspect the missing presenter fact and record to check; at 0:59, inspect possible prior-funding exclusions in historical GNS excerpts. At 1:07, both actual Markdown downloads have been checked and editing the input clears them. The recording uses live Gemma 1B; no canned responses. All applicant facts are fictional and the GNS deadline has passed.
+
+The dossier adds a preparation plan, not an eligibility verdict or measured model gain. The full report remains separate. See [release QA](DOSSIER_RELEASE_QA.md) and [exploratory 4B results](MODEL_SIZE_COMPARISON.md); the default remains 1B and atomic v0.4 remains unmerged. Earlier scripts and recordings above are retained as historical evidence.

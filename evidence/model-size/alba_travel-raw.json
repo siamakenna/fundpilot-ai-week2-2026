@@ -1,0 +1,87 @@
+{
+  "model": "gemma3:4b",
+  "source_sha256": "25c9f1144e9364c609074ad98adcdac6ee0afd46517f68ad28d26e29595acd6f",
+  "calls": [
+    {
+      "ids": [
+        0
+      ],
+      "response": {
+        "model": "gemma3:4b",
+        "created_at": "2026-10-16T01:01:21.729428Z",
+        "response": "{\"passage_0\": {\"kind\": \"funding_limit\", \"criteria\": {\"unknown\": false}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 10323474031,
+        "load_duration": 2755850,
+        "prompt_eval_count": 384,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 8204721000,
+        "eval_count": 24,
+        "eval_duration": 2100005000
+      },
+      "seconds": 10.329
+    },
+    {
+      "ids": [
+        1
+      ],
+      "response": {
+        "model": "gemma3:4b",
+        "created_at": "2026-10-16T01:01:34.613203Z",
+        "response": "{\"passage_1\": {\"kind\": \"requirement\", \"criteria\": {\"career_stage\": true, \"unknown\": true}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 12877622664,
+        "load_duration": 1136393,
+        "prompt_eval_count": 451,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 9560223000,
+        "eval_count": 31,
+        "eval_duration": 3299171000
+      },
+      "seconds": 12.885
+    },
+    {
+      "ids": [
+        2
+      ],
+      "response": {
+        "model": "gemma3:4b",
+        "created_at": "2026-10-16T01:01:45.37688Z",
+        "response": "{\"passage_2\": {\"kind\": \"requirement\", \"criteria\": {\"membership\": true, \"unknown\": false}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 10754563714,
+        "load_duration": 1285650,
+        "prompt_eval_count": 402,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 8143365000,
+        "eval_count": 27,
+        "eval_duration": 2601548000
+      },
+      "seconds": 10.759
+    },
+    {
+      "ids": [
+        3
+      ],
+      "response": {
+        "model": "gemma3:4b",
+        "created_at": "2026-10-16T01:01:56.167441Z",
+        "response": "{\"passage_3\": {\"kind\": \"exclusion\", \"criteria\": {\"prior_award\": true, \"unknown\": false}}}",
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 10785631097,
+        "load_duration": 2828622,
+        "prompt_eval_count": 431,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 8242168000,
+        "eval_count": 29,
+        "eval_duration": 2528001000
+      },
+      "seconds": 10.79
+    }
+  ],
+  "seconds": 44.767
+}

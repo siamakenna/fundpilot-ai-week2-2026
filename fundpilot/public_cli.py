@@ -4,6 +4,7 @@ import argparse
 import json
 from pathlib import Path
 
+from .dossier import markdown as dossier_markdown
 from .realworld import Applicant, analyze
 from .verification import markdown
 
@@ -18,6 +19,7 @@ def main():
     )
     p.add_argument("--mode", choices=["gemma", "rules"], default="gemma")
     p.add_argument("--output", required=True)
+    p.add_argument("--dossier-output", help="Optional separate Application Readiness Dossier Markdown file")
     p.add_argument("--audit", help="Raw model labels and timing; excludes source text and prompt")
     a = p.parse_args()
     profile = (
@@ -25,6 +27,10 @@ def main():
     )
     report = analyze(Path(a.source_file).read_text(), profile, mode=a.mode, audit_path=a.audit)
     Path(a.output).write_text(markdown(report, title=a.title, source_url=a.source_url))
+    if a.dossier_output:
+        Path(a.dossier_output).write_text(
+            dossier_markdown(report, profile, title=a.title, source_url=a.source_url)
+        )
     print(
         json.dumps(
             {"readiness": report["readiness"], "counts": report["counts"], "mode": a.mode, "output": a.output}

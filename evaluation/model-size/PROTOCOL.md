@@ -1,0 +1,9 @@
+# Exploratory model-size comparison — frozen before the 4B run
+
+Control A reuses the completed v0.3 interpreter 1B run (`dev-A-service-restored`); control B changes only the installed model to `gemma3:4b`. No tuning, retries or default change. Same three previously observed development sources, ten passages, twenty provisional atomic labels, seventeen mandatory and four exclusion labels; same fictional profile. References are copied byte-for-byte, not revised. Previously opened reserved sources are excluded and cannot become fresh holdouts.
+
+Measurement unit: (source, passage, category, criterion), multiset intersection. Precision=TP/predictions, recall=TP/reference, F1=2TP/(predictions+reference). Failed reports contribute no delivered predictions, but retain references and raw diagnostic calls. UNKNOWN is divided by delivered non-INFO findings. False supported statuses mean disagreement with provisional expected statuses, not verified real eligibility. Source-span exactness measures literal attachment, not semantic completeness. Mean latency includes failures; sessions are separate, not a controlled paired speed test. No independent human validation exists.
+
+Frozen interpreter SHA256: 7fb7ce091e1d16a7950bd131a9950c543777b6bfabe1f18f2c75d1e52f8674fc. Same embedded prompt/schema, temperature 0, seed 42, context 8192, predict 256, 90-second request / 300-second report limits. Intel i5-1038NG7, 16 GiB RAM, CPU inference, Ollama 0.40.4. Model identities are recorded in model-tags.json. No model download or cloud inference.
+
+Raw responses/errors remain local in `.local-reports/model-size/control-4b`; sanitized predictions, metrics and raw JSON responses (without source documents) may be published after privacy review. Do not claim improvement from this unreviewed reference set. Promote neither model nor strategy without independently reviewed evidence and safety/completion gains. If no compelling benefit appears, skip strategy C and retain 1B.
