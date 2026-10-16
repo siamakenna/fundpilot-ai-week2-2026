@@ -133,9 +133,9 @@ automated eligibility service. The proposed [AI annotation audit](docs/ANNOTATIO
 remains separate from the original benchmark. No meaningful model superiority,
 real customer, revenue or validated price is claimed. A $9 report or $39/month workspace remains a business hypothesis.
 
-## Demo and submission
+## Submission and preserved v0.3.1 fallback
 
-**[Watch/download the new v0.3.1 demo](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.1/fundpilot-onboarding-demo.webm)** · [Release notes](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.3.1) · [Release checks](docs/FIRST_RUN_RELEASE.md)
+**[Watch/download the preserved v0.3.1 demo](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.1/fundpilot-onboarding-demo.webm)** · [Release notes](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.3.1) · [Release checks](docs/FIRST_RUN_RELEASE.md)
 
 The 59.72-second public WebM contains three actual Gemma calls on one CNS passage,
 three real report downloads, prioritized verification questions and stale-report
@@ -143,10 +143,11 @@ invalidation. Its fictional facts and excerpt scope are explicit. The [original
 47-second v0.2.0 demonstration](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.2.0/fundpilot-public-call-demo.webm)
 and all original evidence remain unchanged.
 
-The DEV article remains unpublished. The [new demo evidence](evidence/onboarding/)
+The DEV article remains unpublished. The [v0.3.1 demo evidence](evidence/onboarding/)
 identifies actual model runs; curated fixtures are never passed off as live inference.
-115 automated tests pass, including the unchanged original 93. No inference changes
-ship in this release. The separate [v0.4 experiment](https://github.com/siamakenna/fundpilot-ai-week2-2026/pull/4)
+At the v0.3.1 checkpoint, 115 automated tests passed, including the original 93.
+The current v0.3.2 suite passes **147 tests**; see [release QA](docs/DOSSIER_RELEASE_QA.md).
+Neither release changes the production interpreter. The separate [v0.4 experiment](https://github.com/siamakenna/fundpilot-ai-week2-2026/pull/4)
 failed its frozen release evaluation and remains unmerged; [results and limitations](docs/FIRST_RUN_RELEASE.md) are disclosed.
 The [v0.3.0 video](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.0/fundpilot-verification-queue-demo.webm) also remains unchanged.
 
