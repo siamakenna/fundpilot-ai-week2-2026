@@ -8,81 +8,79 @@ tags: devchallenge, hf26challenge
 
 ## What I Built
 
-“First author” is a small phrase with an expensive consequence. A researcher can have an accepted poster, a compelling project and a travel budget—and still miss a funding requirement before spending an evening on the application.
+“First author” is a small phrase with an expensive consequence. A researcher can have an accepted poster, a compelling project and a travel budget—and still spend an evening applying for an award whose conditions they do not meet.
 
-**FundPilot AI helps researchers check those requirements before they start writing.** Paste a public announcement, answer ordinary Yes/No/Unknown questions, and download a report connecting each supported comparison to its exact source passage. A missing fact becomes a question. A contradiction becomes something to resolve. Neither becomes an official eligibility decision.
+**FundPilot AI helps researchers turn funding rules into an application-preparation plan.** Paste public announcement text, answer ordinary Yes/No/Unknown questions, and run local Gemma. Python attaches the original passages and compares supported conditions with the facts you supplied. A compact overview separates **requirements matching your facts**, **potential problems**, and **missing information or unclear conditions**. Open the **Application Readiness Dossier** for an actionable plan, with the full evidence report available separately.
 
-I built it for independent researchers and small mentoring programs without a grants office. The business hypothesis is **$9 per readiness report or $39/month for a workspace**. Neither price is validated. There are no customers, revenue or first-user testimonials to claim. Before charging, I need to establish whether the report saves people time without creating misplaced confidence.
+I built it for independent researchers and small mentoring programs without a grants office. The commercial hypothesis is **$9 per readiness report or $39/month for a workspace**. Neither price is validated. There are no customers, revenue or testimonials to claim. The product needs to earn trust—and demonstrate that it saves time—before charging makes sense.
 
-The original prototype depended heavily on fictional examples. The main workflow now accepts previously unseen public text and ordinary applicant facts. Fictional fixtures remain in a clearly labeled secondary tab. They never substitute for live model output.
+An UNKNOWN label alone leaves the researcher with another task. The dossier helps decide what that task should be:
 
-**The report should not end at UNKNOWN.** The new verification queue puts contradictions first, groups repeated findings from the same passage, and pairs each item with a next action, a suggested sponsor question, its reason and the exact evidence. Unknown presenter status? Check your records and update the form first. A first-author contradiction? Confirm your declared fact, then ask whether the published condition prevents applying and whether any published exception applies. The tool supplies questions, never invented sponsor answers.
+- **Potential blockers:** distinguish a supported contradiction from a possible exclusion or exception that needs review.
+- **Missing facts:** point back to the relevant form question and a record to check. An unknown presenter is different from unclear sponsor wording.
+- **Materials and dates:** surface source-stated document cues and explicit dates, with uncertain roles labeled for review.
+- **Sponsor questions:** group repeated questions while preserving every passage reference.
+- **A final checklist:** separate work you can do yourself from questions the organizer must answer.
 
-An optional CNS quick-start loads one verified public excerpt and clearly fictional, editable facts. It selects live Gemma, but produces no report until you click Analyze. You can replace the excerpt with another public call. This is early triage and preparation; the complete announcement and linked policies still need review.
+The source-review layer can notice “have not received” in a prior-funding restriction even when the interpreter does not give it a useful category. It keeps the whole passage and flags a **potential issue**, without turning that cue into an eligibility decision or changing the model's scores.
 
-The optional first-run guide explains the three steps and result labels without blocking the form. **Check local model** reports whether Ollama can find Gemma; it does not install anything or claim that inference succeeded. The collapsed tutorial explains the full-source review requirement and local plaintext-report privacy.
+The form suggests questions using simple text cues and always offers **Show all questions**. Hiding a question preserves its answer; it never fills in No. The link field explicitly says the website is not read automatically: users paste the actual requirements. Detailed evidence is expandable, so the first result is a short overview rather than a wall of repeated passages.
+
+The main workflow accepts previously unseen public text; it is not limited to authored scenarios. An optional CNS quick-start loads a verified excerpt with clearly fictional, editable facts. It produces no analysis until you click Analyze. The complete announcement and linked policies still need review.
 
 ## Demo
 
-![An actual first-author contradiction, exact source evidence and a prioritized verification question](https://raw.githubusercontent.com/siamakenna/fundpilot-ai-week2-2026/main/evidence/onboarding/contradiction.png)
+![An actual live Gemma result with a source-backed contradiction and application dossier](https://raw.githubusercontent.com/siamakenna/fundpilot-ai-week2-2026/main/evidence/usability/contradiction-overview.png)
 
-**[Watch/download the new 60-second demo (WebM)](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.1/fundpilot-onboarding-demo.webm)** · [v0.3.1 release](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.3.1)
+**[Watch/download the authentic 96-second v0.3.2 walkthrough (WebM)](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.2/fundpilot-dossier-demo.webm)** · [Release](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.3.2)
 
-This silent, unedited recording shows the working local app, **not a publicly hosted interactive service**. The public download needs no sign-in; open it in a WebM-capable browser/player.
+Watch for supported comparisons at **0:11**, the contradiction overview at **0:27**, the missing-fact result at **0:44**, historical restrictions at **1:22**, and the final downloads and cleared outputs at **1:34**.
 
-**Watch for:** the manual local-model check and tutorial at the start; the editable CNS sample around 0:07; two supported comparisons around 0:25; a first-author contradiction and priority-one question around 0:35; an unknown presenter fact around 0:45; and the final downloaded report around 0:53. Editing an input clears the old report before the recording ends. [Inspect the contradiction report](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/onboarding/contradiction-report.md), [the UNKNOWN report](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/onboarding/unknown-report.md), or [the event log](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/onboarding/events.json).
+This silent, continuous Chromium recording shows the local application and real Gemma 1B inference. It is not a hosted interactive service. The first three analyses use a short CNS passage: two supported comparisons, a first-author contradiction, then a missing presenter fact. The fourth uses historical German Neuroscience Society excerpts to show prior-funding warnings and a passed deadline. All applicant facts are fictional; these selected passages are not whole-call assessments.
 
-Each of the three analyses invokes real local Gemma on one short, attributed CNS 2027 Travel Awards passage with fictional applicant facts. Each report is actually downloaded and checked. This demonstrates the workflow on a simple condition, **not complete CNS eligibility analysis or improved extraction accuracy**. The authentic [v0.2.0 recording](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.2.0/fundpilot-public-call-demo.webm) remains unchanged.
+Inspect the actual downloads: [contradiction dossier](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/usability/contradiction-dossier.md), [missing-fact dossier](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/usability/unknown-dossier.md), [historical-source dossier](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/usability/historical-exclusion-dossier.md), and [full evidence report](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/usability/historical-exclusion-report.md). The [event log](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/usability/events.json) records actual timings and downloaded-file hashes. Editing an input clears both downloads.
 
-The broader [official-source evaluation](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/REAL_WORLD_EVALUATION.md) exercises selected passages from eight announcements, including current and historical opportunities. The [source ledger](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/OFFICIAL_SOURCES.md) distinguishes them and records retrieval limitations.
+The authentic [v0.3.1 fallback demonstration](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.1/fundpilot-onboarding-demo.webm) remains unchanged. The [official-source ledger](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/OFFICIAL_SOURCES.md) distinguishes current and historical evaluation sources.
 
 ## Code
 
-[FundPilot AI on GitHub](https://github.com/siamakenna/fundpilot-ai-week2-2026) includes the Python/Gradio app, tests, original fixtures, evaluation protocol and raw model failures. Application code is MIT licensed; Gemma weights retain Google's separate terms and are downloaded through Ollama. No private grant documents, institutional research code or model weights are included.
+[FundPilot AI on GitHub](https://github.com/siamakenna/fundpilot-ai-week2-2026) includes the Python/Gradio application, tests, original fixtures, evaluation protocols and preserved failures. Application code is MIT licensed; Gemma weights retain Google's separate terms. No private grant documents, institutional research code or model weights are included. There are no accounts, payments or cloud inference services.
 
 ## How I Built It
 
-**My first real model runs failed.** Passing tests against authored examples did not mean Gemma could interpret funding announcements. Real-source runs omitted passages or repeated criteria. Strict validation rejected those reports. I kept the failures because they explain the engineering decisions better than a successful screenshot alone.
+**My first real model runs failed.** Tests against authored examples passed, but real announcements produced omitted passages and repeated criteria. Instead of silently repairing those responses, I narrowed the task and kept the failure evidence.
 
-The final path uses **Gemma 3 1B, Q4_K_M, through Ollama 0.40.4** on a CPU laptop. Python gives every pasted paragraph or list item an identity and character span. Gemma proposes a category and applicable criteria using one request per passage and fixed Boolean fields. Python attaches the original text; **the model never writes the evidence quote**.
+The stable path uses **Gemma 3 1B, Q4_K_M, through Ollama 0.40.4** on a CPU laptop. Python assigns each pasted paragraph or list item an ID and character span. Gemma proposes a category and applicable criteria using a small fixed schema. Python attaches the original text: **the model never writes the evidence quote**.
 
-Lexical rules constrain candidate criteria and provide a measured baseline. A supported comparison is allowed only when the model and rules agree. Python then compares the condition with declared applicant facts. Applicant facts stay in Python; only public announcement text goes to Ollama. Exceptions, uncertain scope and unsupported conditions remain review items. Amount handling separates explicit request ceilings from sponsor benefits; dates retain their apparent purpose without inventing missing years or opening status.
+Lexical rules constrain candidate criteria and provide a measured baseline. A supported comparison requires agreement between model and rules, followed by a deterministic check against declared facts. Only public announcement text goes to local Ollama; applicant facts stay in Python. This guardrail is useful but imperfect: agreement can still miss semantic dependencies.
 
-The verification queue is a small deterministic layer over those frozen findings. It does not change model prompts, predictions, statuses, counts or source hashes. The top three questions appear beside the outcome; the full numbered list and all underlying criteria remain in the downloadable Markdown report. Award information is excluded from risk items, and even an all-MATCH excerpt retains a source-review warning. Inputs lock during analysis; changing them clears the previous report. Missing models and invalid responses produce an error instead of a fabricated answer.
+The dossier reuses those findings and the existing verification queue. It adds deterministic source cues for exclusions, AND/OR pathways, periods, materials and financial terms. It does not change the interpreter or promote warnings to MATCH or NOT MATCH. Exact source links make those prompts inspectable. Downloads remain local plaintext files; they are not encrypted storage. The form locks during inference, edits clear both outputs, and missing models produce an error without a fallback answer.
 
-I tested alternative schemas on five development sources, froze the candidate, and reserved three additional sources for one held-out pass. An inaccessible reserved page was replaced before inference, with the substitution recorded. Eight paragraphs per source were selected; these are not whole-document completeness tests.
-
-The measured results were humbling:
+Measured interpretation remains limited:
 
 | Original provisional reference | Live Gemma precision / recall / F1 | Rule-baseline F1 | Reports completed |
 | --- | --- | --- | --- |
 | Development: 40 paragraphs, 48 labels | 42.55% / 41.67% / 42.11% (20 matches, 47 predictions) | 62.50% | 5/5 |
 | Held-out: 24 paragraphs, 32 labels | 38.46% / 31.25% / 34.48% (10 matches, 26 predictions) | 33.90% | 3/3 |
 
-Selected mandatory-category recall was 15/34 in development and 5/15 held-out.
-Mean workflow time was 50.212 seconds for development and 38.460 seconds held-out.
-The held-out reports contained 24 UNKNOWN and three informational findings, with
-**no supported applicant matches or mismatches** for the evaluation profile. They
-all needed manual review. That is a real limitation, not a successful eligibility
-verdict. A tiny held-out F1 difference from rules does not establish superiority.
-The separate 95.24% synthetic prototype score is not real-world accuracy. This interface upgrade leaves those evaluations frozen; it improves what a researcher can do with uncertainty, not the measured extraction performance.
+Mandatory-category recall was 15/34 in development and 5/15 held-out. Mean workflow times were 50.212 and 38.460 seconds. The held-out reports produced 24 UNKNOWN and three INFO findings, with no supported matches or mismatches for that profile. The tiny held-out F1 difference does not establish superiority to rules. The earlier 95.24% synthetic prototype result is not real-world accuracy. [Full evaluation and limitations](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/REAL_WORLD_EVALUATION.md).
 
-The original development labels are provisional. A separately supplied AI reconciliation package proposed changes to 14 of 40 development records; all 40 passage hashes and five source snapshots matched the local cache. I preserved that proposal separately, without retuning or replacing historical scores. **AI reviewers are not independent human adjudicators.** Conflicting ISMB postdoc wording remains unresolved pending sponsor clarification.
+I also tested the already-installed **4B model with the unchanged interpreter**. On three previously observed development sources, ten passages and twenty provisional atomic reference units, F1 rose from 18.18% to 23.53%, but supported MATCH disagreements with the provisional reference increased from 2 to 3. Mean case time was 40.94 seconds versus the saved 1B run's 15.44 seconds. **I kept 1B.** Different sessions and unreviewed labels do not justify a bigger default model. [Comparison, exact denominators and raw responses](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/MODEL_SIZE_COMPARISON.md).
 
-The stable suite now has **115 passing tests**: all original 93 plus 22 onboarding checks. These include adapter mocks, not live accuracy measurements. The new checks cover missing facts, exclusions, repeated criteria, compound passages, award-versus-cap handling, escaping and live-path failure. Chromium verified the queue, downloads, keyboard quick-start and narrow-screen form. The earlier five live safety probes kept injection, a membership exception and a negative cap unresolved, treated a stipend as information, and rejected a missing model. These checks demonstrate specific safeguards, not universal prompt-injection resistance or flawless interpretation.
+The earlier [atomic v0.4 experiment](https://github.com/siamakenna/fundpilot-ai-week2-2026/pull/4) failed its release gates and remains unmerged. Historical scores, original annotations and failures are preserved. A supplied AI reconciliation is a separate proposal, not human validation; conflicting ISMB postdoc wording remains unresolved. A new blind annotation packet is ready for an independent reviewer, but none has completed it.
 
-A later atomic-clause experiment also failed its release gate. On a new, expanded common scoring unit, its F1 was 5.41% in development and 0% on two reserved sources, with only 1/3 and 0/2 reports completed. The unchanged engine scored 18.18% and 6.90% on those same provisional labels; this is a separate diagnostic, not a replacement for the historical table. Even the unchanged engine produced two MATCH statuses that disagreed with the new provisional reference expectations. I kept [the experiment and failures](https://github.com/siamakenna/fundpilot-ai-week2-2026/pull/4) unmerged and shipped onboarding alone. Exact quotations are useful evidence, but they do not make uncertain interpretation reliable.
+The product has **147 passing automated tests**, including the 137-test dossier checkpoint. These are regression checks, not proof of model accuracy. Actual Chromium checks cover keyboard evidence navigation, a narrow-screen dossier, invalid inputs, a genuinely missing model, downloads and stale-result clearing. The walkthrough runs four real analyses. Keyword suggestions, hidden-value preservation and URL-only rejection also have regression coverage. [Release checks and evidence](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/DOSSIER_RELEASE_QA.md).
 
 ## Why Does Open Innovation Matter?
 
-Running an open-weight model locally let me inspect failed responses, narrow the task and change the schema without a hosted inference account. The ordinary workflow has no metered model API dependency. Installation and model download require internet; local inference still costs hardware time and electricity.
+Local open-weight inference let me inspect failed responses, narrow the task and compare installed models without a hosted inference account. Gemma genuinely participates in every live interpretation; the NO AI baseline remains a separate, explicit choice. The open approach gives me control over the runtime and access to failures worth investigating.
 
-Gemma is integral to the live path: its interpretation participates in every supported comparison, and its disagreements stay visible. The explicit NO AI baseline is a separate user choice. **The measurements do not show Gemma outperforming the rules**, and no closed-model comparison was run. Local control and inspectability are the benefits demonstrated here, not superior accuracy.
+That is the demonstrated benefit—not proven superiority to closed models. Initial installation and model downloads require internet. Local inference still costs hardware time and electricity. The current workflow has no metered model API dependency, but I have not established commercial unit economics.
 
-The next milestone is an independently human-reviewed reference set and a consenting researcher using the product with fictional facts. The question is practical: does this evidence-backed checklist help someone decide where to spend their application time?
+The next milestone is structured, consent-based usability tasks with fictional facts and a fair timed comparison against manual review, alongside independent human review of the reference labels. Qualitative observations do not establish measured time savings. Does it help them resolve an uncertainty or avoid a wasted application? I want that answer before adding another model or claiming a business.
 
 ## Prize Categories
 
-- **Best Use of Gemma** — real local Gemma interpretation is implemented, measured and integral to the live workflow. Its failures and limitations remain visible.
+- **Best Use of Gemma** — real local Gemma interpretation is integral to the workflow, measured and accompanied by its limitations.
 
 #devchallenge #hf26challenge

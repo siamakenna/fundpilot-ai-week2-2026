@@ -7,8 +7,11 @@ from pathlib import Path
 
 import gradio as gr
 
+from .dossier import markdown as dossier_markdown
 from .logic import safe_text
 from .onboarding import INITIAL_STATUS, INTRO, SAMPLE_STATUS, TUTORIAL, check_local_model
+from .presentation import overview as readiness_overview
+from .presentation import suggested_questions
 from .quickstart import CNS_EXCERPT, CNS_RETRIEVED, CNS_URL, sample_inputs
 from .realworld import Applicant, analyze
 from .verification import markdown, queue_markdown
@@ -26,7 +29,18 @@ QUESTIONS = {
 }
 
 
-def run_public(source, title, url, stage, amount, currency, method, *answers, progress=gr.Progress()):
+def run_public(
+    source,
+    title,
+    url,
+    stage,
+    amount,
+    currency,
+    method,
+    *answers,
+    progress=gr.Progress(),  # noqa: B008 — Gradio injects its progress dependency.
+    include_dossier=False,
+):
     tick = time.perf_counter()
     try:
         values = {"Yes": True, "No": False, "Unknown": None}
@@ -53,10 +67,25 @@ def run_public(source, title, url, stage, amount, currency, method, *answers, pr
         overview += f"\n\n{report['covered_units']}/{report['source_units']} source passages accounted for. Completed in {time.perf_counter() - tick:.1f}s. "
         overview += "**Live Gemma interpretation**" if mode == "gemma" else "**Rule baseline — NO AI**"
         overview += "\n\nSupported comparisons use your declared facts; they are not verified credentials. Every passage also requires a scope review for additional conditions, exceptions and linked rules. See the report for all review items. This is not a sponsor’s eligibility decision."
-        overview += "\n\n" + queue_markdown(report, limit=3)
-        return overview, rows, md, target
-    except Exception as exc:
-        return (
+        if not include_dossier:
+            overview += "\n\n" + queue_markdown(report, limit=3)
+        result = (overview, rows, md, target)
+        if include_dossier:
+            overview = readiness_overview(report, profile)
+            overview += f"\n\n{'Live local Gemma 1B' if mode == 'gemma' else 'Rule baseline — NO AI'} · {time.perf_counter() - tick:.1f}s · {report['covered_units']}/{report['source_units']} pasted passages accounted for (not proof of complete interpretation)."
+            result = (overview, rows, md, target)
+            dossier = dossier_markdown(
+                report, profile, title=title or "Public funding announcement", source_url=url
+            )
+            fd, dossier_target = tempfile.mkstemp(prefix="fundpilot_dossier_", suffix=".md")
+            os.close(fd)
+            Path(dossier_target).write_text(dossier, encoding="utf-8")
+            # Gradio prefixes generated header IDs; portable Markdown downloads do not.
+            display_dossier = dossier.replace("(#source-passage-", "(#h-source-passage-")
+            return result + (display_dossier, dossier_target)
+        return result
+    except Exception as exc:  # noqa: BLE001 — UI boundary must clear every output on failure.
+        result = (
             "## Analysis unavailable\n\n"
             + safe_text(str(exc))
             + "\n\nNo result or download was fabricated. Keep the complete eligibility section, including exceptions and deadlines; retry after checking local Ollama.",
@@ -64,10 +93,24 @@ def run_public(source, title, url, stage, amount, currency, method, *answers, pr
             "",
             None,
         )
+        return result + ("", None) if include_dossier else result
+
+
+def run_public_with_dossier(*args, progress=gr.Progress()):  # noqa: B008 — Gradio dependency injection
+    return run_public(*args, progress=progress, include_dossier=True)
+
+
+def clear_dossier(*_):
+    return clear_public() + ("", None)
 
 
 def clear_public(*_):
     return "Inputs changed. Analyze again before using or downloading a report.", [], "", None
+
+
+def question_visibility(source, show_all):
+    suggested = suggested_questions(source, QUESTIONS)
+    return [gr.update(visible=bool(show_all or key in suggested)) for key in QUESTIONS]
 
 
 def build_public_ui():
@@ -89,7 +132,10 @@ def build_public_ui():
     )
     with gr.Row():
         title = gr.Textbox(label="Opportunity title")
-        url = gr.Textbox(label="Official source URL (attribution only; not fetched)")
+        url = gr.Textbox(
+            label="Official announcement link (reference only — not fetched)",
+            info="This website is not automatically read. Paste the actual requirements below.",
+        )
     source = gr.Textbox(
         label="Eligibility, exclusions, amounts, deadlines and application instructions",
         lines=6,
@@ -116,12 +162,24 @@ def build_public_ui():
             placeholder="For example: 250.50",
         )
         currency = gr.Dropdown(["USD", "GBP", "EUR"], value="USD", label="Request currency")
+    gr.Markdown(
+        "Questions below are suggested from simple text cues, which can miss requirements. "
+        "**Show all questions** to inspect every field. Hidden answers are preserved; unknown facts stay Unknown."
+    )
+    show_all = gr.Checkbox(label="Show all questions", value=False)
     facts = []
     questions = list(QUESTIONS.items())
     for offset in range(0, len(questions), 3):
         with gr.Row():
             for key, label in questions[offset : offset + 3]:
-                facts.append(gr.Radio(["Unknown", "Yes", "No"], value="Unknown", label=label))
+                facts.append(
+                    gr.Radio(
+                        ["Unknown", "Yes", "No"],
+                        value="Unknown",
+                        label=label,
+                        visible=key in suggested_questions("", QUESTIONS),
+                    )
+                )
     gr.Markdown(
         "Membership duration, prior awards, required materials, conditional pathways and unsupported restrictions remain review questions. A sponsor stipend is not automatically a limit on your request."
     )
@@ -133,19 +191,31 @@ def build_public_ui():
     summary = gr.Markdown(
         "No analysis yet. Local Ollama and gemma3:1b must be installed for live analysis. CPU inference can take several minutes; the report stops after five minutes instead of guessing."
     )
-    table = gr.Dataframe(
-        headers=["Passage", "Criterion", "Finding", "Exact evidence", "Reason"],
-        column_widths=[80, 160, 130, 420, 420],
-        datatype=["number", "str", "str", "str", "str"],
+    with gr.Accordion("Application Readiness Dossier — plan and source evidence", open=False):
+        dossier = gr.Markdown(elem_id="readiness-dossier", header_links=True)
+    dossier_download = gr.File(
+        label="Download Application Readiness Dossier (Markdown)",
         interactive=False,
-        wrap=True,
-        label="Supported comparisons and unresolved interpretations",
+        elem_id="dossier-download",
     )
+    with gr.Accordion("Detailed findings and exact passages", open=False):
+        table = gr.Dataframe(
+            headers=["Passage", "Criterion", "Finding", "Exact evidence", "Reason"],
+            column_widths=[80, 160, 130, 420, 420],
+            datatype=["number", "str", "str", "str", "str"],
+            interactive=False,
+            wrap=True,
+            label="Supported comparisons and unresolved interpretations",
+        )
     with gr.Accordion("Full evidence report and passage review checklist", open=False):
         report = gr.Markdown()
-    download = gr.File(label="Download readiness report (Markdown)", interactive=False)
+    download = gr.File(
+        label="Download readiness report (Markdown)", interactive=False, elem_id="evidence-download"
+    )
     inputs = [source, title, url, stage, amount, currency, method, *facts]
-    outputs = [summary, table, report, download]
+    outputs = [summary, table, report, download, dossier, dossier_download]
+    source.change(question_visibility, inputs=[source, show_all], outputs=facts)
+    show_all.change(question_visibility, inputs=[source, show_all], outputs=facts)
 
     def lock():
         return [gr.update(interactive=False) for _ in inputs + [go, sample]]
@@ -156,12 +226,14 @@ def build_public_ui():
     # Prevent an older in-flight result from overwriting edits. Inputs become
     # editable again after success or the handled error result.
     sample.click(lambda: sample_inputs(QUESTIONS) + [SAMPLE_STATUS], outputs=inputs + [sample_status]).then(
-        clear_public, outputs=outputs
+        clear_dossier, outputs=outputs
     )
-    source.change(lambda text: SAMPLE_STATUS if text == CNS_EXCERPT else "", inputs=source, outputs=sample_status)
+    source.change(
+        lambda text: SAMPLE_STATUS if text == CNS_EXCERPT else "", inputs=source, outputs=sample_status
+    )
     event = go.click(lock, outputs=inputs + [go, sample], queue=False)
-    event.then(run_public, inputs=inputs, outputs=outputs, concurrency_limit=1).then(
+    event.then(run_public_with_dossier, inputs=inputs, outputs=outputs, concurrency_limit=1).then(
         unlock, outputs=inputs + [go, sample]
     )
     for field in inputs:
-        field.change(clear_public, outputs=outputs)
+        field.change(clear_dossier, outputs=outputs)

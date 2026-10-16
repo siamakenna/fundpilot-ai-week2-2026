@@ -12,13 +12,13 @@ questions that still need the sponsor's answer.
 
 ## See the real application
 
-![FundPilot AI prioritizing a real-source contradiction for sponsor verification](https://raw.githubusercontent.com/siamakenna/fundpilot-ai-week2-2026/main/evidence/onboarding/contradiction.png)
+![Live Gemma contradiction and Application Readiness Dossier](https://raw.githubusercontent.com/siamakenna/fundpilot-ai-week2-2026/main/evidence/usability/contradiction-overview.png)
 
-[60-second authentic v0.3.1 video](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.1/fundpilot-onboarding-demo.webm) · [Contradiction report](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/onboarding/contradiction-report.md) · [Unresolved presenter fact](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/onboarding/unknown-report.md) · [Quick-start screenshot](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/onboarding/quickstart.png)
+[Authentic v0.3.2 dossier video](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.2/fundpilot-dossier-demo.webm) · [Contradiction dossier](evidence/usability/contradiction-dossier.md) · [Missing-fact dossier](evidence/usability/unknown-dossier.md) · [Historical restriction and deadline](evidence/usability/historical-exclusion-dossier.md) · [Release checks](docs/DOSSIER_RELEASE_QA.md)
 
-The recording uses three fictional applicant configurations on one real public funding passage. It shows actual local Gemma calls and does **not** claim that a full funding announcement was evaluated or that the app is publicly hosted.
+Four genuine local Gemma analyses: three fictional applicant configurations on a short CNS excerpt, then historical GNS source excerpts with a passed deadline. The recording demonstrates preparation and review, not complete-call eligibility or a hosted service. The [v0.3.1 fallback video](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.1/fundpilot-onboarding-demo.webm) is preserved.
 
-The optional first-run guide explains the workflow and result labels. **Check local model** checks installation only when clicked; it does not install software or run inference. A collapsed tutorial explains evidence, scope and local plaintext-report privacy.
+The optional guide explains the workflow and result labels. **Check local model** checks installation only when clicked; it does not install software or claim successful inference.
 
 ## Three-step workflow
 
@@ -28,13 +28,17 @@ The optional first-run guide explains the workflow and result labels. **Check lo
    with fictional editable facts. It loads no predictions; Analyze runs real Gemma.
    The short excerpt neither covers the full award nor confirms applications are open.
 2. Enter your career stage and Yes/No/Unknown facts. Leave unknown amounts blank.
+   Suggested questions use incomplete keyword cues; **Show all questions** exposes every
+   field. Hidden answers are retained and never silently changed to No.
    The form defaults to **Live local Gemma**; no JSON knowledge is needed.
-3. Review the **Questions to verify before applying** queue: contradictions first,
-   one item per unresolved passage, exact evidence, reasons and suggested questions.
-   Missing facts point back to your records; unsupported interpretations need sponsor
-   clarification. The top three appear above the evidence table; the complete
-   numbered queue is in the expandable report. INFO is not counted as a risk item. Download the Markdown report. Changing inputs clears the
-   previous result; inputs are locked during an in-flight analysis.
+3. Start with the compact overview: matching facts, potential problems, and missing
+   information / unclear conditions. Provisional source flags stay separate. Open the
+   **Application Readiness Dossier** for supported contradictions, missing
+   facts, materials and dated milestones, grouped sponsor questions, and a prioritized
+   checklist. Potential source issues are labeled separately from model findings.
+   Detailed evidence is expandable. Follow passage links to exact evidence. Download the dossier and the separate,
+   unchanged full evidence report. Inputs lock during analysis; editing them clears both.
+
 
 MATCH means a supported textual comparison with a declared fact—not an independently
 verified credential. Contradictions can be useful without claiming official
@@ -78,7 +82,7 @@ not claimed.
 Developer reproduction of the real-call path:
 
 ```bash
-python -m fundpilot.public_cli --source-file public-call.txt --mode gemma --output report.md --audit model-labels.json
+python -m fundpilot.public_cli --source-file public-call.txt --mode gemma --output report.md --dossier-output dossier.md --audit model-labels.json
 ```
 
 The CLI defaults to unknown applicant facts. Its optional `--profile-json` is for
@@ -158,3 +162,15 @@ The owner attests independent work during the Week 2 contest window. Original
 fixtures and baseline failure evidence remain unchanged. See
 [provenance](docs/PROVENANCE_AND_LICENSES.md) and the
 [official challenge](https://dev.to/challenges/hacktoberfest-week2-2026-10-12).
+
+## Dossier release and model decision
+
+The dossier highlights structural cues, including possible exclusions hidden in paragraphs,
+AND/OR/UNLESS dependencies, periods, materials, and award benefits versus request limits.
+These are review prompts, never verified interpretations or new MATCH/NOT MATCH findings.
+Pasted text cannot establish complete coverage; review the full source and linked policies.
+
+Gemma 1B remains the default. An exploratory [same-strategy 4B comparison](docs/MODEL_SIZE_COMPARISON.md)
+found one additional provisional condition but more supported MATCH disagreements and longer
+latency. No human-validated model improvement is claimed. The failed atomic v0.4 PR remains unmerged.
+The original 42.11%/34.48% Gemma development/held-out F1 values and 62.50%/33.90% rule values are unchanged.

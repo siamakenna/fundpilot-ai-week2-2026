@@ -1,0 +1,10 @@
+{
+  "baseline": "e60d2a98b21f2dbcba284845f10084527d6beefb",
+  "reference_sha256": "648c47ab144ca393da5322e29e22375b45c29c165735f514d421d5548fa95b95",
+  "protocol_sha256": "65ff41eeadab79034cddc6fe018c72cc7c35435cb7ea4dbf3f837b588198bb84",
+  "interpreter_sha256": "7fb7ce091e1d16a7950bd131a9950c543777b6bfabe1f18f2c75d1e52f8674fc",
+  "a_reused": ".local-reports/v04/dev-A-service-restored/results.json",
+  "b_attempts": 1,
+  "tuning": false,
+  "independent_human_review": false
+}

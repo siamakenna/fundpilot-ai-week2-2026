@@ -1,0 +1,52 @@
+/* Real browser QA; the second server uses a deliberately absent model name, not mock replies. */
+const {chromium}=require('playwright');const fs=require('node:fs/promises');
+(async()=>{
+ const dir='.local-reports/dossier-browser';await fs.mkdir(dir,{recursive:true});
+ const browser=await chromium.launch({headless:true});const page=await browser.newPage({viewport:{width:390,height:844}});
+ const errors=[],checks={};page.on('pageerror',e=>errors.push(e.message));
+ const sample=page.getByRole('button',{name:'Load sample public excerpt (CNS; fictional applicant)',exact:true});
+ const go=page.getByRole('button',{name:'Analyze public announcement',exact:true});
+ const amount=page.getByLabel('Requested funding (optional; leave blank if unknown)',{exact:true});
+ const method=page.locator('fieldset').filter({has:page.getByText('Analysis method',{exact:true})});
+ const clear=async()=>{await page.getByText('Inputs changed. Analyze again before using or downloading a report.',{exact:true}).waitFor();if(await page.getByTestId('download-link').count()||await page.locator('#readiness-dossier').innerText())throw Error('Stale output');};
+ try{
+  await page.goto('http://127.0.0.1:7864');await sample.waitFor();
+  await sample.focus();await page.keyboard.press('Enter');await page.getByText('CNS excerpt loaded.',{exact:false}).waitFor();
+  checks.keyboard_sample=true;
+  await method.getByRole('radio',{name:'Rule baseline (NO AI)',exact:true}).check();
+  await go.focus();await page.keyboard.press('Enter');
+  await page.getByRole('heading',{name:'Application Readiness Dossier',exact:true}).waitFor();
+  await page.locator('#dossier-download').getByTestId('download-link').waitFor();
+  await page.locator('#evidence-download').getByTestId('download-link').waitFor();
+  await page.getByRole('heading',{name:'A. Potential application blockers',exact:true}).scrollIntoViewIfNeeded();
+  const width=await page.evaluate(()=>({viewport:innerWidth,document:document.documentElement.scrollWidth}));
+  if(width.document>width.viewport+1)throw Error('Mobile overflow '+JSON.stringify(width));
+  checks.mobile=width;await page.screenshot({path:dir+'/mobile-dossier.png'});
+  const link=page.locator('#readiness-dossier a[href="#h-source-passage-1"]').first();
+  await link.focus();await page.keyboard.press('Enter');
+  await page.waitForTimeout(300);
+  const evidenceTop=await page.getByRole('heading',{name:'Source passage 1',exact:true}).evaluate(el=>el.getBoundingClientRect().top);
+  if(evidenceTop<0||evidenceTop>844)throw Error('Evidence anchor not navigable: '+evidenceTop);
+  checks.keyboard_evidence_anchor=true;
+  for(const value of ['-1','NaN','invalid']){
+   await amount.fill(value);await clear();await go.click();
+   await page.getByRole('heading',{name:'Analysis unavailable',exact:true}).waitFor();
+   if(await page.getByTestId('download-link').count())throw Error('Output after invalid amount');
+  }
+  checks.invalid_amounts=['-1','NaN','invalid'];
+  await amount.fill('');await clear();
+  await page.getByLabel('Eligibility, exclusions, amounts, deadlines and application instructions',{exact:true}).fill('');
+  await go.click();await page.getByRole('heading',{name:'Analysis unavailable',exact:true}).waitFor();
+  checks.empty_source=true;
+  await page.goto('http://127.0.0.1:7865');await sample.waitFor();await sample.click();
+  await page.getByText('CNS excerpt loaded.',{exact:false}).waitFor();await go.click();
+  await page.getByRole('heading',{name:'Analysis unavailable',exact:true}).waitFor({timeout:30000});
+  const body=await page.locator('body').innerText();
+  if(!body.includes('HTTP Error 404: Not Found')||!body.includes('Check Ollama and the downloaded model')||await page.getByTestId('download-link').count())throw Error('Missing-model error not explicit/clean: '+body.slice(body.indexOf('Analysis unavailable'),body.indexOf('Analysis unavailable')+800));
+  checks.missing_model={model:'fundpilot-deliberately-missing:qa',actual_ollama_request:true,no_fallback:true,no_downloads:true};
+  await page.getByRole('heading',{name:'Analysis unavailable',exact:true}).scrollIntoViewIfNeeded();await page.screenshot({path:dir+'/missing-model.png'});
+  if(errors.length)throw Error(errors.join(';'));
+  await fs.writeFile(dir+'/checks.json',JSON.stringify({checks,browser:browser.version(),page_errors:errors},null,2));
+  console.log('PASS',JSON.stringify(checks));
+ }finally{await browser.close();}
+})().catch(e=>{console.error(e);process.exit(1)});

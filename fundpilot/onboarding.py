@@ -14,7 +14,7 @@ INTRO = '''**Check the funding rules before writing the application.** Paste a p
 
 1. **Add the rules:** Include exceptions and deadlines—or load the CNS sample.
 2. **Add your facts:** Answer Yes, No or Unknown. Unknown is safer than guessing.
-3. **Review and verify:** Run local Gemma, check source quotations and resolve questions with the organizer.
+3. **Review and prepare:** Run local Gemma, inspect the Application Readiness Dossier, and download your next steps with exact evidence.
 
 Only public award text goes to local Gemma; applicant answers are evaluated in Python. Do not paste confidential or proprietary grant materials.'''
 TUTORIAL = '''### Understand your results
@@ -23,6 +23,10 @@ TUTORIAL = '''### Understand your results
 - **NOT MATCH:** A supported condition conflicts with a fact you entered. Verify the contradiction and any published exceptions.
 - **UNKNOWN:** Information is missing, the source is conditional, or the analysis cannot safely decide. Follow the verification question.
 - **INFO:** A date, award benefit or other detail to review; not a confirmed eligibility condition.
+
+### Your application preparation plan
+
+The dossier separates supported contradictions, missing facts, materials and dates, sponsor questions, and a final checklist. Source cues highlight possible exclusions and dependencies; they are review prompts, not new findings. Download the dossier and the separate full evidence report. Editing any input clears both.
 
 ### How evidence and privacy work
 

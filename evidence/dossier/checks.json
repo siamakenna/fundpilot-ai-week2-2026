@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "keyboard_sample": true,
+    "mobile": {
+      "viewport": 390,
+      "document": 390
+    },
+    "keyboard_evidence_anchor": true,
+    "invalid_amounts": [
+      "-1",
+      "NaN",
+      "invalid"
+    ],
+    "empty_source": true,
+    "missing_model": {
+      "model": "fundpilot-deliberately-missing:qa",
+      "actual_ollama_request": true,
+      "no_fallback": true,
+      "no_downloads": true
+    }
+  },
+  "browser": "151.0.7922.34",
+  "page_errors": []
+}
