@@ -10,7 +10,7 @@ tags: devchallenge, hf26challenge
 
 “First author” is a small phrase with an expensive consequence. A researcher can have an accepted poster, a compelling project and a travel budget—and still spend an evening applying for an award whose conditions they do not meet.
 
-**FundPilot AI helps researchers turn funding rules into an application-preparation plan.** Paste public announcement text, answer ordinary Yes/No/Unknown questions, and run local Gemma. Python attaches the original passages and compares supported conditions with the facts you supplied. The result is an **Application Readiness Dossier**, with a separate full evidence report.
+**FundPilot AI helps researchers turn funding rules into an application-preparation plan.** Paste public announcement text, answer ordinary Yes/No/Unknown questions, and run local Gemma. Python attaches the original passages and compares supported conditions with the facts you supplied. A compact overview separates **requirements matching your facts**, **potential problems**, and **missing information or unclear conditions**. Open the **Application Readiness Dossier** for an actionable plan, with the full evidence report available separately.
 
 I built it for independent researchers and small mentoring programs without a grants office. The commercial hypothesis is **$9 per readiness report or $39/month for a workspace**. Neither price is validated. There are no customers, revenue or testimonials to claim. The product needs to earn trust—and demonstrate that it saves time—before charging makes sense.
 
@@ -24,19 +24,21 @@ An UNKNOWN label alone leaves the researcher with another task. The dossier help
 
 The source-review layer can notice “have not received” in a prior-funding restriction even when the interpreter does not give it a useful category. It keeps the whole passage and flags a **potential issue**, without turning that cue into an eligibility decision or changing the model's scores.
 
+The form suggests questions using simple text cues and always offers **Show all questions**. Hiding a question preserves its answer; it never fills in No. The link field explicitly says the website is not read automatically: users paste the actual requirements. Detailed evidence is expandable, so the first result is a short overview rather than a wall of repeated passages.
+
 The main workflow accepts previously unseen public text; it is not limited to authored scenarios. An optional CNS quick-start loads a verified excerpt with clearly fictional, editable facts. It produces no analysis until you click Analyze. The complete announcement and linked policies still need review.
 
 ## Demo
 
-![An actual live Gemma result with a source-backed contradiction and application dossier](https://raw.githubusercontent.com/siamakenna/fundpilot-ai-week2-2026/main/evidence/dossier/contradiction.png)
+![An actual live Gemma result with a source-backed contradiction and application dossier](https://raw.githubusercontent.com/siamakenna/fundpilot-ai-week2-2026/main/evidence/usability/contradiction-overview.png)
 
-**[Watch/download the authentic 69-second v0.3.2 walkthrough (WebM)](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.2/fundpilot-dossier-demo.webm)** · [Release](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.3.2)
+**[Watch/download the authentic 96-second v0.3.2 walkthrough (WebM)](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.2/fundpilot-dossier-demo.webm)** · [Release](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.3.2)
 
-Watch for the contradiction dossier at **0:11**, the missing-fact dossier at **0:23**, the historical restriction at **0:59**, and the verified downloads and cleared outputs at **1:07**.
+Watch for supported comparisons at **0:11**, the contradiction overview at **0:27**, the missing-fact result at **0:44**, historical restrictions at **1:22**, and the final downloads and cleared outputs at **1:34**.
 
-This silent, continuous Chromium recording shows the local application and real Gemma 1B inference. It is not a hosted interactive service. The first two analyses use a short CNS passage: a first-author contradiction, then a missing presenter fact. The third uses historical German Neuroscience Society excerpts to show prior-funding warnings and a passed deadline. All applicant facts are fictional; these selected passages are not whole-call assessments.
+This silent, continuous Chromium recording shows the local application and real Gemma 1B inference. It is not a hosted interactive service. The first three analyses use a short CNS passage: two supported comparisons, a first-author contradiction, then a missing presenter fact. The fourth uses historical German Neuroscience Society excerpts to show prior-funding warnings and a passed deadline. All applicant facts are fictional; these selected passages are not whole-call assessments.
 
-Inspect the actual downloads: [contradiction dossier](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/dossier/contradiction-dossier.md), [missing-fact dossier](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/dossier/unknown-dossier.md), [historical-source dossier](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/dossier/historical-exclusion-dossier.md), and [full evidence report](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/dossier/historical-exclusion-report.md). The [event log](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/dossier/events.json) records actual timings and downloaded-file hashes. Editing an input clears both downloads.
+Inspect the actual downloads: [contradiction dossier](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/usability/contradiction-dossier.md), [missing-fact dossier](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/usability/unknown-dossier.md), [historical-source dossier](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/usability/historical-exclusion-dossier.md), and [full evidence report](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/usability/historical-exclusion-report.md). The [event log](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/evidence/usability/events.json) records actual timings and downloaded-file hashes. Editing an input clears both downloads.
 
 The authentic [v0.3.1 fallback demonstration](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.1/fundpilot-onboarding-demo.webm) remains unchanged. The [official-source ledger](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/OFFICIAL_SOURCES.md) distinguishes current and historical evaluation sources.
 
@@ -67,7 +69,7 @@ I also tested the already-installed **4B model with the unchanged interpreter**.
 
 The earlier [atomic v0.4 experiment](https://github.com/siamakenna/fundpilot-ai-week2-2026/pull/4) failed its release gates and remains unmerged. Historical scores, original annotations and failures are preserved. A supplied AI reconciliation is a separate proposal, not human validation; conflicting ISMB postdoc wording remains unresolved. A new blind annotation packet is ready for an independent reviewer, but none has completed it.
 
-The product has **137 passing automated tests**, including the original 115. These are regression checks, not proof of model accuracy. Actual Chromium checks cover keyboard evidence navigation, a narrow-screen dossier, invalid inputs, a genuinely missing model, downloads and stale-result clearing. The walkthrough runs three real analyses. [Release checks and evidence](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/DOSSIER_RELEASE_QA.md).
+The product has **147 passing automated tests**, including the 137-test dossier checkpoint. These are regression checks, not proof of model accuracy. Actual Chromium checks cover keyboard evidence navigation, a narrow-screen dossier, invalid inputs, a genuinely missing model, downloads and stale-result clearing. The walkthrough runs four real analyses. Keyword suggestions, hidden-value preservation and URL-only rejection also have regression coverage. [Release checks and evidence](https://github.com/siamakenna/fundpilot-ai-week2-2026/blob/main/docs/DOSSIER_RELEASE_QA.md).
 
 ## Why Does Open Innovation Matter?
 
@@ -75,7 +77,7 @@ Local open-weight inference let me inspect failed responses, narrow the task and
 
 That is the demonstrated benefit—not proven superiority to closed models. Initial installation and model downloads require internet. Local inference still costs hardware time and electricity. The current workflow has no metered model API dependency, but I have not established commercial unit economics.
 
-The next milestone is a consenting researcher using the dossier with fictional facts, alongside independent human review of the reference labels. Does it help them resolve an uncertainty or avoid a wasted application? I want that answer before adding another model or claiming a business.
+The next milestone is structured, consent-based usability tasks with fictional facts and a fair timed comparison against manual review, alongside independent human review of the reference labels. Qualitative observations do not establish measured time savings. Does it help them resolve an uncertainty or avoid a wasted application? I want that answer before adding another model or claiming a business.
 
 ## Prize Categories
 

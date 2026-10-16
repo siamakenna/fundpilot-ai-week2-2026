@@ -80,9 +80,10 @@ Start Ollama and the app, then run `scripts/record_demo.cjs` as documented in
 Do not rerun the held-out evaluation to record a demo.
 
 
-## v0.3.2 dossier walkthrough (latest)
+## v0.3.2 readiness overview and dossier (latest)
 
-Use the [69-second authentic recording](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.2/fundpilot-dossier-demo.webm).
-At 0:11, inspect the first-author contradiction and its exact source link; at 0:23, inspect the missing presenter fact and record to check; at 0:59, inspect possible prior-funding exclusions in historical GNS excerpts. At 1:07, both actual Markdown downloads have been checked and editing the input clears them. The recording uses live Gemma 1B; no canned responses. All applicant facts are fictional and the GNS deadline has passed.
+Use the [authentic recording](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.2/fundpilot-dossier-demo.webm). At 0:11, inspect supported comparisons; at 0:27, the first-author contradiction and next action; at 0:44, the missing presenter fact; at 1:22, possible prior-funding exclusions in historical GNS excerpts. At 1:34, both final Markdown downloads have been checked and an edit clears the displayed findings and files. Four genuine Gemma 1B analyses, eight actual downloads. All applicant facts are fictional; the GNS deadline has passed.
 
-The dossier adds a preparation plan, not an eligibility verdict or measured model gain. The full report remains separate. See [release QA](DOSSIER_RELEASE_QA.md) and [exploratory 4B results](MODEL_SIZE_COMPARISON.md); the default remains 1B and atomic v0.4 remains unmerged. Earlier scripts and recordings above are retained as historical evidence.
+The compact overview uses existing counts. Show all questions exposes every applicant field and preserves hidden values. The URL is attribution-only; paste the actual text. Expand the dossier for the five-part preparation plan and exact source links; the complete original evidence report is separately available.
+
+This is a preparation aid, not official eligibility or measured model improvement. See [release QA](DOSSIER_RELEASE_QA.md) and [exploratory 4B results](MODEL_SIZE_COMPARISON.md). The default remains 1B; atomic v0.4 is unmerged. The 69.12-second pre-refinement checkpoint remains in local storage and `evidence/dossier`; current release evidence is in `evidence/usability`. Earlier scripts and recordings above are historical evidence.

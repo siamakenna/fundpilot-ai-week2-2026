@@ -1,0 +1,100 @@
+{
+  "browser": "151.0.7922.34",
+  "recording": "Actual continuous headless Chromium; local Gemma 1B; no model mocks, video edits or speed changes",
+  "scope": "Three fictional CNS profiles plus historical GNS excerpts; not complete announcement analysis",
+  "events": [
+    {
+      "name": "model_checked",
+      "seconds": 1.014
+    },
+    {
+      "name": "fictional_editable_profile_loaded",
+      "seconds": 3.947
+    },
+    {
+      "name": "start_supported",
+      "seconds": 4.411
+    },
+    {
+      "name": "complete_supported",
+      "seconds": 10.644
+    },
+    {
+      "name": "download_supported_dossier",
+      "seconds": 23.155,
+      "bytes": 3379,
+      "sha256": "71bc923c5f6436229c6f1b922ab637bb756e2b49dffacb0117e38b0eed62fa00"
+    },
+    {
+      "name": "download_supported_report",
+      "seconds": 23.213,
+      "bytes": 3083,
+      "sha256": "757fb6df65cdc96b05691a019e28afc2cd29225fc3cc5a45c93dc53a9581321d"
+    },
+    {
+      "name": "start_contradiction",
+      "seconds": 23.395
+    },
+    {
+      "name": "complete_contradiction",
+      "seconds": 26.872
+    },
+    {
+      "name": "download_contradiction_dossier",
+      "seconds": 39.223,
+      "bytes": 3812,
+      "sha256": "6525fc355e351d09dc53a0eb587e569d5731e09b6874ec7788d4e35edd845583"
+    },
+    {
+      "name": "download_contradiction_report",
+      "seconds": 39.277,
+      "bytes": 3750,
+      "sha256": "890266b17c65e29b05ff46a5866d1188c7a4fa7a87d828bfae0937492220a818"
+    },
+    {
+      "name": "start_unknown",
+      "seconds": 39.551
+    },
+    {
+      "name": "complete_unknown",
+      "seconds": 44.068
+    },
+    {
+      "name": "download_unknown_dossier",
+      "seconds": 56.394,
+      "bytes": 3572,
+      "sha256": "b790789c52f893b0073c6bd1dc9675d8b774cf0291eee8fcea70438f07e501bc"
+    },
+    {
+      "name": "download_unknown_report",
+      "seconds": 56.441,
+      "bytes": 3566,
+      "sha256": "613538e5294a62e24ceb2ba6c7023f9257da38e221b267a9abfc80029617996d"
+    },
+    {
+      "name": "start_historical-exclusion",
+      "seconds": 56.777
+    },
+    {
+      "name": "complete_historical-exclusion",
+      "seconds": 82.033
+    },
+    {
+      "name": "download_historical-exclusion_dossier",
+      "seconds": 94.417,
+      "bytes": 5280,
+      "sha256": "f8dddd042bc16afd0512d81add7a0ccca17a9a5b0a410cb654ee0f2a1cd43e60"
+    },
+    {
+      "name": "download_historical-exclusion_report",
+      "seconds": 94.462,
+      "bytes": 5497,
+      "sha256": "560fc12d1949f849a6412b52aaf0ff93cbeee84c4aadcef306848d0482cba9c7"
+    },
+    {
+      "name": "edit_invalidates_both_outputs",
+      "seconds": 94.628
+    }
+  ],
+  "page_errors": []
+}

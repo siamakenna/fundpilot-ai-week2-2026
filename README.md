@@ -12,11 +12,11 @@ questions that still need the sponsor's answer.
 
 ## See the real application
 
-![Live Gemma contradiction and Application Readiness Dossier](https://raw.githubusercontent.com/siamakenna/fundpilot-ai-week2-2026/main/evidence/dossier/contradiction.png)
+![Live Gemma contradiction and Application Readiness Dossier](https://raw.githubusercontent.com/siamakenna/fundpilot-ai-week2-2026/main/evidence/usability/contradiction-overview.png)
 
-[Authentic v0.3.2 dossier video](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.2/fundpilot-dossier-demo.webm) · [Contradiction dossier](evidence/dossier/contradiction-dossier.md) · [Missing-fact dossier](evidence/dossier/unknown-dossier.md) · [Historical restriction and deadline](evidence/dossier/historical-exclusion-dossier.md) · [Release checks](docs/DOSSIER_RELEASE_QA.md)
+[Authentic v0.3.2 dossier video](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.2/fundpilot-dossier-demo.webm) · [Contradiction dossier](evidence/usability/contradiction-dossier.md) · [Missing-fact dossier](evidence/usability/unknown-dossier.md) · [Historical restriction and deadline](evidence/usability/historical-exclusion-dossier.md) · [Release checks](docs/DOSSIER_RELEASE_QA.md)
 
-Three genuine local Gemma analyses: two fictional applicant configurations on a short CNS excerpt, then historical GNS source excerpts with a passed deadline. The recording demonstrates preparation and review, not complete-call eligibility or a hosted service. The [v0.3.1 fallback video](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.1/fundpilot-onboarding-demo.webm) is preserved.
+Four genuine local Gemma analyses: three fictional applicant configurations on a short CNS excerpt, then historical GNS source excerpts with a passed deadline. The recording demonstrates preparation and review, not complete-call eligibility or a hosted service. The [v0.3.1 fallback video](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/download/v0.3.1/fundpilot-onboarding-demo.webm) is preserved.
 
 The optional guide explains the workflow and result labels. **Check local model** checks installation only when clicked; it does not install software or claim successful inference.
 
@@ -28,11 +28,15 @@ The optional guide explains the workflow and result labels. **Check local model*
    with fictional editable facts. It loads no predictions; Analyze runs real Gemma.
    The short excerpt neither covers the full award nor confirms applications are open.
 2. Enter your career stage and Yes/No/Unknown facts. Leave unknown amounts blank.
+   Suggested questions use incomplete keyword cues; **Show all questions** exposes every
+   field. Hidden answers are retained and never silently changed to No.
    The form defaults to **Live local Gemma**; no JSON knowledge is needed.
-3. Review the **Application Readiness Dossier**: supported contradictions, missing
+3. Start with the compact overview: matching facts, potential problems, and missing
+   information / unclear conditions. Provisional source flags stay separate. Open the
+   **Application Readiness Dossier** for supported contradictions, missing
    facts, materials and dated milestones, grouped sponsor questions, and a prioritized
    checklist. Potential source issues are labeled separately from model findings.
-   Follow passage links to exact evidence. Download the dossier and the separate,
+   Detailed evidence is expandable. Follow passage links to exact evidence. Download the dossier and the separate,
    unchanged full evidence report. Inputs lock during analysis; editing them clears both.
 
 

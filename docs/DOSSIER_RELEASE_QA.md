@@ -8,14 +8,32 @@ The dossier adds five visible sections, a separate Markdown download and exact-p
 
 ## Local gates
 
-- Full suite: **137 passed** (115 original + 22 dossier regressions). Focused dossier suite: 22 passed. Tests do not measure live model accuracy.
+- Full suite: **147 passed** (all 137 checkpoint tests retained + 10 usability regressions). Focused dossier/usability suites: 32 passed. Tests do not measure live model accuracy.
 - `python -m ruff check --select F .`: passed.
-- Configured focused lint on `fundpilot/dossier.py`, `real_ui.py`, `public_cli.py`, `tests/test_dossier.py`, and both model-comparison/review-packet scripts: passed. Gradio progress injection and the UI/trial exception boundaries have narrow explained suppressions.
+- Configured focused lint on `fundpilot/dossier.py`, `presentation.py`, `real_ui.py`, `public_cli.py`, `tests/test_dossier.py`, `tests/test_presentation.py`, and both model-comparison/review-packet scripts: passed. Gradio progress injection and the UI/trial exception boundaries have narrow explained suppressions.
 - `git diff --check`: passed. Baseline comparison verified **224 protected source/evidence/evaluation files unchanged**. All original tests retained. Production `realworld.py` SHA-256 remains `7fb7ce091e1d16a7950bd131a9950c543777b6bfabe1f18f2c75d1e52f8674fc`.
 - Scoped privacy/security review: no credential-pattern hits in publishable files; no new model weights, private document formats, source-cache dumps, personal profiles, environment files or local temporary reports in Git. Public demo inputs are attributed official excerpts plus fictional facts. Raw model-size audits contain Boolean classifications/timing, not source prompts or applicant data. MIT attribution and separate Gemma terms preserved. This is a scoped review, not a penetration-test guarantee.
 - Unchanged production model, prompt/schema and evidence/decision engine; new warnings never change findings or counts. Source-derived items retain exact parent passage references, with offsets. Full-source completeness is a general recommendation, never inferred from excerpt length.
 
-## Actual browser and live inference
+## Final usability refinement
+
+A compact three-group overview uses unchanged MATCH / NOT MATCH / UNKNOWN counts and gives separate next actions. Possible structural exclusions remain visible as provisional flags, never folded into NOT MATCH. The five-part dossier, exact evidence and full original report are expandable; both downloads remain directly accessible. The URL field explicitly says it is reference-only and not fetched.
+
+Keyword cues suggest relevant applicant questions. **Show all questions** always exposes all nine Boolean fields; career stage and budget remain accessible. Filtering changes visibility only, preserves entered values and cannot establish completeness. Default unknown values remain Unknown, and changing any answer clears both outputs. This reduces initial clutter without altering interpretation inputs or making an extra model call.
+
+[Final browser checks](../evidence/usability/checks.json) verify suggestions and hidden-value retention, a secondary-answer edit clearing both downloads, 390px layout without overflow, keyboard anchors, invalid/empty inputs, URL-only rejection and a real missing-model response. Connection-refused and malformed-JSON output-clearing regressions use explicit adapter mocks and are not live accuracy measurements. CLI output checks also verify the two separate Markdown artifacts in explicit NO AI mode.
+
+Hosting, installation redesign, PDF conversion and model rewriting were deferred. The private owner-provided feedback packet is not committed. No participant identity, direct quotation, testimonial, completed study or time-savings claim is published. Product benefits remain hypotheses to test.
+
+## Final release recording
+
+The final **95.72-second**, continuous, unedited Chromium recording shows **four genuine Gemma 1B analyses and eight actual Markdown downloads**: supported comparisons, a contradiction, missing applicant information and historical GNS restrictions. [Events and download hashes](../evidence/usability/events.json), [screenshots and actual reports](../evidence/usability/), [video integrity](../evidence/usability/video-integrity.json), and [normal-speed full playback](../evidence/usability/playback.json).
+
+The final asset is **8,444,044 bytes**, SHA-256 **`2eb79fca0a9113016598f63bad64a116296160d9aeeaf5f3f2f54c9441ada197`**. The public release verification manifest records anonymous HTTP status, downloaded bytes and digest. Earlier 69.12-second footage remains untouched; it predates the final overview/questionnaire presentation.
+
+The usability capture harness needed two corrections: Gradio includes help text in the URL textbox's accessible name, and clearing a result updates its separate components over successive browser render frames. The final script waits for the explicit cleared state (bounded to three seconds) rather than inspecting one intermediate frame. Earlier interrupted captures remain local and are not presented as release demonstrations. The final browser checks and recording complete all assertions.
+
+## Preserved dossier checkpoint: browser and live inference
 
 Chromium 151.0.7922.34, Gradio 6.30.0, local Ollama 0.40.4, Gemma 3 1B Q4_K_M.
 
@@ -33,7 +51,7 @@ GNS passages 2 and 3 remain unclassified in the original report. The dossier pro
 
 Three earlier capture attempts were retained locally and excluded from the release video: an app-startup connection refusal, a download assertion that did not decode Markdown escapes, and an assertion that did not handle blank lines between evidence paragraphs. Browser testing also caught and fixed Gradio's prefixed heading-anchor behavior. None was replaced by simulated inference. The final capture completes all assertions, and its video is unedited at normal speed.
 
-Video file: `fundpilot-dossier-demo.webm`, **5,884,135 bytes**, SHA-256 **`321d13a4156f1381ba9cd6da5aecfa689698419cf1402ccb11c6cf6ca4c1f643`**. The v0.3.1 and earlier release assets remain unchanged. See the [v0.3.2 release](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.3.2) for the video and the post-upload `release-verification.json` manifest. CI must pass on the product PR before merging; the public release is tied to the merged commit.
+Preserved pre-refinement video (local `.local-reports/dossier-release/fundpilot-dossier-demo.webm`): **5,884,135 bytes**, SHA-256 **`321d13a4156f1381ba9cd6da5aecfa689698419cf1402ccb11c6cf6ca4c1f643`**. The v0.3.1 and earlier release assets remain unchanged. The final usability recording supersedes this checkpoint for public demonstration. See the [v0.3.2 release](https://github.com/siamakenna/fundpilot-ai-week2-2026/releases/tag/v0.3.2) for the video and the post-upload `release-verification.json` manifest. CI must pass on the product PR before merging; the public release is tied to the merged commit.
 
 ## Reproduction
 
@@ -43,14 +61,14 @@ python -m ruff check --select F .
 python -m ruff check fundpilot/dossier.py fundpilot/real_ui.py fundpilot/public_cli.py tests/test_dossier.py scripts/compare_model_size.py scripts/prepare_blind_model_review.py
 GRADIO_ANALYTICS_ENABLED=False python -c 'from app import demo; demo.launch(server_name="127.0.0.1", server_port=7864, share=False)'
 # With installed Playwright Chromium and NODE_PATH set as needed:
-node scripts/record_dossier_demo.cjs .local-reports/dossier-release-new
+node scripts/record_usability_demo.cjs .local-reports/usability-release-new
 ```
 
-The recording script requires the hash-checked historical GNS cache; it does not fetch or fabricate it. For browser failure checks, start a second local process:
+The older `record_dossier_demo.cjs` targets checkpoint `7a74fc3`; its files remain preserved. The final recording script requires the hash-checked historical GNS cache; it does not fetch or fabricate it. For browser failure checks, start a second local process:
 
 ```bash
 GRADIO_ANALYTICS_ENABLED=False python -c 'from functools import partial; from fundpilot import real_ui; real_ui.analyze = partial(real_ui.analyze, model="fundpilot-deliberately-missing:qa"); from app import demo; demo.launch(server_name="127.0.0.1", server_port=7865, share=False)'
-node scripts/check_dossier_browser.cjs
+node scripts/check_usability_browser.cjs
 ```
 
 ## Limitations and submission

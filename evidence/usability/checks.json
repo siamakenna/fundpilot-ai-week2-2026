@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "keyboard_sample": true,
+    "relevant_first_and_hidden_value_preservation": true,
+    "mobile": {
+      "viewport": 390,
+      "document": 390
+    },
+    "keyboard_evidence_anchor": true,
+    "secondary_answer_invalidates_both_downloads": true,
+    "invalid_amounts": [
+      "-1",
+      "NaN",
+      "invalid"
+    ],
+    "empty_source": true,
+    "url_only_rejected": true,
+    "reference_url_not_fetched": true,
+    "missing_model": {
+      "model": "fundpilot-deliberately-missing:qa",
+      "actual_ollama_request": true,
+      "no_fallback": true,
+      "no_downloads": true
+    }
+  },
+  "browser": "151.0.7922.34",
+  "page_errors": []
+}
